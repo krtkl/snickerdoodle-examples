@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# 
+# Start of session at: Mon Apr 11 10:13:18 2016
+# Process ID: 1796
+# Current directory: C:/snickerdoodle_base/snickerdoodle_base.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/snickerdoodle_base/snickerdoodle_base.sdk/webtalk/webtalk.log
+# Journal file: C:/snickerdoodle_base/snickerdoodle_base.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
+# webtalk_init -webtalk_dir C:\\snickerdoodle_base\\snickerdoodle_base.sdk\\webtalk
+# webtalk_register_client -client project
+# webtalk_add_data -client project -key date_generated -value "Mon Apr 11 10:13:16 2016" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key product_version -value "SDK v2015.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key build_version -value "2015.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_platform -value "amd64" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key registration_id -value "" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key tool_flow -value "SDK" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key beta -value "false" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key route_design -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_family -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_device -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_package -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_speed -value "NA" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key random_id -value "cf161ajkcdvrt03i7hjqkpcvpb" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_id -value "2015.4_10" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_iteration -value "10" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_name -value "" -context "user_environment"
+# webtalk_add_data -client project -key os_release -value "" -context "user_environment"
+# webtalk_add_data -client project -key cpu_name -value "" -context "user_environment"
+# webtalk_add_data -client project -key cpu_speed -value "" -context "user_environment"
+# webtalk_add_data -client project -key total_processors -value "" -context "user_environment"
+# webtalk_add_data -client project -key system_ram -value "" -context "user_environment"
+# webtalk_register_client -client sdk
+# webtalk_add_data -client sdk -key uid -value "1460394624655" -context "sdk\\\\bsp/1460394624655"
+# webtalk_add_data -client sdk -key hwid -value "1457663959765" -context "sdk\\\\bsp/1460394624655"
+# webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\bsp/1460394624655"
+# webtalk_add_data -client sdk -key apptemplate -value "zynq_fsbl" -context "sdk\\\\bsp/1460394624655"
+# webtalk_add_data -client sdk -key uid -value "1460394641669" -context "sdk\\\\application/1460394641669"
+# webtalk_add_data -client sdk -key hwid -value "1457663959765" -context "sdk\\\\application/1460394641669"
+# webtalk_add_data -client sdk -key bspid -value "1460394624655" -context "sdk\\\\application/1460394641669"
+# webtalk_add_data -client sdk -key newbsp -value "true" -context "sdk\\\\application/1460394641669"
+# webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\application/1460394641669"
+# webtalk_add_data -client sdk -key apptemplate -value "zynq_fsbl" -context "sdk\\\\application/1460394641669"
+# webtalk_transmit -clientid 2891632121 -regid "" -xml C:\\snickerdoodle_base\\snickerdoodle_base.sdk\\webtalk\\usage_statistics_ext_sdk.xml -html C:\\snickerdoodle_base\\snickerdoodle_base.sdk\\webtalk\\usage_statistics_ext_sdk.html -wdm C:\\snickerdoodle_base\\snickerdoodle_base.sdk\\webtalk\\sdk_webtalk.wdm -intro "<H3>SDK Usage Report</H3><BR>"
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 49.266 ; gain = 0.000
+# webtalk_terminate
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 11 10:13:33 2016...

@@ -1,0 +1,3 @@
+17:40:03 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:40:05 INFO  : XSDB server has started successfully.
+17:40:06 INFO  : Processing command line option -hwspec C:/snickerdoodle_black_GPIO/snickerdoodle_black_GPIO.sdk/base_block_design_wrapper.hdf.
