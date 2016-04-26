@@ -58,16 +58,16 @@ COMPONENT base_block_design_auto_pc_0
     aresetn : IN STD_LOGIC;
     s_axi_awid : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     s_axi_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    s_axi_awlen : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    s_axi_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    s_axi_awlock : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi_awlock : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     s_axi_awcache : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    s_axi_awregion : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_awqos : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_awvalid : IN STD_LOGIC;
     s_axi_awready : OUT STD_LOGIC;
-    s_axi_wid : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     s_axi_wdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi_wstrb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_wlast : IN STD_LOGIC;
@@ -79,12 +79,13 @@ COMPONENT base_block_design_auto_pc_0
     s_axi_bready : IN STD_LOGIC;
     s_axi_arid : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     s_axi_araddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    s_axi_arlen : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    s_axi_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    s_axi_arlock : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    s_axi_arlock : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     s_axi_arcache : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    s_axi_arregion : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_arqos : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi_arvalid : IN STD_LOGIC;
     s_axi_arready : OUT STD_LOGIC;
@@ -133,10 +134,10 @@ your_instance_name : base_block_design_auto_pc_0
     s_axi_awlock => s_axi_awlock,
     s_axi_awcache => s_axi_awcache,
     s_axi_awprot => s_axi_awprot,
+    s_axi_awregion => s_axi_awregion,
     s_axi_awqos => s_axi_awqos,
     s_axi_awvalid => s_axi_awvalid,
     s_axi_awready => s_axi_awready,
-    s_axi_wid => s_axi_wid,
     s_axi_wdata => s_axi_wdata,
     s_axi_wstrb => s_axi_wstrb,
     s_axi_wlast => s_axi_wlast,
@@ -154,6 +155,7 @@ your_instance_name : base_block_design_auto_pc_0
     s_axi_arlock => s_axi_arlock,
     s_axi_arcache => s_axi_arcache,
     s_axi_arprot => s_axi_arprot,
+    s_axi_arregion => s_axi_arregion,
     s_axi_arqos => s_axi_arqos,
     s_axi_arvalid => s_axi_arvalid,
     s_axi_arready => s_axi_arready,

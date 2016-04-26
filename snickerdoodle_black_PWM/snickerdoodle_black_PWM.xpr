@@ -35,25 +35,48 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_3_0/base_block_design_axi_timer_3_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_1/base_block_design_axi_timer_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_0/base_block_design_axi_timer_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_2/base_block_design_axi_timer_0_2.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_3_1/base_block_design_axi_timer_3_1.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_3/base_block_design_axi_timer_0_3.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_3_3/base_block_design_axi_timer_3_3.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_3_2/base_block_design_axi_timer_3_2.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_3_5/base_block_design_axi_timer_3_5.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="base_block_design_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_3_4/base_block_design_axi_timer_3_4.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hdl/base_block_design.v"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_auto_pc_3/base_block_design_auto_pc_3.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_tier2_xbar_3_0/base_block_design_tier2_xbar_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_xbar_2/base_block_design_xbar_2.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_auto_pc_1/base_block_design_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hw_handoff/base_block_design.hwh"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hdl/base_block_design.hwdef"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hw_handoff/base_block_design_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hw_handoff/base_block_design.hwh"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hdl/base_block_design.v"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_xbar_0/base_block_design_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_axi_periph_0/base_block_design_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_auto_pc_0/base_block_design_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_auto_pc_4/base_block_design_auto_pc_4.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="base_block_design_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_axi_periph_2/base_block_design_processing_system7_0_axi_periph_2.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_10/base_block_design_axi_timer_0_10.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_auto_pc_2/base_block_design_auto_pc_2.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_tier2_xbar_0_0/base_block_design_tier2_xbar_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_tier2_xbar_2_0/base_block_design_tier2_xbar_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_tier2_xbar_1_0/base_block_design_tier2_xbar_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_27/base_block_design_axi_timer_0_27.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_25/base_block_design_axi_timer_0_25.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_24/base_block_design_axi_timer_0_24.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_23/base_block_design_axi_timer_0_23.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_22/base_block_design_axi_timer_0_22.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_21/base_block_design_axi_timer_0_21.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_5/base_block_design_axi_timer_0_5.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_26/base_block_design_axi_timer_0_26.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_8/base_block_design_axi_timer_0_8.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_7/base_block_design_axi_timer_0_7.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_9/base_block_design_axi_timer_0_9.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_6/base_block_design_axi_timer_0_6.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_4/base_block_design_axi_timer_0_4.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_12/base_block_design_axi_timer_0_12.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_14/base_block_design_axi_timer_0_14.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_11/base_block_design_axi_timer_0_11.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_15/base_block_design_axi_timer_0_15.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_13/base_block_design_axi_timer_0_13.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_16/base_block_design_axi_timer_0_16.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_18/base_block_design_axi_timer_0_18.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_17/base_block_design_axi_timer_0_17.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_20/base_block_design_axi_timer_0_20.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_timer_0_19/base_block_design_axi_timer_0_19.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/base_block_design/hdl/base_block_design_wrapper.v">
         <FileInfo>
@@ -68,12 +91,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.upgrade_log"/>
           <Attr Name="ImportTime" Val="1458162296"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_axi_periph_0/base_block_design_processing_system7_0_axi_periph_0.upgrade_log">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../snickerdoodle_black_timer/snickerdoodle_black_timer.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_axi_periph_0/base_block_design_processing_system7_0_axi_periph_0.upgrade_log"/>
-          <Attr Name="ImportTime" Val="1460494759"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.upgrade_log">

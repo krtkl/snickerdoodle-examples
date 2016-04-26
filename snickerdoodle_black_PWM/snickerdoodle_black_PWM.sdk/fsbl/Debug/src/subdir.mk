@@ -57,21 +57,21 @@ C_DEPS += \
 src/%.o: ../src/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM gcc compiler'
-	arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"$@" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM gcc compiler'
-	arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"$@" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/ps7_init.o: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper_hw_platform_0/ps7_init.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM gcc compiler'
-	arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"$@" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

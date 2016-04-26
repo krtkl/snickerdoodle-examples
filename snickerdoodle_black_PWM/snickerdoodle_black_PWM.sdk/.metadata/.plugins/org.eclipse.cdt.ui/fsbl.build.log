@@ -1,19 +1,76 @@
-20:19:37 **** Auto Build of configuration Debug for project fsbl ****
+12:54:38 **** Build of configuration Debug for project fsbl ****
 make all 
 'Building file: ../src/fsbl_handoff.S'
 'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
 'Finished building: ../src/fsbl_handoff.S'
 ' '
 'Building file: ../src/fsbl_hooks.c'
 'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
-In file included from ../src/fsbl_hooks.c:54:0:
-../src/fsbl.h:305:22: fatal error: ps7_init.h: No such file or directory
- #include "ps7_init.h"
-                      ^
-compilation terminated.
-make: *** [src/fsbl_hooks.o] Error 1
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\base_block_design_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../fsbl_bsp/ps7_cortexa9_0/lib -o "fsbl.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size fsbl.elf  |tee "fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77200	  11832	  74308	 163340	  27e0c	fsbl.elf
+'Finished building: fsbl.elf.size'
+' '
 
-20:19:38 Build Finished (took 913ms)
+12:54:44 Build Finished (took 6s.471ms)
 

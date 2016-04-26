@@ -4,3 +4,131 @@
 20:17:15 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
 20:17:25 INFO  : XSDB server has started successfully.
 20:17:47 INFO  : Processing command line option -hwspec C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper.hdf.
+12:52:41 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+12:52:45 INFO  : XSDB server has started successfully.
+12:53:10 INFO  : Processing command line option -hwspec C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper.hdf.
+12:53:12 INFO  : Checking for hwspec changes in the project base_block_design_wrapper_hw_platform_0.
+12:53:12 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1461693786192,  Project:1461640265883
+12:53:12 INFO  : The hardware specification for project 'base_block_design_wrapper_hw_platform_0' is different from C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper.hdf.
+12:53:13 INFO  : Copied contents of C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper.hdf into \base_block_design_wrapper_hw_platform_0\system.hdf.
+12:53:30 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:53:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:32 ERROR :  [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+12:53:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+
+12:53:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:32 INFO  : Unable to read in MSS file C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\fsbl_bsp\system.mss : null
+12:53:33 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:33 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+
+12:53:33 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:33 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:33 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:33 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:43 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:43 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:43 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+12:53:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+
+12:53:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:45 ERROR :  [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+12:53:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+
+12:53:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:45 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:46 INFO  : Unable to read in MSS file C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\fsbl_bsp\system.mss : null
+12:53:46 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:46 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:46 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:47 ERROR : Error updating BSP project MSS files.
+12:53:47 INFO  : Updating hardware inferred compiler options for fsbl.
+12:53:47 INFO  : Clearing existing target manager status.
+12:53:54 INFO  : Closing and re-opening the MSS file of ther project fsbl_bsp
+12:53:54 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:54 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:54 ERROR :  [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+12:53:54 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+
+12:53:54 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:54 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:54 INFO  : Unable to read in MSS file C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\fsbl_bsp\system.mss : null
+12:53:55 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:55 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:55 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:53:55 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+
+12:53:55 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+
+12:53:55 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:53:55 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:54:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:54:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:54:06 ERROR :  [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+12:54:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+
+12:54:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:54:06 INFO  : Unable to read in MSS file C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\fsbl_bsp\system.mss : null
+12:54:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 21 - No IP instance named axi_gpio_0 present in hardware design
+ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 27 - No IP instance named axi_gpio_1 present in hardware design
+
+12:54:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/fsbl_bsp/system.mss line 33 - No IP instance named axi_gpio_2 present in hardware design
+ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+12:54:07 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:54:08 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:55:29 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

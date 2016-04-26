@@ -96,8 +96,8 @@ set_property PACKAGE_PIN    G17         [get_ports pwm9]
 set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 
 #### JA1.35 (IO_L14P_T2_AD4P_SRCC_35)
-#set_property PACKAGE_PIN    J18         [get_ports {gpio0_tri_io[6]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio0_tri_io[6]}]
+set_property PACKAGE_PIN    J18         [get_ports pwm10]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm10]
 
 #### JA1.36 (IO_L13N_T2_MRCC_35)
 #set_property PACKAGE_PIN    H17         [get_ports {gpio0_tri_io[23]}]
@@ -108,8 +108,8 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio0_tri_io[7]}]
 
 #### JA1.38 (IO_L13P_T2_MRCC_35)
-#set_property PACKAGE_PIN    H16         [get_ports {gpio0_tri_io[22]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio0_tri_io[22]}]
+set_property PACKAGE_PIN    H16         [get_ports pwm11]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm11]
 
 ##------------------------------------------------------------------------------
 ## JA2 Connector
@@ -222,8 +222,8 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[24]}]
 
 #### JB1.5 (IO_L1P_T0_34)
-#set_property PACKAGE_PIN    T11         [get_ports {gpio2_tri_io[8]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[8]}]
+set_property PACKAGE_PIN    T11         [get_ports pwm12]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm12]
 
 #### JB1.6 (IO_L2N_T0_34)
 #set_property PACKAGE_PIN    U12         [get_ports {gpio2_tri_io[11]}]
@@ -234,12 +234,12 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[9]}]
 
 #### JB1.8 (IO_L2P_T0_34)
-#set_property PACKAGE_PIN    T12         [get_ports {gpio2_tri_io[10]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[10]}]
+set_property PACKAGE_PIN    T12         [get_ports pwm13]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm13]
 
 #### JB1.11 (IO_L6P_T0_34)
-#set_property PACKAGE_PIN    P14         [get_ports {gpio2_tri_io[12]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[12]}]
+set_property PACKAGE_PIN    P14         [get_ports pwm14]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm14]
 
 #### JB1.12 (IO_L4N_T0_34)
 #set_property PACKAGE_PIN    W13         [get_ports {gpio2_tri_io[15]}]
@@ -250,12 +250,12 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[13]}]
 
 #### JB1.14 (IO_L4P_T0_34)
-#set_property PACKAGE_PIN    V12         [get_ports {gpio2_tri_io[14]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[14]}]
+set_property PACKAGE_PIN    V12         [get_ports pwm15]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm15]
 
 #### JB1.17 (IO_L3P_T0_DQS_PUDC_B_34)
-#set_property PACKAGE_PIN    U13         [get_ports {gpio2_tri_io[20]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[20]}]
+set_property PACKAGE_PIN    U13         [get_ports pwm16]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm16]
 
 #### JB1.18 (IO_L5N_T0_34)
 #set_property PACKAGE_PIN    T15         [get_ports {gpio2_tri_io[17]}]
@@ -266,12 +266,12 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[21]}]
 
 #### JB1.20 (IO_L5P_T0_34)
-#set_property PACKAGE_PIN    T14         [get_ports {gpio2_tri_io[16]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[16]}]
+set_property PACKAGE_PIN    T14         [get_ports pwm17]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm17]
 
 #### JB1.23 (IO_L9P_T1_DQS_34)
-#set_property PACKAGE_PIN    T16         [get_ports {gpio2_tri_io[18]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[18]}]
+set_property PACKAGE_PIN    T16         [get_ports pwm18]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm18]
 
 #### JB1.24 (IO_L7N_T1_34)
 #set_property PACKAGE_PIN    Y17         [get_ports {gpio2_tri_io[1]}]
@@ -282,12 +282,12 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[19]}]
 
 #### JB1.26 (IO_L7P_T1_34)
-#set_property PACKAGE_PIN    Y16         [get_ports {gpio2_tri_io[0]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[0]}]
+set_property PACKAGE_PIN    Y16         [get_ports pwm19]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm19]
 
 #### JB1.29 (IO_L8P_T1_34)
-#set_property PACKAGE_PIN    W14         [get_ports {gpio2_tri_io[2]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[2]}]
+set_property PACKAGE_PIN    W14         [get_ports pwm20]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm20]
 
 #### JB1.30 (IO_L10N_T1_34)
 #set_property PACKAGE_PIN    W15         [get_ports {gpio2_tri_io[5]}]
@@ -298,12 +298,12 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[3]}]
 
 #### JB1.32 (IO_L10P_T1_34)
-#set_property PACKAGE_PIN    V15         [get_ports {gpio2_tri_io[4]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[4]}]
+set_property PACKAGE_PIN    V15         [get_ports pwm21]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm21]
 
 #### JB1.35 (IO_L11P_T1_SRCC_34)
-#set_property PACKAGE_PIN    U14         [get_ports {gpio2_tri_io[6]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[6]}]
+set_property PACKAGE_PIN    U14         [get_ports pwm22]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm22]
 
 #### JB1.36 (IO_L12N_T1_MRCC_34)
 #set_property PACKAGE_PIN    U19         [get_ports {gpio2_tri_io[23]}]
@@ -314,8 +314,8 @@ set_property IOSTANDARD     LVCMOS33    [get_ports pwm9]
 #set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[7]}]
 
 #### JB1.38 (IO_L12P_T1_MRCC_34)
-#set_property PACKAGE_PIN    U18         [get_ports {gpio2_tri_io[22]}]
-#set_property IOSTANDARD     LVCMOS33    [get_ports {gpio2_tri_io[22]}]
+set_property PACKAGE_PIN    U18         [get_ports pwm23]
+set_property IOSTANDARD     LVCMOS33    [get_ports pwm23]
 
 ##------------------------------------------------------------------------------
 ## JB2 Connector

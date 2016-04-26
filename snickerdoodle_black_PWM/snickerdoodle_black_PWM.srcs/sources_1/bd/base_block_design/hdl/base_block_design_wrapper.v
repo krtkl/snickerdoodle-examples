@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Mon Apr 25 19:59:34 2016
+//Date        : Tue Apr 26 10:53:14 2016
 //Host        : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
 //Command     : generate_target base_block_design_wrapper.bd
 //Design      : base_block_design_wrapper
@@ -33,7 +33,21 @@ module base_block_design_wrapper
     FIXED_IO_ps_srstb,
     pwm0,
     pwm1,
+    pwm10,
+    pwm11,
+    pwm12,
+    pwm13,
+    pwm14,
+    pwm15,
+    pwm16,
+    pwm17,
+    pwm18,
+    pwm19,
     pwm2,
+    pwm20,
+    pwm21,
+    pwm22,
+    pwm23,
     pwm3,
     pwm4,
     pwm5,
@@ -64,7 +78,21 @@ module base_block_design_wrapper
   inout FIXED_IO_ps_srstb;
   output pwm0;
   output pwm1;
+  output pwm10;
+  output pwm11;
+  output pwm12;
+  output pwm13;
+  output pwm14;
+  output pwm15;
+  output pwm16;
+  output pwm17;
+  output pwm18;
+  output pwm19;
   output pwm2;
+  output pwm20;
+  output pwm21;
+  output pwm22;
+  output pwm23;
   output pwm3;
   output pwm4;
   output pwm5;
@@ -96,7 +124,21 @@ module base_block_design_wrapper
   wire FIXED_IO_ps_srstb;
   wire pwm0;
   wire pwm1;
+  wire pwm10;
+  wire pwm11;
+  wire pwm12;
+  wire pwm13;
+  wire pwm14;
+  wire pwm15;
+  wire pwm16;
+  wire pwm17;
+  wire pwm18;
+  wire pwm19;
   wire pwm2;
+  wire pwm20;
+  wire pwm21;
+  wire pwm22;
+  wire pwm23;
   wire pwm3;
   wire pwm4;
   wire pwm5;
@@ -129,7 +171,21 @@ module base_block_design_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .pwm0(pwm0),
         .pwm1(pwm1),
+        .pwm10(pwm10),
+        .pwm11(pwm11),
+        .pwm12(pwm12),
+        .pwm13(pwm13),
+        .pwm14(pwm14),
+        .pwm15(pwm15),
+        .pwm16(pwm16),
+        .pwm17(pwm17),
+        .pwm18(pwm18),
+        .pwm19(pwm19),
         .pwm2(pwm2),
+        .pwm20(pwm20),
+        .pwm21(pwm21),
+        .pwm22(pwm22),
+        .pwm23(pwm23),
         .pwm3(pwm3),
         .pwm4(pwm4),
         .pwm5(pwm5),

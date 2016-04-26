@@ -1,0 +1,109 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port pwm7 -pg 1 -y 1360 -defaultsOSRD
+preplace port s_axi_aclk -pg 1 -y 1680 -defaultsOSRD
+preplace port pwm8 -pg 1 -y 1540 -defaultsOSRD
+preplace port pwm20 -pg 1 -y 3820 -defaultsOSRD
+preplace port pwm9 -pg 1 -y 1720 -defaultsOSRD
+preplace port pwm21 -pg 1 -y 3980 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 1660 -defaultsOSRD
+preplace port pwm22 -pg 1 -y 4160 -defaultsOSRD
+preplace port pwm10 -pg 1 -y 1900 -defaultsOSRD
+preplace port pwm23 -pg 1 -y 4340 -defaultsOSRD
+preplace port pwm11 -pg 1 -y 2080 -defaultsOSRD
+preplace port pwm12 -pg 1 -y 2260 -defaultsOSRD
+preplace port pwm13 -pg 1 -y 2440 -defaultsOSRD
+preplace port pwm0 -pg 1 -y 10 -defaultsOSRD
+preplace port pwm14 -pg 1 -y 2620 -defaultsOSRD
+preplace port pwm1 -pg 1 -y 280 -defaultsOSRD
+preplace port pwm15 -pg 1 -y 2800 -defaultsOSRD
+preplace port pwm2 -pg 1 -y 460 -defaultsOSRD
+preplace port pwm16 -pg 1 -y 2960 -defaultsOSRD
+preplace port pwm3 -pg 1 -y 640 -defaultsOSRD
+preplace port s_axi_aresetn -pg 1 -y 1700 -defaultsOSRD
+preplace port pwm4 -pg 1 -y 820 -defaultsOSRD
+preplace port pwm17 -pg 1 -y 3270 -defaultsOSRD
+preplace port pwm5 -pg 1 -y 1000 -defaultsOSRD
+preplace port pwm18 -pg 1 -y 3450 -defaultsOSRD
+preplace port pwm6 -pg 1 -y 1180 -defaultsOSRD
+preplace port pwm19 -pg 1 -y 3620 -defaultsOSRD
+preplace inst axi_timer_12 -pg 1 -lvl 2 -y 2240 -defaultsOSRD
+preplace inst axi_timer_8 -pg 1 -lvl 2 -y 1520 -defaultsOSRD
+preplace inst axi_timer_13 -pg 1 -lvl 2 -y 2420 -defaultsOSRD
+preplace inst axi_timer_9 -pg 1 -lvl 2 -y 1700 -defaultsOSRD
+preplace inst axi_timer_14 -pg 1 -lvl 2 -y 2600 -defaultsOSRD
+preplace inst axi_timer_15 -pg 1 -lvl 2 -y 2780 -defaultsOSRD
+preplace inst axi_timer_16 -pg 1 -lvl 2 -y 2960 -defaultsOSRD
+preplace inst axi_timer_17 -pg 1 -lvl 2 -y 3240 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 2 -y 80 -defaultsOSRD
+preplace inst axi_timer_18 -pg 1 -lvl 2 -y 3440 -defaultsOSRD
+preplace inst axi_timer_1 -pg 1 -lvl 2 -y 260 -defaultsOSRD
+preplace inst axi_timer_19 -pg 1 -lvl 2 -y 3620 -defaultsOSRD
+preplace inst axi_timer_2 -pg 1 -lvl 2 -y 440 -defaultsOSRD
+preplace inst axi_timer_3 -pg 1 -lvl 2 -y 620 -defaultsOSRD
+preplace inst axi_timer_20 -pg 1 -lvl 2 -y 3800 -defaultsOSRD
+preplace inst axi_timer_4 -pg 1 -lvl 2 -y 800 -defaultsOSRD
+preplace inst axi_timer_21 -pg 1 -lvl 2 -y 3980 -defaultsOSRD
+preplace inst axi_timer_5 -pg 1 -lvl 2 -y 980 -defaultsOSRD
+preplace inst axi_timer_22 -pg 1 -lvl 2 -y 4160 -defaultsOSRD
+preplace inst axi_timer_10 -pg 1 -lvl 2 -y 1880 -defaultsOSRD
+preplace inst axi_timer_6 -pg 1 -lvl 2 -y 1160 -defaultsOSRD
+preplace inst axi_timer_23 -pg 1 -lvl 2 -y 4340 -defaultsOSRD
+preplace inst axi_timer_11 -pg 1 -lvl 2 -y 2060 -defaultsOSRD
+preplace inst axi_timer_7 -pg 1 -lvl 2 -y 1340 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 1 -y 2200 -defaultsOSRD
+preplace netloc processing_system7_0_axi_periph_M09_AXI 1 1 1 400
+preplace netloc axi_timer_5_pwm0 1 2 1 NJ
+preplace netloc processing_system7_0_axi_periph_M22_AXI 1 1 1 300
+preplace netloc processing_system7_0_axi_periph_M16_AXI 1 1 1 390
+preplace netloc axi_timer_21_pwm0 1 2 1 NJ
+preplace netloc axi_timer_20_pwm0 1 2 1 NJ
+preplace netloc axi_timer_17_pwm0 1 2 1 NJ
+preplace netloc s_axi_aclk_1 1 0 2 -60 1590 360
+preplace netloc processing_system7_0_axi_periph_M15_AXI 1 1 1 400
+preplace netloc processing_system7_0_axi_periph_M08_AXI 1 1 1 390
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 1 1 320
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 1 1 290
+preplace netloc axi_timer_22_pwm0 1 2 1 NJ
+preplace netloc axi_timer_18_pwm0 1 2 1 NJ
+preplace netloc s_axi_aresetn_1 1 0 2 -50 1600 370
+preplace netloc processing_system7_0_axi_periph_M18_AXI 1 1 1 350
+preplace netloc processing_system7_0_axi_periph_M17_AXI 1 1 1 380
+preplace netloc processing_system7_0_axi_periph_M12_AXI 1 1 1 420
+preplace netloc processing_system7_0_axi_periph_M11_AXI 1 1 1 420
+preplace netloc processing_system7_0_axi_periph_M07_AXI 1 1 1 380
+preplace netloc axi_timer_4_pwm0 1 2 1 NJ
+preplace netloc axi_timer_16_pwm0 1 2 1 NJ
+preplace netloc axi_timer_13_pwm0 1 2 1 NJ
+preplace netloc axi_timer_3_pwm0 1 2 1 NJ
+preplace netloc axi_timer_2_pwm0 1 2 1 NJ
+preplace netloc processing_system7_0_axi_periph_M05_AXI 1 1 1 340
+preplace netloc axi_timer_0_pwm0 1 2 1 NJ
+preplace netloc axi_timer_19_pwm0 1 2 1 NJ
+preplace netloc processing_system7_0_axi_periph_M23_AXI 1 1 1 290
+preplace netloc processing_system7_0_axi_periph_M21_AXI 1 1 1 310
+preplace netloc processing_system7_0_axi_periph_M19_AXI 1 1 1 340
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 1 1 310
+preplace netloc axi_timer_14_pwm0 1 2 1 NJ
+preplace netloc axi_timer_12_pwm0 1 2 1 NJ
+preplace netloc processing_system7_0_axi_periph_M06_AXI 1 1 1 350
+preplace netloc processing_system7_0_axi_periph_M14_AXI 1 1 1 410
+preplace netloc S00_AXI_1 1 0 1 NJ
+preplace netloc axi_timer_23_pwm0 1 2 1 NJ
+preplace netloc axi_timer_6_pwm0 1 2 1 NJ
+preplace netloc axi_timer_10_pwm0 1 2 1 NJ
+preplace netloc processing_system7_0_axi_periph_M10_AXI 1 1 1 410
+preplace netloc axi_timer_9_pwm0 1 2 1 NJ
+preplace netloc axi_timer_11_pwm0 1 2 1 NJ
+preplace netloc axi_timer_1_pwm0 1 2 1 NJ
+preplace netloc processing_system7_0_axi_periph_M13_AXI 1 1 1 420
+preplace netloc axi_timer_7_pwm0 1 2 1 NJ
+preplace netloc processing_system7_0_axi_periph_M20_AXI 1 1 1 330
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 1 1 330
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 1 1 300
+preplace netloc axi_timer_8_pwm0 1 2 1 NJ
+preplace netloc axi_timer_15_pwm0 1 2 1 NJ
+levelinfo -pg 1 -80 160 627 800 -top -10 -bot 4620
+",
+}

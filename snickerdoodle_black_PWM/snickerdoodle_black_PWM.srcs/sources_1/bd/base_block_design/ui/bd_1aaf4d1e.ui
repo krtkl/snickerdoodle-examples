@@ -1,63 +1,70 @@
 {
    guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port pwm7 -pg 1 -y 1380 -defaultsOSRD
-preplace port DDR -pg 1 -y 1650 -defaultsOSRD
-preplace port pwm8 -pg 1 -y 1560 -defaultsOSRD
-preplace port pwm9 -pg 1 -y 1760 -defaultsOSRD
-preplace port pwm0 -pg 1 -y 100 -defaultsOSRD
-preplace port pwm1 -pg 1 -y 280 -defaultsOSRD
-preplace port pwm2 -pg 1 -y 460 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 910 -defaultsOSRD
-preplace port pwm3 -pg 1 -y 640 -defaultsOSRD
-preplace port pwm4 -pg 1 -y 820 -defaultsOSRD
-preplace port pwm5 -pg 1 -y 1020 -defaultsOSRD
-preplace port pwm6 -pg 1 -y 1200 -defaultsOSRD
-preplace inst axi_timer_8 -pg 1 -lvl 3 -y 1550 -defaultsOSRD
-preplace inst axi_timer_9 -pg 1 -lvl 3 -y 1750 -defaultsOSRD
-preplace inst axi_timer_0 -pg 1 -lvl 3 -y 90 -defaultsOSRD
-preplace inst axi_timer_1 -pg 1 -lvl 3 -y 270 -defaultsOSRD
-preplace inst rst_processing_system7_0_50M -pg 1 -lvl 1 -y 770 -defaultsOSRD
-preplace inst axi_timer_2 -pg 1 -lvl 3 -y 450 -defaultsOSRD
-preplace inst axi_timer_3 -pg 1 -lvl 3 -y 630 -defaultsOSRD
-preplace inst axi_timer_4 -pg 1 -lvl 3 -y 810 -defaultsOSRD
-preplace inst axi_timer_5 -pg 1 -lvl 3 -y 1010 -defaultsOSRD
-preplace inst axi_timer_6 -pg 1 -lvl 3 -y 1190 -defaultsOSRD
-preplace inst axi_timer_7 -pg 1 -lvl 3 -y 1370 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 1210 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 960 -defaultsOSRD
-preplace netloc processing_system7_0_axi_periph_M09_AXI 1 2 1 760
-preplace netloc processing_system7_0_DDR 1 1 3 NJ 1650 NJ 1650 NJ
-preplace netloc axi_timer_5_pwm0 1 3 1 NJ
-preplace netloc processing_system7_0_axi_periph_M08_AXI 1 2 1 790
-preplace netloc processing_system7_0_axi_periph_M03_AXI 1 2 1 790
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 740
-preplace netloc rst_processing_system7_0_50M_interconnect_aresetn 1 1 1 440
-preplace netloc processing_system7_0_axi_periph_M07_AXI 1 2 1 820
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N
-preplace netloc axi_timer_4_pwm0 1 3 1 NJ
-preplace netloc axi_timer_3_pwm0 1 3 1 NJ
-preplace netloc axi_timer_2_pwm0 1 3 1 NJ
-preplace netloc processing_system7_0_axi_periph_M05_AXI 1 2 1 750
-preplace netloc axi_timer_0_pwm0 1 3 1 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 680 390
-preplace netloc rst_processing_system7_0_50M_peripheral_aresetn 1 1 2 420 1520 810
-preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 1 770
-preplace netloc processing_system7_0_axi_periph_M06_AXI 1 2 1 780
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 910 NJ 910 NJ
-preplace netloc axi_timer_6_pwm0 1 3 1 NJ
-preplace netloc axi_timer_9_pwm0 1 3 1 NJ
-preplace netloc axi_timer_1_pwm0 1 3 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 30 860 410 1510 800
-preplace netloc axi_timer_7_pwm0 1 3 1 NJ
-preplace netloc processing_system7_0_axi_periph_M04_AXI 1 2 1 820
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 760
-preplace netloc axi_timer_8_pwm0 1 3 1 NJ
-levelinfo -pg 1 0 210 590 930 1060 -top 0 -bot 1850
+preplace port pwm7 -pg 1 -y 560 -defaultsOSRD
+preplace port DDR -pg 1 -y 60 -defaultsOSRD
+preplace port pwm20 -pg 1 -y 420 -defaultsOSRD
+preplace port pwm8 -pg 1 -y 580 -defaultsOSRD
+preplace port pwm21 -pg 1 -y 440 -defaultsOSRD
+preplace port pwm9 -pg 1 -y 600 -defaultsOSRD
+preplace port pwm22 -pg 1 -y 520 -defaultsOSRD
+preplace port pwm10 -pg 1 -y 220 -defaultsOSRD
+preplace port pwm23 -pg 1 -y 540 -defaultsOSRD
+preplace port pwm11 -pg 1 -y 240 -defaultsOSRD
+preplace port pwm12 -pg 1 -y 260 -defaultsOSRD
+preplace port pwm13 -pg 1 -y 280 -defaultsOSRD
+preplace port pwm0 -pg 1 -y 140 -defaultsOSRD
+preplace port pwm14 -pg 1 -y 300 -defaultsOSRD
+preplace port pwm1 -pg 1 -y 160 -defaultsOSRD
+preplace port pwm15 -pg 1 -y 320 -defaultsOSRD
+preplace port pwm2 -pg 1 -y 180 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 80 -defaultsOSRD
+preplace port pwm16 -pg 1 -y 340 -defaultsOSRD
+preplace port pwm3 -pg 1 -y 200 -defaultsOSRD
+preplace port pwm17 -pg 1 -y 360 -defaultsOSRD
+preplace port pwm4 -pg 1 -y 460 -defaultsOSRD
+preplace port pwm18 -pg 1 -y 380 -defaultsOSRD
+preplace port pwm5 -pg 1 -y 480 -defaultsOSRD
+preplace port pwm19 -pg 1 -y 400 -defaultsOSRD
+preplace port pwm6 -pg 1 -y 500 -defaultsOSRD
+preplace inst rst_processing_system7_0_50M -pg 1 -lvl 1 -y 290 -defaultsOSRD
+preplace inst axi_pwm -pg 1 -lvl 2 -y 370 -defaultsOSRD -resize 245 550
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 60 NJ
+preplace netloc axi_pwm_pwm17 1 2 1 NJ
+preplace netloc axi_pwm_pwm2 1 2 1 NJ
+preplace netloc axi_pwm_pwm18 1 2 1 NJ
+preplace netloc axi_pwm_pwm3 1 2 1 NJ
+preplace netloc axi_pwm_pwm19 1 2 1 NJ
+preplace netloc axi_pwm_pwm4 1 2 1 NJ
+preplace netloc axi_pwm_pwm20 1 2 1 NJ
+preplace netloc axi_pwm_pwm5 1 2 1 NJ
+preplace netloc axi_pwm_pwm21 1 2 1 NJ
+preplace netloc axi_pwm_pwm6 1 2 1 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 200 390
+preplace netloc axi_pwm_pwm22 1 2 1 NJ
+preplace netloc axi_pwm_pwm7 1 2 1 NJ
+preplace netloc rst_processing_system7_0_50M_peripheral_aresetn 1 1 1 390
+preplace netloc axi_pwm_pwm23 1 2 1 NJ
+preplace netloc axi_pwm_pwm10 1 2 1 NJ
+preplace netloc axi_pwm_pwm8 1 2 1 NJ
+preplace netloc axi_pwm_pwm11 1 2 1 NJ
+preplace netloc axi_pwm_pwm9 1 2 1 NJ
+preplace netloc S00_AXI_1 1 1 1 410
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 80 NJ
+preplace netloc axi_pwm_pwm12 1 2 1 NJ
+preplace netloc axi_pwm_pwm13 1 2 1 NJ
+preplace netloc axi_pwm_pwm14 1 2 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 190 400
+preplace netloc axi_pwm_pwm15 1 2 1 NJ
+preplace netloc axi_pwm_pwm0 1 2 1 NJ
+preplace netloc axi_pwm_pwm16 1 2 1 NJ
+preplace netloc axi_pwm_pwm1 1 2 1 NJ
+levelinfo -pg 1 0 210 580 770 -top 0 -bot 1210
 ",
 }
 {
-   da_axi4_cnt: "17",
+   da_axi4_cnt: "43",
    da_board_cnt: "6",
    da_ps7_cnt: "1",
 }
