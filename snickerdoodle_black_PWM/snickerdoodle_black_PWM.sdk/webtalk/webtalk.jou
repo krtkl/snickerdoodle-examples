@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# 
+# Start of session at: Mon Apr 25 20:20:00 2016
+# Process ID: 1636
+# Current directory: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/webtalk/webtalk.log
+# Journal file: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

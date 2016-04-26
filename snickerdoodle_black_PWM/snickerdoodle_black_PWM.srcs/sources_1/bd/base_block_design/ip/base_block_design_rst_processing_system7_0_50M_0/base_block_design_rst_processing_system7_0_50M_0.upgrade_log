@@ -1,0 +1,16 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Apr 12 13:59:20 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_rst_processing_system7_0_50M_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of base_block_design_rst_processing_system7_0_50M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 8)) to current project options.
+
