@@ -1,3 +1,17 @@
 17:40:03 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
 17:40:05 INFO  : XSDB server has started successfully.
 17:40:06 INFO  : Processing command line option -hwspec C:/snickerdoodle_black_GPIO/snickerdoodle_black_GPIO.sdk/base_block_design_wrapper.hdf.
+16:04:28 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:04:32 INFO  : XSDB server has started successfully.
+16:04:52 INFO  : Processing command line option -hwspec C:/snickerdoodle_black_GPIO/snickerdoodle_black_GPIO.sdk/base_block_design_wrapper.hdf.
+16:05:00 INFO  : Checking for hwspec changes in the project base_block_design_wrapper_hw_platform_0.
+16:05:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1461970927948,  Project:1461094933365
+16:05:00 INFO  : The hardware specification for project 'base_block_design_wrapper_hw_platform_0' is different from C:/snickerdoodle_black_GPIO/snickerdoodle_black_GPIO.sdk/base_block_design_wrapper.hdf.
+16:05:03 INFO  : Copied contents of C:/snickerdoodle_black_GPIO/snickerdoodle_black_GPIO.sdk/base_block_design_wrapper.hdf into \base_block_design_wrapper_hw_platform_0\system.hdf.
+16:05:21 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:05:44 INFO  : 
+16:05:45 INFO  : Updating hardware inferred compiler options for fsbl.
+16:05:45 INFO  : Clearing existing target manager status.
+16:05:47 INFO  : Closing and re-opening the MSS file of ther project fsbl_bsp
+16:05:51 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:05:53 WARN  : Linker script will not be updated automatically. Users need to update it manually.

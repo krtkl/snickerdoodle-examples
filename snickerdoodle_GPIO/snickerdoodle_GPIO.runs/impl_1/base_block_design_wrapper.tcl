@@ -49,7 +49,7 @@ start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint base_block_design_wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/snickerdoodle_base/snickerdoodle_base.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/snickerdoodle_GPIO/snickerdoodle_GPIO.cache/wt [current_project]
   catch { write_mem_info -force base_block_design_wrapper.mmi }
   write_bitstream -force base_block_design_wrapper.bit 
   catch { write_sysdef -hwdef base_block_design_wrapper.hwdef -bitfile base_block_design_wrapper.bit -meminfo base_block_design_wrapper.mmi -file base_block_design_wrapper.sysdef }

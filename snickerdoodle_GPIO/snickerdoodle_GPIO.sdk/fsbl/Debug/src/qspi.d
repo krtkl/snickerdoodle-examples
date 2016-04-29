@@ -15,7 +15,7 @@ src/qspi.o src/qspi.d: ../src/qspi.c ../src/qspi.h ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_assert.h ../src/fsbl_debug.h \
- C:\snickerdoodle_base\snickerdoodle_base.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h \
+ C:\snickerdoodle_GPIO\snickerdoodle_GPIO.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h \
  ../src/image_mover.h ../../fsbl_bsp/ps7_cortexa9_0/include/xqspips_hw.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xqspips.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xqspips_hw.h
@@ -60,7 +60,7 @@ src/qspi.o src/qspi.d: ../src/qspi.c ../src/qspi.h ../src/fsbl.h \
 
 ../src/fsbl_debug.h:
 
-C:\snickerdoodle_base\snickerdoodle_base.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h:
+C:\snickerdoodle_GPIO\snickerdoodle_GPIO.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h:
 
 ../src/image_mover.h:
 

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Tue Apr 19 17:14:49 2016
+| Date             : Fri Apr 29 16:22:09 2016
 | Host             : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
 | Command          : report_power -file base_block_design_wrapper_power_routed.rpt -pb base_block_design_wrapper_power_summary_routed.pb
 | Design           : base_block_design_wrapper
@@ -56,7 +56,7 @@ Table of Contents
 |   CARRY4                |    <0.001 |       18 |      4400 |            0.41 |
 |   LUT as Shift Register |    <0.001 |       68 |      6000 |            1.13 |
 |   Others                |     0.000 |      217 |       --- |             --- |
-| Signals                 |     0.001 |     2238 |       --- |             --- |
+| Signals                 |     0.001 |     2234 |       --- |             --- |
 | I/O                     |     0.018 |      100 |       100 |          100.00 |
 | PS7                     |     1.045 |        1 |       --- |             --- |
 | Static Power            |     0.124 |          |           |                 |

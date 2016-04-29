@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Tue Apr 19 12:38:36 2016
+| Date         : Sat Apr 23 11:39:25 2016
 | Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
 | Command      : report_utilization -file base_block_design_wrapper_utilization_synth.rpt -pb base_block_design_wrapper_utilization_synth.pb
 | Design       : base_block_design_wrapper

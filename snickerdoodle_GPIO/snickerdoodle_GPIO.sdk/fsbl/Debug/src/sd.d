@@ -15,7 +15,7 @@ src/sd.o src/sd.d: ../src/sd.c \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_assert.h ../src/fsbl_debug.h \
- C:\snickerdoodle_base\snickerdoodle_base.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h \
+ C:\snickerdoodle_GPIO\snickerdoodle_GPIO.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/ff.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/integer.h \
@@ -59,7 +59,7 @@ src/sd.o src/sd.d: ../src/sd.c \
 
 ../src/fsbl_debug.h:
 
-C:\snickerdoodle_base\snickerdoodle_base.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h:
+C:\snickerdoodle_GPIO\snickerdoodle_GPIO.sdk\base_block_design_wrapper_hw_platform_0/ps7_init.h:
 
 ../../fsbl_bsp/ps7_cortexa9_0/include/xstatus.h:
 

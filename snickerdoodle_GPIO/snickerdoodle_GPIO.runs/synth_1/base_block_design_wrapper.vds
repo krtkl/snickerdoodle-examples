@@ -2,30 +2,29 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Tue Apr 19 17:11:35 2016
-# Process ID: 4028
-# Current directory: C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1
+# Start of session at: Fri Apr 29 16:19:18 2016
+# Process ID: 6184
+# Current directory: C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1
 # Command line: vivado.exe -log base_block_design_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source base_block_design_wrapper.tcl
-# Log file: C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1/base_block_design_wrapper.vds
-# Journal file: C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1\vivado.jou
+# Log file: C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/base_block_design_wrapper.vds
+# Journal file: C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source base_block_design_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 274.699 ; gain = 87.668
 Command: synth_design -top base_block_design_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-WARNING: [Synth 8-992] S_AXI_GP0_ACLK_temp is already implicitly declared earlier [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2701]
-WARNING: [Synth 8-992] S_AXI_GP1_ACLK_temp is already implicitly declared earlier [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2702]
+WARNING: [Synth 8-992] S_AXI_GP0_ACLK_temp is already implicitly declared earlier [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2701]
+WARNING: [Synth 8-992] S_AXI_GP1_ACLK_temp is already implicitly declared earlier [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2702]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 358.289 ; gain = 187.129
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 357.535 ; gain = 186.211
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'base_block_design_wrapper' [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design_wrapper.v:12]
-INFO: [Synth 8-638] synthesizing module 'base_block_design' [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:13]
-INFO: [Synth 8-638] synthesizing module 'base_block_design_axi_gpio_0_0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/synth/base_block_design_axi_gpio_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_wrapper' [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'base_block_design' [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:13]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_axi_gpio_0_0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/synth/base_block_design_axi_gpio_0_0.vhd:89]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -41,8 +40,8 @@ INFO: [Synth 8-638] synthesizing module 'base_block_design_axi_gpio_0_0' [c:/sni
 	Parameter C_IS_DUAL bound to: 1 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
-INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:189' bound to instance 'U0' of component 'axi_gpio' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/synth/base_block_design_axi_gpio_0_0.vhd:173]
-INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:282]
+INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:189' bound to instance 'U0' of component 'axi_gpio' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/synth/base_block_design_axi_gpio_0_0.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:282]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -58,9 +57,9 @@ INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/snickerdoodle_base/snicke
 	Parameter C_IS_DUAL bound to: 1 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:219]
-INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:220]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/axi_lite_ipif.vhd:249]
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:219]
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/axi_lite_ipif.vhd:249]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000111111111 
@@ -69,7 +68,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/snickerdoodle_base/s
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
 	Parameter C_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd:239]
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 9 - type: integer 
@@ -78,41 +77,41 @@ INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/snickerdoodle_bas
 	Parameter C_USE_WSTRB bound to: 0 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/address_decoder.vhd:190]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/address_decoder.vhd:190]
 	Parameter C_BUS_AWIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b00 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b01 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b10 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b11 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/address_decoder.vhd:190]
-INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd:448]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd:239]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/axi_lite_ipif.vhd:249]
-INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/pselect_f.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/address_decoder.vhd:190]
+INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd:448]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/slave_attachment.vhd:239]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_lite_ipif_v3_0/hdl/src/vhdl/axi_lite_ipif.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
 	Parameter C_DW bound to: 32 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
 	Parameter C_GPIO_WIDTH bound to: 25 - type: integer 
@@ -125,8 +124,8 @@ INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/snickerdoodle_base/snick
 	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:579]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:579]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
@@ -134,205 +133,205 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/snickerdoodle_base/snicke
 	Parameter C_VECTOR_WIDTH bound to: 25 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:736]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:772]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:788]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:804]
 INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
@@ -384,11 +383,11 @@ INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instanc
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (6#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
-INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (7#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:282]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_axi_gpio_0_0' (8#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/synth/base_block_design_axi_gpio_0_0.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'base_block_design_axi_gpio_1_0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/synth/base_block_design_axi_gpio_1_0.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (5#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (6#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/gpio_core.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (7#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:282]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_axi_gpio_0_0' (8#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/synth/base_block_design_axi_gpio_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_axi_gpio_1_0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/synth/base_block_design_axi_gpio_1_0.vhd:89]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -404,10 +403,10 @@ INFO: [Synth 8-638] synthesizing module 'base_block_design_axi_gpio_1_0' [c:/sni
 	Parameter C_IS_DUAL bound to: 1 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
-INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:189' bound to instance 'U0' of component 'axi_gpio' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/synth/base_block_design_axi_gpio_1_0.vhd:173]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_axi_gpio_1_0' (9#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/synth/base_block_design_axi_gpio_1_0.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'base_block_design_processing_system7_0_0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/synth/base_block_design_processing_system7_0_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:189' bound to instance 'U0' of component 'axi_gpio' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/synth/base_block_design_axi_gpio_1_0.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_axi_gpio_1_0' (9#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/synth/base_block_design_axi_gpio_1_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_processing_system7_0_0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/synth/base_block_design_processing_system7_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
 	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
@@ -462,32 +461,32 @@ INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_syst
 	Parameter C_USE_S_AXI_GP0 bound to: 0 - type: integer 
 	Parameter C_USE_S_AXI_GP1 bound to: 0 - type: integer 
 	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1328]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1329]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1328]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1329]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (10#1) [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-638] synthesizing module 'BIBUF' [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:268]
 INFO: [Synth 8-256] done synthesizing module 'BIBUF' (11#1) [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:268]
 INFO: [Synth 8-638] synthesizing module 'PS7' [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:33163]
 INFO: [Synth 8-256] done synthesizing module 'PS7' (12#1) [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:33163]
-INFO: [Synth 8-638] synthesizing module 'xlnx_axi_wrshim_unwrap' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:4213]
+INFO: [Synth 8-638] synthesizing module 'xlnx_axi_wrshim_unwrap' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:4213]
 	Parameter ID_WIDTH bound to: 6 - type: integer 
 	Parameter AD_WIDTH bound to: 32 - type: integer 
 	Parameter D_WIDTH bound to: 32 - type: integer 
 	Parameter AXI_WRSHIM_APB_SYNC_LEVELS bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'xlnx_axi_wrshim_unwrap' (13#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:4213]
-INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (14#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
-WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/synth/base_block_design_processing_system7_0_0.v:310]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_processing_system7_0_0' (15#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/synth/base_block_design_processing_system7_0_0.v:57]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'base_block_design_processing_system7_0_0' requires 65 connections, but only 63 given [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:255]
-INFO: [Synth 8-638] synthesizing module 'base_block_design_processing_system7_0_axi_periph_0' [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:410]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_QON6JJ' [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:967]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_QON6JJ' (16#1) [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:967]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_423KBI' [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1099]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_423KBI' (17#1) [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1099]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1OB23FL' [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1231]
-INFO: [Synth 8-638] synthesizing module 'base_block_design_auto_pc_0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_auto_pc_0/synth/base_block_design_auto_pc_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_axi_protocol_converter' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
+INFO: [Synth 8-256] done synthesizing module 'xlnx_axi_wrshim_unwrap' (13#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:4213]
+INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (14#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/synth/base_block_design_processing_system7_0_0.v:310]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_processing_system7_0_0' (15#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/synth/base_block_design_processing_system7_0_0.v:57]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'base_block_design_processing_system7_0_0' requires 65 connections, but only 63 given [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:255]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_processing_system7_0_axi_periph_0' [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:410]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_QON6JJ' [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:967]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_QON6JJ' (16#1) [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:967]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_423KBI' [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1099]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_423KBI' (17#1) [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1099]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1OB23FL' [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1231]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_auto_pc_0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_auto_pc_0/synth/base_block_design_auto_pc_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_axi_protocol_converter' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_M_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: 1 - type: integer 
@@ -513,39 +512,39 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_axi_proto
 	Parameter P_SLVERR bound to: 2'b10 
 	Parameter P_PROTECTION bound to: 1 - type: integer 
 	Parameter P_CONVERSION bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
 	Parameter C_S_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_SUPPORTS_WRITE bound to: 1 - type: integer 
 	Parameter C_AXI_SUPPORTS_READ bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_aw_channel' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_aw_channel.v:5]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_aw_channel' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_aw_channel.v:5]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_cmd_translator' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_cmd_translator.v:17]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_cmd_translator' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_cmd_translator.v:17]
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter P_AXBURST_FIXED bound to: 2'b00 
 	Parameter P_AXBURST_INCR bound to: 2'b01 
 	Parameter P_AXBURST_WRAP bound to: 2'b10 
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_incr_cmd' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_incr_cmd.v:11]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_incr_cmd' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_incr_cmd.v:11]
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter L_AXI_ADDR_LOW_BIT bound to: 12 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_incr_cmd' (18#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_incr_cmd.v:11]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wrap_cmd' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wrap_cmd.v:11]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_incr_cmd' (18#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_incr_cmd.v:11]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wrap_cmd' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wrap_cmd.v:11]
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter L_AXI_ADDR_LOW_BIT bound to: 12 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wrap_cmd' (19#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wrap_cmd.v:11]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_cmd_translator' (20#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_cmd_translator.v:17]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wr_cmd_fsm' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:10]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wrap_cmd' (19#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wrap_cmd.v:11]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_cmd_translator' (20#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_cmd_translator.v:17]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wr_cmd_fsm' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:10]
 	Parameter SM_IDLE bound to: 2'b00 
 	Parameter SM_CMD_EN bound to: 2'b01 
 	Parameter SM_CMD_ACCEPTED bound to: 2'b10 
 	Parameter SM_DONE_WAIT bound to: 2'b11 
-INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:64]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wr_cmd_fsm' (21#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:10]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_aw_channel' (22#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_aw_channel.v:5]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_b_channel' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_b_channel.v:10]
+INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:64]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_wr_cmd_fsm' (21#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_wr_cmd_fsm.v:10]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_aw_channel' (22#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_aw_channel.v:5]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_b_channel' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_b_channel.v:10]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter LP_RESP_OKAY bound to: 2'b00 
 	Parameter LP_RESP_EXOKAY bound to: 2'b01 
@@ -557,7 +556,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_b_cha
 	Parameter P_RWIDTH bound to: 2 - type: integer 
 	Parameter P_RDEPTH bound to: 4 - type: integer 
 	Parameter P_RAWIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 	Parameter C_WIDTH bound to: 20 - type: integer 
 	Parameter C_AWIDTH bound to: 2 - type: integer 
 	Parameter C_DEPTH bound to: 4 - type: integer 
@@ -565,8 +564,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simpl
 	Parameter C_EMPTY_PRE bound to: 2'b00 
 	Parameter C_FULL bound to: 2'b10 
 	Parameter C_FULL_PRE bound to: 2'b01 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo' (23#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo' (23#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 	Parameter C_WIDTH bound to: 2 - type: integer 
 	Parameter C_AWIDTH bound to: 2 - type: integer 
 	Parameter C_DEPTH bound to: 4 - type: integer 
@@ -574,20 +573,20 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simpl
 	Parameter C_EMPTY_PRE bound to: 2'b00 
 	Parameter C_FULL bound to: 2'b10 
 	Parameter C_FULL_PRE bound to: 2'b01 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized0' (23#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_b_channel' (24#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_b_channel.v:10]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_ar_channel' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_ar_channel.v:5]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized0' (23#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_b_channel' (24#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_b_channel.v:10]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_ar_channel' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_ar_channel.v:5]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_rd_cmd_fsm' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:10]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_rd_cmd_fsm' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:10]
 	Parameter SM_IDLE bound to: 2'b00 
 	Parameter SM_CMD_EN bound to: 2'b01 
 	Parameter SM_CMD_ACCEPTED bound to: 2'b10 
 	Parameter SM_DONE bound to: 2'b11 
-INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:72]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_rd_cmd_fsm' (25#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:10]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_ar_channel' (26#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_ar_channel.v:5]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_r_channel' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_r_channel.v:21]
+INFO: [Synth 8-226] default block is never used [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:72]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_rd_cmd_fsm' (25#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_rd_cmd_fsm.v:10]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_ar_channel' (26#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_ar_channel.v:5]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_r_channel' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_r_channel.v:21]
 	Parameter C_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter P_WIDTH bound to: 13 - type: integer 
@@ -596,7 +595,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_r_cha
 	Parameter P_D_WIDTH bound to: 34 - type: integer 
 	Parameter P_D_DEPTH bound to: 32 - type: integer 
 	Parameter P_D_AWIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized1' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized1' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 	Parameter C_WIDTH bound to: 34 - type: integer 
 	Parameter C_AWIDTH bound to: 5 - type: integer 
 	Parameter C_DEPTH bound to: 32 - type: integer 
@@ -604,8 +603,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simpl
 	Parameter C_EMPTY_PRE bound to: 5'b00000 
 	Parameter C_FULL bound to: 5'b11110 
 	Parameter C_FULL_PRE bound to: 5'b11010 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized1' (26#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
-INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized2' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized1' (26#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized2' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
 	Parameter C_WIDTH bound to: 13 - type: integer 
 	Parameter C_AWIDTH bound to: 5 - type: integer 
 	Parameter C_DEPTH bound to: 32 - type: integer 
@@ -613,9 +612,9 @@ INFO: [Synth 8-638] synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simpl
 	Parameter C_EMPTY_PRE bound to: 5'b00000 
 	Parameter C_FULL bound to: 5'b11110 
 	Parameter C_FULL_PRE bound to: 5'b11010 
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized2' (26#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_r_channel' (27#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_r_channel.v:21]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_simple_fifo__parameterized2' (26#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_simple_fifo.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s_r_channel' (27#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s_r_channel.v:21]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
@@ -708,7 +707,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axi_register_
 	Parameter G_AXI_RUSER_INDEX bound to: 47 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -800,28 +799,28 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [
 	Parameter G_AXI_RUSER_INDEX bound to: 47 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (28#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (28#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 66 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice' (29#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice' (29#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 49 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized0' (29#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized1' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized0' (29#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized1' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 14 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized1' (29#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized2' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized1' (29#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized2' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 47 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized2' (29#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized2' (29#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -913,9 +912,9 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [
 	Parameter G_AXI_RUSER_INDEX bound to: 47 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 47 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (30#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (30#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -1008,7 +1007,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axi_register_
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -1100,33 +1099,33 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__p
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized3' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_axi2vector.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized3' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 35 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized3' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized4' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized3' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized4' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized4' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized5' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized4' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized5' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized5' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized6' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized5' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized6' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 35 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized6' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized7' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized6' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized7' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_DATA_WIDTH bound to: 34 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized7' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized7' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -1218,14 +1217,14 @@ INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__p
 	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice__parameterized0' (31#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s' (32#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
-INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_axi_protocol_converter' (33#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_auto_pc_0' (34#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_auto_pc_0/synth/base_block_design_auto_pc_0.v:57]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1OB23FL' (35#1) [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1231]
-INFO: [Synth 8-638] synthesizing module 'base_block_design_xbar_0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_xbar_0/synth/base_block_design_xbar_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_axi_crossbar' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_infrastructure_v1_1/hdl/verilog/axi_infrastructure_v1_1_vector2axi.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axi_register_slice__parameterized0' (31#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axi_register_slice.v:64]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_b2s' (32#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_b2s.v:39]
+INFO: [Synth 8-256] done synthesizing module 'axi_protocol_converter_v2_1_7_axi_protocol_converter' (33#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_protocol_converter_v2_1/hdl/verilog/axi_protocol_converter_v2_1_axi_protocol_converter.v:62]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_auto_pc_0' (34#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_auto_pc_0/synth/base_block_design_auto_pc_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1OB23FL' (35#1) [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:1231]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_xbar_0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_xbar_0/synth/base_block_design_xbar_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_axi_crossbar' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 2 - type: integer 
@@ -1274,7 +1273,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_axi_crossbar' [c:/s
 	Parameter P_LEN bound to: 8 - type: integer 
 	Parameter P_LOCK bound to: 1 - type: integer 
 	Parameter P_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_crossbar_sasd' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_crossbar_sasd' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 2 - type: integer 
@@ -1327,7 +1326,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_crossbar_sasd' [c:/
 	Parameter P_FULLY_REG bound to: 1 - type: integer 
 	Parameter P_R_REG_CONFIG bound to: 1 - type: integer 
 	Parameter P_DECERR bound to: 2'b11 
-INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_addr_decoder' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v:69]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_addr_decoder' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v:69]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
@@ -1341,27 +1340,27 @@ INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_addr_decoder' [c:/s
 	Parameter C_TARGET_QUAL bound to: 3'b011 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010000010010000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_and.v:62]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_and.v:62]
 	Parameter C_FAMILY bound to: rtl - type: string 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (36#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_and.v:62]
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (37#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (36#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_carry_and.v:62]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (37#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b010000010010000100000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (37#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_addr_decoder' (38#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v:69]
-INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_decerr_slave' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:64]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (37#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_comparator_static.v:61]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_addr_decoder' (38#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_decoder.v:69]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_decerr_slave' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:64]
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
@@ -1376,8 +1375,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_decerr_slave' [c:/s
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_decerr_slave' (39#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:64]
-INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_addr_arbiter_sasd' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_arbiter_sasd.v:65]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_decerr_slave' (39#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:64]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_addr_arbiter_sasd' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_arbiter_sasd.v:65]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_S bound to: 1 - type: integer 
 	Parameter C_NUM_S_LOG bound to: 1 - type: integer 
@@ -1385,54 +1384,54 @@ INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_addr_arbiter_sasd' 
 	Parameter C_GRANT_ENC bound to: 1 - type: integer 
 	Parameter C_ARB_PRIORITY bound to: 0 - type: integer 
 	Parameter P_PRIO_MASK bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_addr_arbiter_sasd' (40#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_arbiter_sasd.v:65]
-INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_splitter' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_addr_arbiter_sasd' (40#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_addr_arbiter_sasd.v:65]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_splitter' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
 	Parameter C_NUM_M bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_splitter' (41#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
-INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_splitter__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_splitter' (41#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_8_splitter__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
 	Parameter C_NUM_M bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_splitter__parameterized0' (41#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_splitter__parameterized0' (41#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_splitter.v:72]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 3 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (42#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (42#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 1 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (42#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (42#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 1 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (42#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (42#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 3 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (42#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
-INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized8' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (42#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized8' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized8' (42#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
-INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_7_axic_register_slice__parameterized8' (42#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:62]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 3 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (42#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_crossbar_sasd' (43#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
-INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_axi_crossbar' (44#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_xbar_0' (45#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_xbar_0/synth/base_block_design_xbar_0.v:57]
-WARNING: [Synth 8-350] instance 'xbar' of module 'base_block_design_xbar_0' requires 40 connections, but only 38 given [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:926]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_processing_system7_0_axi_periph_0' (46#1) [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:410]
-INFO: [Synth 8-638] synthesizing module 'base_block_design_rst_processing_system7_0_50M_0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/synth/base_block_design_rst_processing_system7_0_50M_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (42#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_mux_enc.v:63]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_crossbar_sasd' (43#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_crossbar_sasd.v:79]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_8_axi_crossbar' (44#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_axi_crossbar.v:54]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_xbar_0' (45#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_xbar_0/synth/base_block_design_xbar_0.v:57]
+WARNING: [Synth 8-350] instance 'xbar' of module 'base_block_design_xbar_0' requires 40 connections, but only 38 given [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:926]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_processing_system7_0_axi_periph_0' (46#1) [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:410]
+INFO: [Synth 8-638] synthesizing module 'base_block_design_rst_processing_system7_0_50M_0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/synth/base_block_design_rst_processing_system7_0_50M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -1442,8 +1441,8 @@ INFO: [Synth 8-638] synthesizing module 'base_block_design_rst_processing_system
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:140' bound to instance 'U0' of component 'proc_sys_reset' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/synth/base_block_design_rst_processing_system7_0_50M_0.vhd:120]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:199]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:140' bound to instance 'U0' of component 'proc_sys_reset' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/synth/base_block_design_rst_processing_system7_0_50M_0.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:199]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -1453,16 +1452,16 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/snickerdoodle_base/
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'lpf' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:138]
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:43266' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:190]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:43266' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:190]
 INFO: [Synth 8-638] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:43266]
 	Parameter INIT bound to: 16'b0000000000000000 
 INFO: [Synth 8-256] done synthesizing module 'SRL16' (47#1) [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:43266]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -1475,8 +1474,8 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [c:/snickerdo
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (47#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (47#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -1489,26 +1488,26 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [c:/snickerdo
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (47#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (48#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:138]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/upcnt_n.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (47#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/lib_cdc_v1_0/hdl/src/vhdl/cdc_sync.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (48#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/lpf.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/upcnt_n.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (49#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/upcnt_n.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (50#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (51#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:199]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_rst_processing_system7_0_50M_0' (52#1) [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/synth/base_block_design_rst_processing_system7_0_50M_0.vhd:74]
-WARNING: [Synth 8-350] instance 'rst_processing_system7_0_50M' of module 'base_block_design_rst_processing_system7_0_50M_0' requires 10 connections, but only 7 given [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:400]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design' (53#1) [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:13]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (49#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/upcnt_n.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (50#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:146]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (51#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/proc_sys_reset.vhd:199]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_rst_processing_system7_0_50M_0' (52#1) [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/synth/base_block_design_rst_processing_system7_0_50M_0.vhd:74]
+WARNING: [Synth 8-350] instance 'rst_processing_system7_0_50M' of module 'base_block_design_rst_processing_system7_0_50M_0' requires 10 connections, but only 7 given [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:400]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design' (53#1) [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design.v:13]
 INFO: [Synth 8-638] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-256] done synthesizing module 'IOBUF' (54#1) [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333]
-INFO: [Synth 8-256] done synthesizing module 'base_block_design_wrapper' (55#1) [C:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/hdl/base_block_design_wrapper.v:12]
+INFO: [Synth 8-256] done synthesizing module 'base_block_design_wrapper' (55#1) [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/hdl/base_block_design_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 461.695 ; gain = 290.535
+Finished RTL Elaboration : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 461.863 ; gain = 290.539
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1518,7 +1517,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 461.695 ; gain = 290.535
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 461.863 ; gain = 290.539
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 713 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1527,29 +1526,29 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xdc] for cell 'base_block_design_i/processing_system7_0/inst'
-Finished Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xdc] for cell 'base_block_design_i/processing_system7_0/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_block_design_wrapper_propImpl.xdc].
+Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xdc] for cell 'base_block_design_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xdc] for cell 'base_block_design_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_block_design_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/base_block_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0_board.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
-Finished Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0_board.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
-Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
-Finished Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
-Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0_board.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
-Finished Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0_board.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
-Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
-Finished Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
-Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_board.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
-Finished Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_board.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
-Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
-Finished Parsing XDC File [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
-Parsing XDC File [C:/snickerdoodle_base/snickerdoodle_base.srcs/constrs_1/new/snickerdoodle_constraints.xdc]
-Finished Parsing XDC File [C:/snickerdoodle_base/snickerdoodle_base.srcs/constrs_1/new/snickerdoodle_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/snickerdoodle_base/snickerdoodle_base.srcs/constrs_1/new/snickerdoodle_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_block_design_wrapper_propImpl.xdc].
+Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0_board.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0_board.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
+Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xdc] for cell 'base_block_design_i/axi_gpio_0/U0'
+Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0_board.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0_board.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
+Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0.xdc] for cell 'base_block_design_i/axi_gpio_1/U0'
+Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_board.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
+Finished Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_board.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
+Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
+Finished Parsing XDC File [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xdc] for cell 'base_block_design_i/rst_processing_system7_0_50M'
+Parsing XDC File [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/constrs_1/new/snickerdoodle_constraints.xdc]
+Finished Parsing XDC File [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/constrs_1/new/snickerdoodle_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/constrs_1/new/snickerdoodle_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_block_design_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/base_block_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_block_design_wrapper_propImpl.xdc].
+Parsing XDC File [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_block_design_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/base_block_design_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
@@ -1559,23 +1558,23 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 100 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 693.051 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 692.309 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 692.309 ; gain = 520.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 692.309 ; gain = 520.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for base_block_design_i/processing_system7_0/inst. (constraint file  C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1/dont_touch.xdc, line 31).
-Applied set_property DONT_TOUCH = true for base_block_design_i/axi_gpio_0/U0. (constraint file  C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1/dont_touch.xdc, line 34).
-Applied set_property DONT_TOUCH = true for base_block_design_i/axi_gpio_1/U0. (constraint file  C:/snickerdoodle_base/snickerdoodle_base.runs/synth_1/dont_touch.xdc, line 42).
+Applied set_property DONT_TOUCH = true for base_block_design_i/processing_system7_0/inst. (constraint file  C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/dont_touch.xdc, line 31).
+Applied set_property DONT_TOUCH = true for base_block_design_i/axi_gpio_0/U0. (constraint file  C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/dont_touch.xdc, line 34).
+Applied set_property DONT_TOUCH = true for base_block_design_i/axi_gpio_1/U0. (constraint file  C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/dont_touch.xdc, line 42).
 Applied set_property DONT_TOUCH = true for base_block_design_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_block_design_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_block_design_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
@@ -1585,14 +1584,14 @@ Applied set_property DONT_TOUCH = true for base_block_design_i/processing_system
 Applied set_property DONT_TOUCH = true for base_block_design_i/processing_system7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_block_design_i/rst_processing_system7_0_50M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:14 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 692.309 ; gain = 520.984
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "address_offset" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:136]
+INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_crossbar_v2_1/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:136]
 INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_0_in2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_0_in1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -1602,9 +1601,9 @@ INFO: [Synth 8-5544] ROM "p_0_in1" won't be mapped to Block RAM because address 
 INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_0_in2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_0_in1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:222]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/proc_sys_reset_v5_0/hdl/src/vhdl/sequence_psr.vhd:222]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:17 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 692.309 ; gain = 520.984
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1958,18 +1957,18 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:07 ; elapsed = 00:01:18 . Memory (MB): peak = 693.051 ; gain = 521.891
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 692.309 ; gain = 520.984
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'bus2ip_reset_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:608]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
-INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [c:/snickerdoodle_base/snickerdoodle_base.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
+INFO: [Synth 8-4471] merging register 'bus2ip_reset_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_gpio_v2_0/hdl/src/vhdl/axi_gpio.vhd:608]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [c:/snickerdoodle_GPIO/snickerdoodle_GPIO.srcs/sources_1/bd/base_block_design/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:18 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 692.309 ; gain = 520.984
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:18 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished Parallel Reinference  : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 692.309 ; gain = 520.984
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1980,9 +1979,9 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:21 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 692.309 ; gain = 520.984
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:10 ; elapsed = 00:01:21 . Memory (MB): peak = 693.051 ; gain = 521.891
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 692.309 ; gain = 520.984
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1996,10 +1995,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 818.867 ; gain = 647.707
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 817.996 ; gain = 646.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:36 . Memory (MB): peak = 857.586 ; gain = 686.426
+Finished Timing Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:26 . Memory (MB): peak = 857.797 ; gain = 686.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2112,16 +2111,16 @@ INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GE
 INFO: [Synth 8-3332] Sequential element (\gpio_core_1/Dual.INPUT_DOUBLE_REGS5/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6 ) is unused and will be removed from module axi_gpio__2.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:39 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:01:29 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:28 ; elapsed = 00:01:39 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:22 ; elapsed = 00:01:29 . Memory (MB): peak = 864.730 ; gain = 693.406
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:28 ; elapsed = 00:01:39 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:22 ; elapsed = 00:01:29 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -2154,7 +2153,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:30 ; elapsed = 00:01:41 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:31 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2167,7 +2166,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:30 ; elapsed = 00:01:41 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:31 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2179,25 +2178,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:24 ; elapsed = 00:01:31 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:31 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2320,14 +2319,14 @@ Report Instance Areas:
 |63    |          SEQ_COUNTER                              |upcnt_n                                                       |    14|
 +------+---------------------------------------------------+--------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 863.875 ; gain = 692.715
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 864.730 ; gain = 693.406
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 863.875 ; gain = 357.820
-Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 863.875 ; gain = 692.715
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:01:15 . Memory (MB): peak = 864.730 ; gain = 359.656
+Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 864.730 ; gain = 693.406
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 527 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -2339,6 +2338,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 431 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 863.875 ; gain = 589.176
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 863.875 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 19 17:13:23 2016...
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:28 . Memory (MB): peak = 864.730 ; gain = 590.102
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 864.730 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 29 16:20:55 2016...

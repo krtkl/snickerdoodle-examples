@@ -1045,3 +1045,18 @@ Caused by: java.net.SocketException: Connection reset
 17:35:37 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
 17:35:38 INFO  : XSDB server has started successfully.
 17:35:40 INFO  : Processing command line option -hwspec C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper.hdf.
+16:35:44 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+16:35:46 INFO  : XSDB server has started successfully.
+16:35:53 INFO  : Processing command line option -hwspec C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper.hdf.
+16:35:54 INFO  : Checking for hwspec changes in the project base_block_design_wrapper_hw_platform_0.
+16:35:54 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1461972272336,  Project:1461111355000
+16:35:54 INFO  : The hardware specification for project 'base_block_design_wrapper_hw_platform_0' is different from C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper.hdf.
+16:36:16 INFO  : Copied contents of C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper.hdf into \base_block_design_wrapper_hw_platform_0\system.hdf.
+16:36:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:36:36 INFO  : 
+16:36:37 INFO  : Updating hardware inferred compiler options for fsbl.
+16:36:37 INFO  : Clearing existing target manager status.
+16:36:39 INFO  : Closing and re-opening the MSS file of ther project fsbl_bsp
+16:36:41 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:36:41 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:37:27 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

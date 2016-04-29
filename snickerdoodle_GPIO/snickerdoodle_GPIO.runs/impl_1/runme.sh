@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/snickerdoodle_base/snickerdoodle_base.runs/impl_1'
+HD_PWD='C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

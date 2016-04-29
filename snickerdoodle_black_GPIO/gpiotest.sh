@@ -50,79 +50,79 @@ fi
 
 case $GPIO_PIN in
   4)
-    GPIO_PORT=$(expr $GPIO_NUM + 0)
+    GPIO_PORT=$(expr $GPIO_NUM + 24)
     ;;
   5)
-    GPIO_PORT=$(expr $GPIO_NUM + 1)
-    ;;
-  6)
-    GPIO_PORT=$(expr $GPIO_NUM + 2)
-    ;;
-  7)
-    GPIO_PORT=$(expr $GPIO_NUM + 3)
-    ;;
-  8)
-    GPIO_PORT=$(expr $GPIO_NUM + 4)
-    ;;
-  11)
-    GPIO_PORT=$(expr $GPIO_NUM + 5)
-    ;;
-  12)
-    GPIO_PORT=$(expr $GPIO_NUM + 6)
-    ;;
-  13)
-    GPIO_PORT=$(expr $GPIO_NUM + 7)
-    ;;
-  14)
     GPIO_PORT=$(expr $GPIO_NUM + 8)
     ;;
-  17)
-    GPIO_PORT=$(expr $GPIO_NUM + 9)
-    ;;
-  18)
-    GPIO_PORT=$(expr $GPIO_NUM + 10)
-    ;;
-  19)
+  6)
     GPIO_PORT=$(expr $GPIO_NUM + 11)
     ;;
-  20)
+  7)
+    GPIO_PORT=$(expr $GPIO_NUM + 9)
+    ;;
+  8)
+    GPIO_PORT=$(expr $GPIO_NUM + 10)
+    ;;
+  11)
     GPIO_PORT=$(expr $GPIO_NUM + 12)
     ;;
-  23)
-    GPIO_PORT=$(expr $GPIO_NUM + 13)
-    ;;
-  24)
-    GPIO_PORT=$(expr $GPIO_NUM + 14)
-    ;;
-  25)
+  12)
     GPIO_PORT=$(expr $GPIO_NUM + 15)
     ;;
-  26)
-    GPIO_PORT=$(expr $GPIO_NUM + 16)
+  13)
+    GPIO_PORT=$(expr $GPIO_NUM + 13)
     ;;
-  29)
-    GPIO_PORT=$(expr $GPIO_NUM + 17)
+  14)
+    GPIO_PORT=$(expr $GPIO_NUM + 14)
     ;;
-  30)
-    GPIO_PORT=$(expr $GPIO_NUM + 18)
-    ;;
-  31)
-    GPIO_PORT=$(expr $GPIO_NUM + 19)
-    ;;
-  32)
+  17)
     GPIO_PORT=$(expr $GPIO_NUM + 20)
     ;;
-  35)
+  18)
+    GPIO_PORT=$(expr $GPIO_NUM + 17)
+    ;;
+  19)
     GPIO_PORT=$(expr $GPIO_NUM + 21)
     ;;
-  36)
-    GPIO_PORT=$(expr $GPIO_NUM + 22)
+  20)
+    GPIO_PORT=$(expr $GPIO_NUM + 16)
     ;;
-  37)
+  23)
+    GPIO_PORT=$(expr $GPIO_NUM + 18)
+    ;;
+  24)
+    GPIO_PORT=$(expr $GPIO_NUM + 1)
+    ;;
+  25)
+    GPIO_PORT=$(expr $GPIO_NUM + 19)
+    ;;
+  26)
+    GPIO_PORT=$(expr $GPIO_NUM + 0)
+    ;;
+  29)
+    GPIO_PORT=$(expr $GPIO_NUM + 2)
+    ;;
+  30)
+    GPIO_PORT=$(expr $GPIO_NUM + 5)
+    ;;
+  31)
+    GPIO_PORT=$(expr $GPIO_NUM + 3)
+    ;;
+  32)
+    GPIO_PORT=$(expr $GPIO_NUM + 4)
+    ;;
+  35)
+    GPIO_PORT=$(expr $GPIO_NUM + 6)
+    ;;
+  36)
     GPIO_PORT=$(expr $GPIO_NUM + 23)
     ;;
+  37)
+    GPIO_PORT=$(expr $GPIO_NUM + 27)
+    ;;
   38)
-    GPIO_PORT=$(expr $GPIO_NUM + 24)
+    GPIO_PORT=$(expr $GPIO_NUM + 22)
     ;;
   *)
     echo "Invalid pin specified: $GPIO_PIN"

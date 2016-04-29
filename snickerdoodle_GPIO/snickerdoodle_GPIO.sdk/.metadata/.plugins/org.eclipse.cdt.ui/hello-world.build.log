@@ -1,0 +1,26 @@
+16:48:46 **** Build of configuration Debug for project hello-world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hello-world_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hello-world_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: hello-world.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello-world_bsp/ps7_cortexa9_0/lib -o "hello-world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello-world.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hello-world.elf  |tee "hello-world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22872	   1152	  22564	  46588	   b5fc	hello-world.elf
+'Finished building: hello-world.elf.size'
+' '
+
+16:48:48 Build Finished (took 2s.390ms)
+
