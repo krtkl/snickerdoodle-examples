@@ -5,144 +5,138 @@ JA1=881
 JA2=849
 JB1=824
 JB2=792
+J3=906
 
 GPIO_BASE=/sys/class/gpio/
 
-# Check arguments
-# First argument is expected to be the connector and pin
-# Second argument is expected to be the value (0 or 1) or omitted for read operation
+declare -A fpga_gpio=([4]=24  [5]=8   [6]=11  [7]=9   [8]=10 
+                      [11]=12 [12]=15 [13]=13 [14]=14 [17]=20
+                      [18]=17 [19]=21 [20]=16 [23]=18 [24]=1
+                      [25]=19 [26]=0  [29]=2  [30]=5  [31]=3
+                      [32]=4  [35]=6  [36]=23 [37]=27 [38]=22)
+                      
+declare -A ps_gpio=(        [5]=16  [6]=19   [7]=17 [8]=18 
+                    [11]=20 [12]=23 [13]=21 [14]=22 [17]=24
+                    [18]=27 [19]=25 [20]=26 [23]=28 [24]=31
+                    [25]=29 [26]=30 [29]=32 [30]=35 [31]=33
+                    [32]=34 [35]=36 [36]=39 [37]=37 [38]=38)
+
+declare -A connectors=(["JA1"]=881 ["JA2"]=849 ["JB1"]=824 ["JB2"]=792 ["J3"]=906)
+
+
+#
+# Getter for FPGA port number
+#
+function get_fpga_port() {
+
+  if [ -z ${fpga_gpio[$2]} ]; then
+    echo "GPIO pin $2 not found"
+    return -1
+  fi 
+  
+  let "port=${fpga_gpio[$2]} + $1"
+  echo $port
+}
+
+
+#
+# Getter for PS port number
+#
+function get_ps_port() {
+
+  if [ -z ${ps_gpio[$2]} ]; then
+    echo "GPIO pin $2 not found"
+    return -1
+  fi 
+  
+  let "port=${ps_gpio[$2]} + $1"
+  echo $port
+}
+
+
+#
+# Export gpio port
+#
+function export_gpio() {
+
+  echo $1 > ${GPIO_BASE}/export
+}
+
+
+#
+# Set pin direction
+#
+function set_gpio_dir() {
+
+  if [ ! -e ${GPIO_BASE}/gpio$1 ]; then
+    export_gpio $1
+    sleep 1
+  fi
+  echo $2 > ${GPIO_BASE}/gpio$1/direction
+}
+
+
+#
+# Set the pin out
+#
+function set_gpio_val() {
+
+  case $2 in
+    [0-1])
+      echo "Writing $2 to ${GPIO_BASE}/gpio$1/value"
+      echo $2 > ${GPIO_BASE}/gpio$1/value
+      sleep 1
+      ;;
+    *)
+      echo "Invalid value specified: $2"
+      return -1
+      ;;
+  esac
+}
 
 # Parse the first argument into the connector and pin values
 GPIO_CON=$(echo $1 | cut -d "." -f1)
 GPIO_PIN=$(echo $1 | cut -d "." -f2)
 
 case $GPIO_CON in
-  JA1)
-    echo "Using ${GPIO_BASE}gpiochip$JA1"
-    GPIO_NUM=$JA1
-    ;;
-  JA2)
-    echo "Using ${GPIO_BASE}gpiochip$JA2"
-    GPIO_NUM=$JA2
-    ;;
-  JB1)
-    echo "Using ${GPIO_BASE}gpiochip$JB1"
-    GPIO_NUM=$JB1
-    ;;
-  JB2)
-    echo "Using ${GPIO_BASE}gpiochip$JB2"
-    GPIO_NUM=$JB2
-    ;;
+  JA1 | JA2 | JB1 | JB2 )
+    #
+    # Use the array for fpga gpio
+    #
+    port=$(get_fpga_port ${connectors[$GPIO_CON]} $GPIO_PIN)
+    if [ $? -ne 0 ]; then
+      echo "ERROR: $port"
+      return $?
+    fi
+    set_gpio_dir $port out
+    if [ ! -z "$2" ]; then
+      set_gpio_val $port $2
+    fi
+  ;;
+  J3)
+    #
+    # Use the array for ps gpio
+    #
+    port=$(get_ps_port ${connectors[$GPIO_CON]} $GPIO_PIN)
+    if [ $? -ne 0 ]; then
+      echo "ERROR: $port"
+      return $?
+    fi
+    set_gpio_dir $port out
+    if [ ! -z "$2" ]; then
+      set_gpio_val $port $2
+    fi
+  ;;
   *)
+    #
+    # THIS IS AN ERROR
+    #
     echo "Invalid connector specified: $GPIO_CON"
-    return
-    ;;
+    echo "  --Valid connectors are:"
+    for gpioconn in ${!connectors[@]}; do
+      echo "  $gpioconn"
+    done 
+  ;;
 esac
 
-# Check if the GPIO interface has already been exported
-if [ ! -e ${GPIO_BASE}/gpiochip$GPIO_NUM ]; then
-    echo "GPIO interface not found: ${GPIO_BASE}/gpiochip$GPIO_NUM"
-fi
 
-case $GPIO_PIN in
-  4)
-    GPIO_PORT=$(expr $GPIO_NUM + 24)
-    ;;
-  5)
-    GPIO_PORT=$(expr $GPIO_NUM + 8)
-    ;;
-  6)
-    GPIO_PORT=$(expr $GPIO_NUM + 11)
-    ;;
-  7)
-    GPIO_PORT=$(expr $GPIO_NUM + 9)
-    ;;
-  8)
-    GPIO_PORT=$(expr $GPIO_NUM + 10)
-    ;;
-  11)
-    GPIO_PORT=$(expr $GPIO_NUM + 12)
-    ;;
-  12)
-    GPIO_PORT=$(expr $GPIO_NUM + 15)
-    ;;
-  13)
-    GPIO_PORT=$(expr $GPIO_NUM + 13)
-    ;;
-  14)
-    GPIO_PORT=$(expr $GPIO_NUM + 14)
-    ;;
-  17)
-    GPIO_PORT=$(expr $GPIO_NUM + 20)
-    ;;
-  18)
-    GPIO_PORT=$(expr $GPIO_NUM + 17)
-    ;;
-  19)
-    GPIO_PORT=$(expr $GPIO_NUM + 21)
-    ;;
-  20)
-    GPIO_PORT=$(expr $GPIO_NUM + 16)
-    ;;
-  23)
-    GPIO_PORT=$(expr $GPIO_NUM + 18)
-    ;;
-  24)
-    GPIO_PORT=$(expr $GPIO_NUM + 1)
-    ;;
-  25)
-    GPIO_PORT=$(expr $GPIO_NUM + 19)
-    ;;
-  26)
-    GPIO_PORT=$(expr $GPIO_NUM + 0)
-    ;;
-  29)
-    GPIO_PORT=$(expr $GPIO_NUM + 2)
-    ;;
-  30)
-    GPIO_PORT=$(expr $GPIO_NUM + 5)
-    ;;
-  31)
-    GPIO_PORT=$(expr $GPIO_NUM + 3)
-    ;;
-  32)
-    GPIO_PORT=$(expr $GPIO_NUM + 4)
-    ;;
-  35)
-    GPIO_PORT=$(expr $GPIO_NUM + 6)
-    ;;
-  36)
-    GPIO_PORT=$(expr $GPIO_NUM + 23)
-    ;;
-  37)
-    GPIO_PORT=$(expr $GPIO_NUM + 27)
-    ;;
-  38)
-    GPIO_PORT=$(expr $GPIO_NUM + 22)
-    ;;
-  *)
-    echo "Invalid pin specified: $GPIO_PIN"
-    return
-    ;;
-esac
-
-# Check if the port exists
-if [ ! -e ${GPIO_BASE}/gpio$GPIO_PORT ]; then
-    echo $GPIO_PORT > ${GPIO_BASE}/export
-    sleep 1
-    echo out > ${GPIO_BASE}/gpio${GPIO_PORT}/direction
-fi
-
-if [ ! -z "$2" ]; then
-  case $2 in
-    [0-1])
-      echo "Writing $2 to ${GPIO_BASE}/gpio${GPIO_PORT}/value"
-      echo $2 > ${GPIO_BASE}/gpio${GPIO_PORT}/value
-      sleep 1
-      ;;
-    *)
-      echo "Invalid value specified: $2"
-      return
-      ;;
-  esac
-fi
