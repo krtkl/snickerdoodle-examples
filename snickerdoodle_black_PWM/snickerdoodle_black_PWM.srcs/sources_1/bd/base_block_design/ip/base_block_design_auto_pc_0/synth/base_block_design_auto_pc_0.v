@@ -48,11 +48,12 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_protocol_converter:2.1
-// IP Revision: 7
+// IP Revision: 8
 
-(* X_CORE_INFO = "axi_protocol_converter_v2_1_7_axi_protocol_converter,Vivado 2015.4" *)
-(* CHECK_LICENSE_TYPE = "base_block_design_auto_pc_0,axi_protocol_converter_v2_1_7_axi_protocol_converter,{}" *)
-(* CORE_GENERATION_INFO = "base_block_design_auto_pc_0,axi_protocol_converter_v2_1_7_axi_protocol_converter,{x_ipProduct=Vivado 2015.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_converter,x_ipVersion=2.1,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_M_AXI_PROTOCOL=2,C_S_AXI_PROTOCOL=0,C_IGNORE_ID=0,C_AXI_ID_WIDTH=12,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=32,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_TRANSLATION_MODE=2}" *)
+(* X_CORE_INFO = "axi_protocol_converter_v2_1_8_axi_protocol_converter,Vivado 2016.1" *)
+(* CHECK_LICENSE_TYPE = "base_block_design_auto_pc_0,axi_protocol_converter_v2_1_8_axi_protocol_converter,{}" *)
+(* CORE_GENERATION_INFO = "base_block_design_auto_pc_0,axi_protocol_converter_v2_1_8_axi_protocol_converter,{x_ipProduct=Vivado 2016.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_converter,x_ipVersion=2.1,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_M_AXI_PROTOCOL=2,C_S_AXI_PROTOCOL=0,C_IGNORE_ID=0,C_AXI_ID_WIDTH=12,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=32,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AX\
+I_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_TRANSLATION_MODE=2}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module base_block_design_auto_pc_0 (
   aclk,
@@ -238,7 +239,7 @@ input wire m_axi_rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  axi_protocol_converter_v2_1_7_axi_protocol_converter #(
+  axi_protocol_converter_v2_1_8_axi_protocol_converter #(
     .C_FAMILY("zynq"),
     .C_M_AXI_PROTOCOL(2),
     .C_S_AXI_PROTOCOL(0),

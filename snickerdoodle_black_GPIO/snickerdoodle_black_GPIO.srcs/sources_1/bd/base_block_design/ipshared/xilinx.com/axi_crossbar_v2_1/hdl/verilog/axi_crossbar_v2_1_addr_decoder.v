@@ -66,7 +66,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_addr_decoder #
+module axi_crossbar_v2_1_9_addr_decoder #
   (
    parameter         C_FAMILY          = "none",
    parameter integer C_NUM_TARGETS     = 2,  // Number of decode targets = [1:16]

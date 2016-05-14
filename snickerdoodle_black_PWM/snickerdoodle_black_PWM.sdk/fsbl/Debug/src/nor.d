@@ -1,4 +1,4 @@
-src/nor.o src/nor.d: ../src/nor.c ../src/fsbl.h \
+src/nor.o src/nor.o: ../src/nor.c ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \

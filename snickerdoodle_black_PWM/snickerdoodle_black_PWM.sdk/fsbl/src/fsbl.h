@@ -1,6 +1,6 @@
 /******************************************************************************
 *
-* Copyright (C) 2012 - 2014 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2012 - 2016 Xilinx, Inc.  All rights reserved.
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal 
@@ -228,6 +228,9 @@
 *                       not correct.
 *                       Resolution: Corresponding fields in the devcfg.STATUS
 *                       register are written to, for clearing DMA done count.
+* 14.0 gan 01/13/16     869081 -(2016.1)FSBL -In qspi.c, FSBL picks the qspi
+*						read command from LQSPI_CFG register instead of hard
+*		   				coded read command (0x6B).
 *
 * </pre>
 *
@@ -313,8 +316,8 @@ extern "C" {
 /*
  * SDK release version
  */
-#define SDK_RELEASE_YEAR	2015
-#define SDK_RELEASE_QUARTER	4
+#define SDK_RELEASE_YEAR	2016
+#define SDK_RELEASE_QUARTER	1
 
 #define WORD_LENGTH_SHIFT	2
 

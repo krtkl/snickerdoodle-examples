@@ -119,6 +119,12 @@
 * 2.5 	sg		07/09/15 Added SD 3.0 features
 *       kvn     07/15/15 Modified the code according to MISRAC-2012.
 * 2.6   sk     10/12/15 Added support for SD card v1.0 CR# 840601.
+* 2.7   sk     11/24/15 Considered the slot type befoe checking CD/WP pins.
+*       sk     12/10/15 Added support for MMC cards.
+*              01/08/16 Added workaround for issue in auto tuning mode
+*                       of SDR50, SDR104 and HS200.
+*       sk     02/16/16 Corrected the Tuning logic.
+*       sk     03/01/16 Removed Bus Width check for eMMC. CR# 938311.
 *
 * </pre>
 *
@@ -141,6 +147,7 @@ extern "C" {
 /************************** Constant Definitions *****************************/
 
 #define XSDPS_CT_ERROR	0x2U	/**< Command timeout flag */
+#define MAX_TUNING_COUNT	40U		/**< Maximum Tuning count */
 
 /**************************** Type Definitions *******************************/
 /**

@@ -62,7 +62,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_b_downsizer #
+module axi_protocol_converter_v2_1_8_b_downsizer #
   (
    parameter         C_FAMILY                         = "none", 
                        // FPGA Family. Current version: virtex6 or spartan6.

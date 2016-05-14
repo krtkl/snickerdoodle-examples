@@ -56,9 +56,9 @@
 `timescale 1ns/1ps
 
 module base_block_design_processing_system7_0_0 (
-USB0_PORT_INDCTL, 
-USB0_VBUS_PWRSELECT, 
-USB0_VBUS_PWRFAULT, 
+GPIO_I, 
+GPIO_O, 
+GPIO_T, 
 M_AXI_GP0_ARVALID, 
 M_AXI_GP0_AWVALID, 
 M_AXI_GP0_BREADY, 
@@ -122,9 +122,9 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
-output [1 : 0] USB0_PORT_INDCTL;
-output USB0_VBUS_PWRSELECT;
-input USB0_VBUS_PWRFAULT;
+input [63 : 0] GPIO_I;
+output [63 : 0] GPIO_O;
+output [63 : 0] GPIO_T;
 output M_AXI_GP0_ARVALID;
 output M_AXI_GP0_AWVALID;
 output M_AXI_GP0_BREADY;
@@ -204,9 +204,9 @@ input PS_PORB;
     .C_S_AXI_HP3_DATA_WIDTH(64),
     .C_HIGH_OCM_EN(0),
     .C_FCLK_CLK0_FREQ(50.0),
-    .C_FCLK_CLK1_FREQ(50.0),
-    .C_FCLK_CLK2_FREQ(50.0),
-    .C_FCLK_CLK3_FREQ(50.0),
+    .C_FCLK_CLK1_FREQ(10.0),
+    .C_FCLK_CLK2_FREQ(10.0),
+    .C_FCLK_CLK3_FREQ(10.0),
 	.C_M_AXI_GP0_ENABLE_STATIC_REMAP(0),
 	.C_M_AXI_GP1_ENABLE_STATIC_REMAP(0),
 	.C_M_AXI_GP0_THREAD_ID_WIDTH (12), 
@@ -576,7 +576,7 @@ input PS_PORB;
     .FCLK_RESET1_N(),
     .FCLK_RESET2_N(),
     .FCLK_RESET3_N(),
-    .IRQ_F2P(16'B0),
+    .IRQ_F2P(IRQ_F2P),
     .PS_SRSTB(PS_SRSTB),
     .PS_CLK(PS_CLK),
     .PS_PORB(PS_PORB)

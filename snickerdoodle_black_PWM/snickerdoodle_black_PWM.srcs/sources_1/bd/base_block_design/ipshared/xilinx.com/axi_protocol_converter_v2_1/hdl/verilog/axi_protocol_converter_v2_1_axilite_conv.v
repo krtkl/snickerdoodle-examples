@@ -57,7 +57,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_axilite_conv #
+module axi_protocol_converter_v2_1_8_axilite_conv #
   (
    parameter         C_FAMILY                    = "virtex6",
    parameter integer C_AXI_ID_WIDTH              = 1,

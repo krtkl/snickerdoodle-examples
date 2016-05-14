@@ -1,4 +1,4 @@
-src/qspi.o src/qspi.d: ../src/qspi.c ../src/qspi.h ../src/fsbl.h \
+src/qspi.o src/qspi.o: ../src/qspi.c ../src/qspi.h ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \

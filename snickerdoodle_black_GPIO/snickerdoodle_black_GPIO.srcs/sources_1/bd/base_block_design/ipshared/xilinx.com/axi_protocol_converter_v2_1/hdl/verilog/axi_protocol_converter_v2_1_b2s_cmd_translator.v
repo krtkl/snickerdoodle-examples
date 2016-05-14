@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// File name: axi_protocol_converter_v2_1_7_b2s_cmd_translator.v
+// File name: axi_protocol_converter_v2_1_8_b2s_cmd_translator.v
 //
 // Description: 
 // INCR and WRAP burst modes are decoded in parallel and then the output is
@@ -14,7 +14,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_b2s_cmd_translator #
+module axi_protocol_converter_v2_1_8_b2s_cmd_translator #
 (
 ///////////////////////////////////////////////////////////////////////////////
 // Parameter Definitions
@@ -111,7 +111,7 @@ always @(posedge clk) begin
   end
 end
 
-axi_protocol_converter_v2_1_7_b2s_incr_cmd #(
+axi_protocol_converter_v2_1_8_b2s_incr_cmd #(
   .C_AXI_ADDR_WIDTH (C_AXI_ADDR_WIDTH)
 )
 incr_cmd_0
@@ -127,7 +127,7 @@ incr_cmd_0
   .next_pending  ( incr_next_pending  ) 
 );
 
-axi_protocol_converter_v2_1_7_b2s_wrap_cmd #(
+axi_protocol_converter_v2_1_8_b2s_wrap_cmd #(
   .C_AXI_ADDR_WIDTH (C_AXI_ADDR_WIDTH)
 )
 wrap_cmd_0

@@ -104,8 +104,8 @@ library ieee;
     use ieee.std_logic_1164.all;
 library unisim;
     use unisim.vcomponents.all;
-library proc_sys_reset_v5_0_8;
-    use proc_sys_reset_v5_0_8.all;
+library proc_sys_reset_v5_0_9;
+    use proc_sys_reset_v5_0_9.all;
 
 -------------------------------------------------------------------------------
 -- Port Declaration
@@ -360,7 +360,7 @@ begin
 -- ** -- -- This instantiates a counter to ensure the Core_Reset_Req_* will genereate a
 -- ** -- -- RstcPPCresetcore_* that is a mimimum of 15 clocks
 -- ** -- -------------------------------------------------------------------------------
--- ** --   CORE_RESET_0 : entity proc_sys_reset_v5_0_8.UPCNT_N
+-- ** --   CORE_RESET_0 : entity proc_sys_reset_v5_0_9.UPCNT_N
 -- ** --   generic map (C_SIZE => 4)
 -- ** --   port map(
 -- ** --     Data     => "0000",                    -- in  STD_LOGIC_VECTOR (C_SIZE-1 downto 0);
@@ -371,7 +371,7 @@ begin
 -- ** --     Qout     => core_cnt_0                 -- out STD_LOGIC_VECTOR (C_SIZE-1 downto 0) 
 -- ** --   );
 -- ** -- 
--- ** --   CORE_RESET_1 : entity proc_sys_reset_v5_0_8.UPCNT_N
+-- ** --   CORE_RESET_1 : entity proc_sys_reset_v5_0_9.UPCNT_N
 -- ** --   generic map (C_SIZE => 4)
 -- ** --   port map(
 -- ** --     Data     => "0000",                    -- in  STD_LOGIC_VECTOR (C_SIZE-1 downto 0);
@@ -409,7 +409,7 @@ begin
 -- This instantiates a low pass filter to filter both External and Auxiliary
 -- Reset Inputs.
 -------------------------------------------------------------------------------
-  EXT_LPF : entity proc_sys_reset_v5_0_8.LPF
+  EXT_LPF : entity proc_sys_reset_v5_0_9.LPF
   generic map (
     C_EXT_RST_WIDTH  => C_EXT_RST_WIDTH,
     C_AUX_RST_WIDTH  => C_AUX_RST_WIDTH,
@@ -434,7 +434,7 @@ begin
 
   -- Chip_Reset_Req   <= Chip_Reset_Req_0 or Chip_Reset_Req_1;
 
-  SEQ : entity proc_sys_reset_v5_0_8.SEQUENCE_PSR
+  SEQ : entity proc_sys_reset_v5_0_9.SEQUENCE_PSR
   --generic map (
   --  C_EXT_RESET_HIGH_1 => C_EXT_RESET_HIGH
   --)

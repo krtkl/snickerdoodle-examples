@@ -59,7 +59,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_7_axic_register_slice #
+module axi_register_slice_v2_1_8_axic_register_slice #
   (
    parameter C_FAMILY     = "virtex6",
    parameter C_DATA_WIDTH = 32,

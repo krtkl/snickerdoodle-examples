@@ -62,7 +62,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_addr_arbiter #
+module axi_crossbar_v2_1_9_addr_arbiter #
   (
    parameter         C_FAMILY                         = "none", 
    parameter integer C_NUM_S                = 1, 

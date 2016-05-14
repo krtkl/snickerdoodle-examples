@@ -59,7 +59,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_a_axi3_conv #
+module axi_protocol_converter_v2_1_8_a_axi3_conv #
   (
    parameter C_FAMILY                            = "none",
    parameter integer C_AXI_ID_WIDTH              = 1,
@@ -681,7 +681,7 @@ module axi_protocol_converter_v2_1_7_a_axi3_conv #
   // Instantiated queue.
   generate
     if ( C_AXI_CHANNEL == 1 && C_SUPPORT_SPLITTING == 1 && C_SUPPORT_BURSTS == 1 ) begin : USE_R_CHANNEL
-      axi_data_fifo_v2_1_6_axic_fifo #
+      axi_data_fifo_v2_1_7_axic_fifo #
       (
        .C_FAMILY(C_FAMILY),
        .C_FIFO_DEPTH_LOG(C_FIFO_DEPTH_LOG),
@@ -704,7 +704,7 @@ module axi_protocol_converter_v2_1_7_a_axi3_conv #
        assign cmd_length        = 4'b0;
        
     end else if (C_SUPPORT_BURSTS == 1) begin : USE_BURSTS
-      axi_data_fifo_v2_1_6_axic_fifo #
+      axi_data_fifo_v2_1_7_axic_fifo #
       (
        .C_FAMILY(C_FAMILY),
        .C_FIFO_DEPTH_LOG(C_FIFO_DEPTH_LOG),
@@ -726,7 +726,7 @@ module axi_protocol_converter_v2_1_7_a_axi3_conv #
        assign cmd_split         = 1'b0;
        
     end else begin : NO_BURSTS
-      axi_data_fifo_v2_1_6_axic_fifo #
+      axi_data_fifo_v2_1_7_axic_fifo #
       (
        .C_FAMILY(C_FAMILY),
        .C_FIFO_DEPTH_LOG(C_FIFO_DEPTH_LOG),
@@ -792,7 +792,7 @@ module axi_protocol_converter_v2_1_7_a_axi3_conv #
       wire                                cmd_b_valid_i;
       wire                                s_b_ready;
       
-      axi_data_fifo_v2_1_6_axic_fifo #
+      axi_data_fifo_v2_1_7_axic_fifo #
       (
        .C_FAMILY(C_FAMILY),
        .C_FIFO_DEPTH_LOG(C_FIFO_DEPTH_LOG),

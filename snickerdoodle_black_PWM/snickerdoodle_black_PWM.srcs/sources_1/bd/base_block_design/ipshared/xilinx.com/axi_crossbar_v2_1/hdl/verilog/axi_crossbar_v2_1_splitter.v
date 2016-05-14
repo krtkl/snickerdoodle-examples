@@ -69,7 +69,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_splitter #
+module axi_crossbar_v2_1_9_splitter #
   (
    parameter integer C_NUM_M = 2  // Number of master ports = [2:16]
    )

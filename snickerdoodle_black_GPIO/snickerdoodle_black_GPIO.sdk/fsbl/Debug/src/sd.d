@@ -1,4 +1,4 @@
-src/sd.o src/sd.d: ../src/sd.c \
+src/sd.o src/sd.o: ../src/sd.c \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xparameters_ps.h ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \

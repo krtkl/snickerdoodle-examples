@@ -6,7 +6,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_b2s_simple_fifo #
+module axi_protocol_converter_v2_1_8_b2s_simple_fifo #
 (
   parameter C_WIDTH  = 8,
   parameter C_AWIDTH = 4,
@@ -78,6 +78,6 @@ assign a_empty = (cnt_read == C_EMPTY_PRE);
 
 assign dout  = (C_DEPTH == 1) ? memory[0] : memory[cnt_read];
 
-endmodule // axi_protocol_converter_v2_1_7_b2s_simple_fifo
+endmodule // axi_protocol_converter_v2_1_8_b2s_simple_fifo
 
 `default_nettype wire

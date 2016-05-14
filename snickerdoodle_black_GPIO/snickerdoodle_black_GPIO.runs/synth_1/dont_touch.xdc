@@ -18,14 +18,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_desi
 # IP: bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_gpio_0_0 || ORIG_REF_NAME==base_block_design_axi_gpio_0_0}]
 
-# IP: bd/base_block_design/ip/base_block_design_xbar_0/base_block_design_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_xbar_0 || ORIG_REF_NAME==base_block_design_xbar_0}]
-
 # IP: bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_gpio_1_0 || ORIG_REF_NAME==base_block_design_axi_gpio_1_0}]
 
 # IP: bd/base_block_design/ip/base_block_design_axi_gpio_2_0/base_block_design_axi_gpio_2_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_gpio_2_0 || ORIG_REF_NAME==base_block_design_axi_gpio_2_0}]
+
+# IP: bd/base_block_design/ip/base_block_design_xbar_0/base_block_design_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_xbar_0 || ORIG_REF_NAME==base_block_design_xbar_0}]
 
 # IP: bd/base_block_design/ip/base_block_design_auto_pc_0/base_block_design_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_auto_pc_0 || ORIG_REF_NAME==base_block_design_auto_pc_0}]
@@ -34,10 +34,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_desi
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_processing_system7_0_0 || ORIG_REF_NAME==base_block_design_processing_system7_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_board.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}]
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_ooc.xdc
 
@@ -48,8 +48,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_gpio_0_0 || ORIG_REF_NAME==base_block_design_axi_gpio_0_0}] {/U0 }]/U0 ]]
-
-# XDC: bd/base_block_design/ip/base_block_design_xbar_0/base_block_design_xbar_0_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_gpio_1_0 || ORIG_REF_NAME==base_block_design_axi_gpio_1_0}] {/U0 }]/U0 ]]
@@ -66,6 +64,8 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_gpio_2_0/base_block_design_axi_gpio_2_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_gpio_2_0 || ORIG_REF_NAME==base_block_design_axi_gpio_2_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/base_block_design/ip/base_block_design_xbar_0/base_block_design_xbar_0_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_auto_pc_0/base_block_design_auto_pc_0_ooc.xdc
 

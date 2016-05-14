@@ -51,7 +51,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_axi_crossbar # (
+module axi_crossbar_v2_1_9_axi_crossbar # (
    parameter         C_FAMILY                         = "rtl", 
                        // FPGA Base Family. Current version: virtex6 or spartan6.
    parameter integer C_NUM_SLAVE_SLOTS                = 1, 
@@ -324,7 +324,7 @@ module axi_crossbar_v2_1_8_axi_crossbar # (
     end
   endfunction
 
-  // Widths of all write issuance counters implemented in axi_crossbar_v2_1_8_crossbar (before counter carry-out bit)
+  // Widths of all write issuance counters implemented in axi_crossbar_v2_1_9_crossbar (before counter carry-out bit)
   function [(C_NUM_MASTER_SLOTS+1)*32-1:0] f_write_issue_width_vec
     (input null_arg);
     integer mi;
@@ -339,7 +339,7 @@ module axi_crossbar_v2_1_8_axi_crossbar # (
     end
   endfunction
 
-  // Widths of all read issuance counters implemented in axi_crossbar_v2_1_8_crossbar (before counter carry-out bit)
+  // Widths of all read issuance counters implemented in axi_crossbar_v2_1_9_crossbar (before counter carry-out bit)
   function [(C_NUM_MASTER_SLOTS+1)*32-1:0] f_read_issue_width_vec
     (input null_arg);
     integer mi;
@@ -354,7 +354,7 @@ module axi_crossbar_v2_1_8_axi_crossbar # (
     end
   endfunction
 
-  // Widths of all write acceptance counters implemented in axi_crossbar_v2_1_8_crossbar (before counter carry-out bit)
+  // Widths of all write acceptance counters implemented in axi_crossbar_v2_1_9_crossbar (before counter carry-out bit)
   function [C_NUM_SLAVE_SLOTS*32-1:0] f_write_accept_width_vec
     (input null_arg);
     integer si;
@@ -368,7 +368,7 @@ module axi_crossbar_v2_1_8_axi_crossbar # (
     end
   endfunction
 
-  // Widths of all read acceptance counters implemented in axi_crossbar_v2_1_8_crossbar (before counter carry-out bit)
+  // Widths of all read acceptance counters implemented in axi_crossbar_v2_1_9_crossbar (before counter carry-out bit)
   function [C_NUM_SLAVE_SLOTS*32-1:0] f_read_accept_width_vec
     (input null_arg);
     integer si;
@@ -697,7 +697,7 @@ generate
     end  // gen_mi_tieoff
 
     if ((C_CONNECTIVITY_MODE==0) || (C_AXI_PROTOCOL==P_AXILITE)) begin : gen_sasd
-      axi_crossbar_v2_1_8_crossbar_sasd #
+      axi_crossbar_v2_1_9_crossbar_sasd #
       (
         .C_FAMILY                         (P_FAMILY),
         .C_NUM_SLAVE_SLOTS                (C_NUM_SLAVE_SLOTS),
@@ -825,7 +825,7 @@ generate
           .M_AXI_RREADY                     (cb_mi_rready         )
       );
     end else begin : gen_samd
-      axi_crossbar_v2_1_8_crossbar #
+      axi_crossbar_v2_1_9_crossbar #
       (
         .C_FAMILY                         (P_FAMILY),
         .C_NUM_SLAVE_SLOTS                (C_NUM_SLAVE_SLOTS),

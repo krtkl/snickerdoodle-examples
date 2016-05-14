@@ -62,7 +62,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_data_fifo_v2_1_6_axi_data_fifo #
+module axi_data_fifo_v2_1_7_axi_data_fifo #
   (
    parameter         C_FAMILY                    = "virtex7",
    parameter integer C_AXI_PROTOCOL              = 0,
@@ -302,7 +302,7 @@ module axi_data_fifo_v2_1_6_axi_data_fifo #
       assign m_axi_wid = (C_AXI_PROTOCOL == P_AXI3) ? m_axi_wid_i : {C_AXI_ID_WIDTH{1'b0}};
 
 
-      fifo_generator_v13_0_1 #(
+      fifo_generator_v13_1_0 #(
           .C_INTERFACE_TYPE(2),
           .C_AXI_TYPE((C_AXI_PROTOCOL == P_AXI4) ? 1 : 3),
           .C_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),

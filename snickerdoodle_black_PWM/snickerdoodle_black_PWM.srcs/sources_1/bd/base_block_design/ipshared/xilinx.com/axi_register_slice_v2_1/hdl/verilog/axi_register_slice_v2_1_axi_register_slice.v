@@ -61,7 +61,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_7_axi_register_slice #
+module axi_register_slice_v2_1_8_axi_register_slice #
   (
    parameter C_FAMILY                            = "virtex6",
    parameter C_AXI_PROTOCOL                      = 0,
@@ -284,7 +284,7 @@ module axi_register_slice_v2_1_7_axi_register_slice #
     .s_rpayload  ( s_rpayload  ) 
   );
     
-  axi_register_slice_v2_1_7_axic_register_slice # (
+  axi_register_slice_v2_1_8_axic_register_slice # (
     .C_FAMILY     ( C_FAMILY              ) ,
     .C_DATA_WIDTH ( G_AXI_AWPAYLOAD_WIDTH ) ,
     .C_REG_CONFIG ( C_REG_CONFIG_AW       ) 
@@ -305,7 +305,7 @@ module axi_register_slice_v2_1_7_axi_register_slice #
     .M_READY(m_axi_awready)
   );
     
-  axi_register_slice_v2_1_7_axic_register_slice # (
+  axi_register_slice_v2_1_8_axic_register_slice # (
     .C_FAMILY     ( C_FAMILY             ) ,
     .C_DATA_WIDTH ( G_AXI_WPAYLOAD_WIDTH ) ,
     .C_REG_CONFIG ( C_REG_CONFIG_W       ) 
@@ -326,7 +326,7 @@ module axi_register_slice_v2_1_7_axi_register_slice #
     .M_READY(m_axi_wready)
   );
 
-  axi_register_slice_v2_1_7_axic_register_slice # (
+  axi_register_slice_v2_1_8_axic_register_slice # (
     .C_FAMILY     ( C_FAMILY             ) ,
     .C_DATA_WIDTH ( G_AXI_BPAYLOAD_WIDTH ) ,
     .C_REG_CONFIG ( C_REG_CONFIG_B       ) 
@@ -348,7 +348,7 @@ module axi_register_slice_v2_1_7_axi_register_slice #
   );
  
 
-  axi_register_slice_v2_1_7_axic_register_slice # (
+  axi_register_slice_v2_1_8_axic_register_slice # (
     .C_FAMILY     ( C_FAMILY              ) ,
     .C_DATA_WIDTH ( G_AXI_ARPAYLOAD_WIDTH ) ,
     .C_REG_CONFIG ( C_REG_CONFIG_AR       ) 
@@ -369,7 +369,7 @@ module axi_register_slice_v2_1_7_axi_register_slice #
     .M_READY(m_axi_arready)
   );
         
-  axi_register_slice_v2_1_7_axic_register_slice # (
+  axi_register_slice_v2_1_8_axic_register_slice # (
     .C_FAMILY     ( C_FAMILY             ) ,
     .C_DATA_WIDTH ( G_AXI_RPAYLOAD_WIDTH ) ,
     .C_REG_CONFIG ( C_REG_CONFIG_R       ) 

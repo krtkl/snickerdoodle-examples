@@ -55,7 +55,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_data_fifo_v2_1_6_ndeep_srl #
+module axi_data_fifo_v2_1_7_ndeep_srl #
   (
    parameter         C_FAMILY  = "rtl", // FPGA Family
    parameter         C_A_WIDTH = 1          // Address Width (>= 1)

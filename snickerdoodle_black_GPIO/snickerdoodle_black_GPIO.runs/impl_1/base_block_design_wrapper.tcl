@@ -53,6 +53,7 @@ set rc [catch {
   catch { write_mem_info -force base_block_design_wrapper.mmi }
   write_bitstream -force base_block_design_wrapper.bit 
   catch { write_sysdef -hwdef base_block_design_wrapper.hwdef -bitfile base_block_design_wrapper.bit -meminfo base_block_design_wrapper.mmi -file base_block_design_wrapper.sysdef }
+  catch {write_debug_probes -quiet -force debug_nets}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {

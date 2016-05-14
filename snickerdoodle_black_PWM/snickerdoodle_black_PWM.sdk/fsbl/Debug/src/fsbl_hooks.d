@@ -1,4 +1,4 @@
-src/fsbl_hooks.o src/fsbl_hooks.d: ../src/fsbl_hooks.c ../src/fsbl.h \
+src/fsbl_hooks.o src/fsbl_hooks.o: ../src/fsbl_hooks.c ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \

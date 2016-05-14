@@ -108,7 +108,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 library unisim;
 use unisim.vcomponents.all;
-library proc_sys_reset_v5_0_8;
+library proc_sys_reset_v5_0_9;
 
 -------------------------------------------------------------------------------
 -- Port Declaration
@@ -215,7 +215,7 @@ begin
 -------------------------------------------------------------------------------
 -- This instantiates a counter to control the sequencing
 -------------------------------------------------------------------------------
-   SEQ_COUNTER : entity proc_sys_reset_v5_0_8.UPCNT_N
+   SEQ_COUNTER : entity proc_sys_reset_v5_0_9.UPCNT_N
    generic map (C_SIZE => 6)
    port map(
      Data     => "000000",

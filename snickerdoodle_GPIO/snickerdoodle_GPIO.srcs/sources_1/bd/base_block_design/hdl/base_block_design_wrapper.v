@@ -1,7 +1,7 @@
-//Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Tue Apr 19 17:11:32 2016
+//Tool Version: Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+//Date        : Sat May 14 15:47:03 2016
 //Host        : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
 //Command     : generate_target base_block_design_wrapper.bd
 //Design      : base_block_design_wrapper

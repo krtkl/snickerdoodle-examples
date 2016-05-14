@@ -1,4 +1,4 @@
-src/ps7_init.o src/ps7_init.d: \
+src/ps7_init.o src/ps7_init.o: \
  C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper_hw_platform_0/ps7_init.c \
  C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper_hw_platform_0/ps7_init.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \

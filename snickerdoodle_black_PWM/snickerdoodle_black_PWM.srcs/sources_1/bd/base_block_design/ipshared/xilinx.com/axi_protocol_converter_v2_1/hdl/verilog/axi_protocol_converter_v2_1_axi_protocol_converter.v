@@ -59,7 +59,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_axi_protocol_converter #(
+module axi_protocol_converter_v2_1_8_axi_protocol_converter #(
   parameter         C_FAMILY                    = "virtex6",
   parameter integer C_M_AXI_PROTOCOL            = 0, 
   parameter integer C_S_AXI_PROTOCOL            = 0, 
@@ -282,7 +282,7 @@ generate
       assign s_buser_i = {C_AXI_BUSER_WIDTH{1'b0}};
       assign s_ruser_i = {C_AXI_RUSER_WIDTH{1'b0}};
 
-      axi_protocol_converter_v2_1_7_b2s #(
+      axi_protocol_converter_v2_1_8_b2s #(
         .C_S_AXI_PROTOCOL                 (C_S_AXI_PROTOCOL),
         .C_AXI_ID_WIDTH                   (C_AXI_ID_WIDTH),
         .C_AXI_ADDR_WIDTH                 (C_AXI_ADDR_WIDTH),
@@ -344,7 +344,7 @@ generate
         .m_axi_rready                     (m_axi_rready)
       );
     end else begin : gen_axilite_conv
-      axi_protocol_converter_v2_1_7_axilite_conv #(
+      axi_protocol_converter_v2_1_8_axilite_conv #(
         .C_FAMILY                         (C_FAMILY),
         .C_AXI_ID_WIDTH                   (C_AXI_ID_WIDTH),
         .C_AXI_ADDR_WIDTH                 (C_AXI_ADDR_WIDTH),
@@ -404,7 +404,7 @@ generate
       );
     end
   end else if ((C_M_AXI_PROTOCOL == P_AXI3) && (C_S_AXI_PROTOCOL == P_AXI4)) begin : gen_axi4_axi3
-    axi_protocol_converter_v2_1_7_axi3_conv #(
+    axi_protocol_converter_v2_1_8_axi3_conv #(
       .C_FAMILY                         (C_FAMILY),
       .C_AXI_ID_WIDTH                   (C_AXI_ID_WIDTH),
       .C_AXI_ADDR_WIDTH                 (C_AXI_ADDR_WIDTH),
@@ -776,7 +776,7 @@ generate
         end
       end
       
-      axi_protocol_converter_v2_1_7_decerr_slave #
+      axi_protocol_converter_v2_1_8_decerr_slave #
         (
          .C_AXI_ID_WIDTH                 (C_AXI_ID_WIDTH),
          .C_AXI_DATA_WIDTH               (C_AXI_DATA_WIDTH),

@@ -1,7 +1,7 @@
-Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Fri Apr 29 16:20:55 2016
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:49:59 2016
 | Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
 | Command      : report_utilization -file base_block_design_wrapper_utilization_synth.rpt -pb base_block_design_wrapper_utilization_synth.pb
 | Design       : base_block_design_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  984 |     0 |     17600 |  5.59 |
-|   LUT as Logic             |  914 |     0 |     17600 |  5.19 |
+| Slice LUTs*                |  889 |     0 |     17600 |  5.05 |
+|   LUT as Logic             |  819 |     0 |     17600 |  4.65 |
 |   LUT as Memory            |   70 |     0 |      6000 |  1.17 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   70 |     0 |           |       |
-| Slice Registers            | 1731 |     0 |     35200 |  4.92 |
-|   Register as Flip Flop    | 1731 |     0 |     35200 |  4.92 |
+| Slice Registers            | 1713 |     0 |     35200 |  4.87 |
+|   Register as Flip Flop    | 1713 |     0 |     35200 |  4.87 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 155   |          Yes |         Set |            - |
-| 1576  |          Yes |       Reset |            - |
+| 1558  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -100,7 +100,7 @@ Table of Contents
 | OUT_FIFO                    |    0 |     0 |         8 |   0.00 |
 | IN_FIFO                     |    0 |     0 |         8 |   0.00 |
 | IDELAYCTRL                  |    0 |     0 |         2 |   0.00 |
-| IBUFGDS                     |    0 |     0 |        96 |   0.00 |
+| IBUFDS                      |    0 |     0 |        96 |   0.00 |
 | PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |         8 |   0.00 |
 | PHASER_IN/PHASER_IN_PHY     |    0 |     0 |         8 |   0.00 |
 | IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       100 |   0.00 |
@@ -148,14 +148,14 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| FDRE     | 1576 |         Flop & Latch |
-| LUT6     |  362 |                  LUT |
-| LUT3     |  254 |                  LUT |
-| LUT1     |  159 |                  LUT |
+| FDRE     | 1558 |         Flop & Latch |
+| LUT6     |  336 |                  LUT |
+| LUT3     |  249 |                  LUT |
 | FDSE     |  155 |         Flop & Latch |
-| LUT4     |  138 |                  LUT |
 | BIBUF    |  130 |                   IO |
-| LUT5     |  117 |                  LUT |
+| LUT4     |  129 |                  LUT |
+| LUT1     |  104 |                  LUT |
+| LUT5     |  103 |                  LUT |
 | OBUFT    |  100 |                   IO |
 | IBUF     |  100 |                   IO |
 | LUT2     |   49 |                  LUT |

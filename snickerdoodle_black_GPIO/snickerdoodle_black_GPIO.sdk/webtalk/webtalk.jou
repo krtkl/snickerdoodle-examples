@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Webtalk v2015.4 (64-bit)
-# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# Webtalk v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
 # 
-# Start of session at: Tue Apr 19 17:41:36 2016
-# Process ID: 5336
+# Start of session at: Sat May 14 15:10:42 2016
+# Process ID: 8108
 # Current directory: C:/snickerdoodle_black_GPIO/snickerdoodle_black_GPIO.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
 # Log file: C:/snickerdoodle_black_GPIO/snickerdoodle_black_GPIO.sdk/webtalk/webtalk.log

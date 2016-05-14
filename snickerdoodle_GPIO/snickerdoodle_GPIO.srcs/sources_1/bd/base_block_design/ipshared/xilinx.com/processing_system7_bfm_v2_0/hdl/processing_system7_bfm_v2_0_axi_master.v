@@ -58,7 +58,7 @@ module processing_system7_bfm_v2_0_5_axi_master (
    parameter id_bus_width = 6;
    parameter max_outstanding_transactions = 8;
    parameter exclusive_access_supported = 0;
-   parameter EXCL_ID = 12'hC00;
+   parameter ID = 12'hC00;
    `include "processing_system7_bfm_v2_0_5_local_params.v"
     /* IDs for Masters 
        // l2m1 (CPU000)
@@ -210,9 +210,9 @@ module processing_system7_bfm_v2_0_5_axi_master (
 task automatic read_burst(input [address_bus_width-1:0] addr,input [axi_len_width-1:0] len,input [axi_size_width-1:0] siz,input [axi_brst_type_width-1:0] burst,input [axi_lock_width-1:0] lck,input [axi_cache_width-1:0] cache,input [axi_prot_width-1:0] prot,output [(axi_mgp_data_width*axi_burst_len)-1:0] data, output [(axi_rsp_width*axi_burst_len)-1:0] response);
  if(enable_this_port)begin
   if(lck !== AXI_NRML)
-   master.READ_BURST(EXCL_ID,addr,len,siz,burst,lck,cache,prot,data,response);
+   master.READ_BURST(ID,addr,len,siz,burst,lck,cache,prot,data,response);
   else
-   master.READ_BURST(get_id(1),addr,len,siz,burst,lck,cache,prot,data,response);
+   master.READ_BURST(ID,addr,len,siz,burst,lck,cache,prot,data,response);
  end else begin
    $display("[%0d] : %0s : %0s : Port is disabled. 'read_burst' will not be executed...",$time, DISP_ERR, master_name);
    if(STOP_ON_ERROR) $stop;
@@ -222,9 +222,9 @@ endtask
 task automatic write_burst(input [address_bus_width-1:0] addr,input [axi_len_width-1:0] len,input [axi_size_width-1:0] siz,input [axi_brst_type_width-1:0] burst,input [axi_lock_width-1:0] lck,input [axi_cache_width-1:0] cache,input [axi_prot_width-1:0] prot,input [(axi_mgp_data_width*axi_burst_len)-1:0] data,input integer datasize, output [axi_rsp_width-1:0] response);
  if(enable_this_port)begin
   if(lck !== AXI_NRML)
-   master.WRITE_BURST(EXCL_ID,addr,len,siz,burst,lck,cache,prot,data,datasize,response);
+   master.WRITE_BURST(ID,addr,len,siz,burst,lck,cache,prot,data,datasize,response);
   else
-   master.WRITE_BURST(get_id(1),addr,len,siz,burst,lck,cache,prot,data,datasize,response);
+   master.WRITE_BURST(ID,addr,len,siz,burst,lck,cache,prot,data,datasize,response);
  end else begin
    $display("[%0d] : %0s : %0s : Port is disabled. 'write_burst' will not be executed...",$time, DISP_ERR, master_name);
    if(STOP_ON_ERROR) $stop;
@@ -234,9 +234,9 @@ endtask
 task automatic write_burst_concurrent(input [address_bus_width-1:0] addr,input [axi_len_width-1:0] len,input [axi_size_width-1:0] siz,input [axi_brst_type_width-1:0] burst,input [axi_lock_width-1:0] lck,input [axi_cache_width-1:0] cache,input [axi_prot_width-1:0] prot,input [(axi_mgp_data_width*axi_burst_len)-1:0] data,input integer datasize, output [axi_rsp_width-1:0] response);
  if(enable_this_port)begin
   if(lck !== AXI_NRML)
-   master.WRITE_BURST_CONCURRENT(EXCL_ID,addr,len,siz,burst,lck,cache,prot,data,datasize,response);
+   master.WRITE_BURST_CONCURRENT(ID,addr,len,siz,burst,lck,cache,prot,data,datasize,response);
   else
-   master.WRITE_BURST_CONCURRENT(get_id(1),addr,len,siz,burst,lck,cache,prot,data,datasize,response);
+   master.WRITE_BURST_CONCURRENT(ID,addr,len,siz,burst,lck,cache,prot,data,datasize,response);
  end else begin
    $display("[%0d] : %0s : %0s : Port is disabled. 'write_burst_concurrent' will not be executed...",$time, DISP_ERR, master_name);
    if(STOP_ON_ERROR) $stop;
@@ -321,7 +321,7 @@ end else begin
  else 
   trnsfr_lngth = bytes/(data_bus_width/8);
  
- wr_id = get_id(1);
+ wr_id = ID;
  wr_fd = $fopen(file_name,"r");
  
  while (bytes > 0) begin
@@ -388,7 +388,7 @@ end else begin
   rresp = 0;
   bytes = rd_size;
   
-  rd_id = get_id(1'b1);
+  rd_id = ID;
   
   if(bytes > (axi_burst_len * data_bus_width/8))
    trnsfr_lngth = axi_burst_len-1;
@@ -465,7 +465,7 @@ end else begin
  cache = 0;
  prot = 0;
  pad_bytes = start_addr[clogb2(data_bus_width/8)-1:0];
- wr_id = get_id(1);
+ wr_id = ID;
  if(bytes+pad_bytes > (data_bus_width/8*axi_burst_len)) begin /// for unaligned address
    trnsfr_bytes = (data_bus_width*axi_burst_len)/8 - pad_bytes;//start_addr[1:0]; 
    trnsfr_lngth = axi_burst_len-1;
@@ -539,7 +539,7 @@ end else begin
  rresp = 0;
  total_rcvd_bytes = 0;
  rd_data = 0; 
- rd_id = get_id(1'b1);
+ rd_id = ID;
 
  siz =  2; 
  burst = 1;
@@ -636,7 +636,7 @@ if(!enable_this_port) begin
  upd_done = 0;
  if(STOP_ON_ERROR) $stop;
 end else begin
- rd_id = get_id(1'b1);
+ rd_id = ID;
  siz =  2; 
  burst = 1;
  lck = 0;

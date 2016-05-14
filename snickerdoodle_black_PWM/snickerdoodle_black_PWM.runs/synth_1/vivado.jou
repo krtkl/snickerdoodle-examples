@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2015.4 (64-bit)
-# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
-# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Tue Apr 26 10:53:25 2016
-# Process ID: 7928
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Sat May 14 15:22:50 2016
+# Process ID: 4752
 # Current directory: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.runs/synth_1
 # Command line: vivado.exe -log base_block_design_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source base_block_design_wrapper.tcl
 # Log file: C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.runs/synth_1/base_block_design_wrapper.vds

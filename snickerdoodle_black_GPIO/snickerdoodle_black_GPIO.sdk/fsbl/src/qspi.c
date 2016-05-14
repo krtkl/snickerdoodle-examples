@@ -1,6 +1,6 @@
 /******************************************************************************
 *
-* Copyright (C) 2012 - 2014 Xilinx, Inc.  All rights reserved.
+* Copyright (C) 2012 - 2016 Xilinx, Inc.  All rights reserved.
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal 
@@ -58,6 +58,10 @@
 * 7.00a kc  10/25/13 Fix for CR#739968 - FSBL should do the QSPI config
 *                    					 settings for Dual parallel
 *                    					 configuration in IO mode
+* 14.0 gan 01/13/16  Fix for CR#869081 - (2016.1)FSBL picks the qspi read
+*                                        command from LQSPI_CFG register
+*					 					 instead of hard coded read
+*					 					 command (0x6B).
 *
 * </pre>
 *
@@ -390,6 +394,9 @@ u32 FlashReadID(void)
 	} else if(ReadBuffer[1] == WINBOND_ID) {
 		QspiFlashMake = WINBOND_ID;
 		fsbl_printf(DEBUG_INFO, "WINBOND ");
+	} else if(ReadBuffer[1] == MACRONIX_ID) {
+		QspiFlashMake = MACRONIX_ID;
+		fsbl_printf(DEBUG_INFO, "MACRONIX ");
 	}
 
 	/*
@@ -401,10 +408,12 @@ u32 FlashReadID(void)
 	} else if (ReadBuffer[3] == FLASH_SIZE_ID_256M) {
 		QspiFlashSize = FLASH_SIZE_256M;
 		fsbl_printf(DEBUG_INFO, "256M Bits\r\n");
-	} else if (ReadBuffer[3] == FLASH_SIZE_ID_512M) {
+	} else if ((ReadBuffer[3] == FLASH_SIZE_ID_512M)
+			|| (ReadBuffer[3] == MACRONIX_FLASH_SIZE_ID_512M)) {
 		QspiFlashSize = FLASH_SIZE_512M;
 		fsbl_printf(DEBUG_INFO, "512M Bits\r\n");
-	} else if (ReadBuffer[3] == FLASH_SIZE_ID_1G) {
+	} else if ((ReadBuffer[3] == FLASH_SIZE_ID_1G)
+			|| (ReadBuffer[3] == MACRONIX_FLASH_SIZE_ID_1G)) {
 		QspiFlashSize = FLASH_SIZE_1G;
 		fsbl_printf(DEBUG_INFO, "1G Bits\r\n");
 	}
@@ -432,7 +441,12 @@ void FlashRead(u32 Address, u32 ByteCount)
 	 * Setup the write command with the specified address and data for the
 	 * FLASH
 	 */
-	WriteBuffer[COMMAND_OFFSET]   = QUAD_READ_CMD;
+	u32 LqspiCrReg;
+	u8  ReadCommand;
+
+	LqspiCrReg = XQspiPs_GetLqspiConfigReg(QspiInstancePtr);
+	ReadCommand = (u8) (LqspiCrReg & XQSPIPS_LQSPI_CR_INST_MASK);
+	WriteBuffer[COMMAND_OFFSET]   = ReadCommand;
 	WriteBuffer[ADDRESS_1_OFFSET] = (u8)((Address & 0xFF0000) >> 16);
 	WriteBuffer[ADDRESS_2_OFFSET] = (u8)((Address & 0xFF00) >> 8);
 	WriteBuffer[ADDRESS_3_OFFSET] = (u8)(Address & 0xFF);
@@ -663,8 +677,9 @@ u32 SendBankSelect(u8 BankSel)
 
 	/*
 	 * bank select commands for Micron and Spansion are different
+	 * Macronix bank select is same as Micron
 	 */
-	if (QspiFlashMake == MICRON_ID)	{
+	if (QspiFlashMake == MICRON_ID || QspiFlashMake == MACRONIX_ID)	{
 		/*
 		 * For micron command WREN should be sent first
 		 * except for some specific feature set
@@ -722,7 +737,7 @@ u32 SendBankSelect(u8 BankSel)
 		}
 	}
 
-	if (QspiFlashMake == MICRON_ID) {
+	if (QspiFlashMake == MICRON_ID || QspiFlashMake == MACRONIX_ID) {
 		WriteBuffer[COMMAND_OFFSET]   = EXTADD_REG_RD;
 		WriteBuffer[ADDRESS_1_OFFSET] = 0x00;
 

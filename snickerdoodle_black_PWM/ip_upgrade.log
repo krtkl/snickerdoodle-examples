@@ -1,0 +1,541 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_rst_processing_system7_0_50M_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_rst_processing_system7_0_50M_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_processing_system7_0_axi_periph_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_processing_system7_0_axi_periph_2 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_9'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_9 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_8'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_8 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_7'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_7 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_6'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_6 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_5'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_5 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_4 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_27'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_27 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_26'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_26 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_25'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_25 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_24'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_24 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_23'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_23 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_22'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_22 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_21'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_21 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_20'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_20 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_19'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_19 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_18'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_18 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_17'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_17 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_16'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_16 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_15'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_15 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_14'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_14 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_13'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_13 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_12'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_12 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_11'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_11 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Sat May 14 15:15:53 2016
+| Host         : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_block_design_axi_timer_0_10'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of base_block_design_axi_timer_0_10 (xilinx.com:ip:axi_timer:2.0) from (Rev. 8) to (Rev. 10)
+

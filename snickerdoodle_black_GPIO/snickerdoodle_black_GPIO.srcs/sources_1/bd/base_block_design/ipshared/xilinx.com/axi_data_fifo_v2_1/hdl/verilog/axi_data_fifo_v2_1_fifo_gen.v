@@ -57,7 +57,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_data_fifo_v2_1_6_fifo_gen #(
+module axi_data_fifo_v2_1_7_fifo_gen #(
 parameter C_FAMILY          = "virtex7",
 parameter integer C_COMMON_CLOCK    = 1,
 parameter integer C_SYNCHRONIZER_STAGE = 3,
@@ -96,7 +96,7 @@ localparam C_MEMORY_TYPE =  (C_FIFO_TYPE == "bram")? 1 : 2;
 
 localparam C_IMPLEMENTATION_TYPE = (C_COMMON_CLOCK == 1)? 0 : 2;
 
-  fifo_generator_v13_0_1 #(
+  fifo_generator_v13_1_0 #(
     .C_COMMON_CLOCK(C_COMMON_CLOCK),
     .C_DIN_WIDTH(C_FIFO_WIDTH),
     .C_DOUT_WIDTH(C_FIFO_WIDTH),

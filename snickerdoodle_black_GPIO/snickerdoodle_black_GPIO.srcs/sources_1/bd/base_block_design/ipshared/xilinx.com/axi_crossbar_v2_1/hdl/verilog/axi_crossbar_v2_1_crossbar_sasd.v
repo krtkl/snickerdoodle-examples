@@ -48,7 +48,7 @@
 // File name: crossbar_sasd.v
 //
 // Description: 
-//   This module is a M-master to N-slave AXI axi_crossbar_v2_1_8_crossbar switch.
+//   This module is a M-master to N-slave AXI axi_crossbar_v2_1_9_crossbar switch.
 //   Single transaction issuing, single arbiter (both W&R), single data pathways.
 //   The interface of this module consists of a vectored slave and master interface
 //     in which all slots are sized and synchronized to the native width and clock 
@@ -76,7 +76,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_crossbar_sasd #
+module axi_crossbar_v2_1_9_crossbar_sasd #
   (
    parameter         C_FAMILY                       = "none", 
    parameter integer C_NUM_SLAVE_SLOTS              =   1, 
@@ -408,7 +408,7 @@ module axi_crossbar_v2_1_8_crossbar_sasd #
   assign reset = ~aresetn_d;
 
   generate
-    axi_crossbar_v2_1_8_addr_arbiter_sasd #
+    axi_crossbar_v2_1_9_addr_arbiter_sasd #
       (
        .C_FAMILY                (C_FAMILY),
        .C_NUM_S                 (C_NUM_SLAVE_SLOTS),
@@ -440,7 +440,7 @@ module axi_crossbar_v2_1_8_crossbar_sasd #
          );
 
     if (C_ADDR_DECODE) begin : gen_addr_decoder
-      axi_crossbar_v2_1_8_addr_decoder #
+      axi_crossbar_v2_1_9_addr_decoder #
         (
           .C_FAMILY          (C_FAMILY),
           .C_NUM_TARGETS     (C_NUM_MASTER_SLOTS),
@@ -470,7 +470,7 @@ module axi_crossbar_v2_1_8_crossbar_sasd #
     end  // gen_addr_decoder
     
     // AW-channel arbiter command transfer completes upon completion of both M-side AW-channel transfer and B channel completion.
-    axi_crossbar_v2_1_8_splitter #  
+    axi_crossbar_v2_1_9_splitter #  
       (
         .C_NUM_M                (3)
       )
@@ -485,7 +485,7 @@ module axi_crossbar_v2_1_8_crossbar_sasd #
       );
     
     // AR-channel arbiter command transfer completes upon completion of both M-side AR-channel transfer and R channel completion.
-    axi_crossbar_v2_1_8_splitter #  
+    axi_crossbar_v2_1_9_splitter #  
       (
         .C_NUM_M                (2)
       )
@@ -799,7 +799,7 @@ module axi_crossbar_v2_1_8_crossbar_sasd #
        .OE  (1'b1)
       ); 
       
-    axi_register_slice_v2_1_7_axic_register_slice #
+    axi_register_slice_v2_1_8_axic_register_slice #
       (
        .C_FAMILY (C_FAMILY),
        .C_DATA_WIDTH (P_RMESG_WIDTH),
@@ -941,7 +941,7 @@ module axi_crossbar_v2_1_8_crossbar_sasd #
 
     if (C_RANGE_CHECK) begin : gen_decerr
       // Highest MI-slot (index C_NUM_MASTER_SLOTS) is the error handler
-      axi_crossbar_v2_1_8_decerr_slave #
+      axi_crossbar_v2_1_9_decerr_slave #
         (
          .C_AXI_ID_WIDTH                 (1),
          .C_AXI_DATA_WIDTH               (C_AXI_DATA_WIDTH),

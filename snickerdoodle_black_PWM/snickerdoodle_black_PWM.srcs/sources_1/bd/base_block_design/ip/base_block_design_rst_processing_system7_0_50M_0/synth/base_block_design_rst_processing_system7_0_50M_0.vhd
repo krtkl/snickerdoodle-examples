@@ -47,14 +47,11 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:proc_sys_reset:5.0
--- IP Revision: 8
+-- IP Revision: 9
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
-
-LIBRARY proc_sys_reset_v5_0_8;
-USE proc_sys_reset_v5_0_8.proc_sys_reset;
 
 ENTITY base_block_design_rst_processing_system7_0_50M_0 IS
   PORT (
@@ -72,9 +69,8 @@ ENTITY base_block_design_rst_processing_system7_0_50M_0 IS
 END base_block_design_rst_processing_system7_0_50M_0;
 
 ARCHITECTURE base_block_design_rst_processing_system7_0_50M_0_arch OF base_block_design_rst_processing_system7_0_50M_0 IS
-  ATTRIBUTE DowngradeIPIdentifiedWarnings : string;
+  ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF base_block_design_rst_processing_system7_0_50M_0_arch: ARCHITECTURE IS "yes";
-
   COMPONENT proc_sys_reset IS
     GENERIC (
       C_FAMILY : STRING;
@@ -101,11 +97,11 @@ ARCHITECTURE base_block_design_rst_processing_system7_0_50M_0_arch OF base_block
     );
   END COMPONENT proc_sys_reset;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF base_block_design_rst_processing_system7_0_50M_0_arch: ARCHITECTURE IS "proc_sys_reset,Vivado 2015.4";
+  ATTRIBUTE X_CORE_INFO OF base_block_design_rst_processing_system7_0_50M_0_arch: ARCHITECTURE IS "proc_sys_reset,Vivado 2016.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF base_block_design_rst_processing_system7_0_50M_0_arch : ARCHITECTURE IS "base_block_design_rst_processing_system7_0_50M_0,proc_sys_reset,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF base_block_design_rst_processing_system7_0_50M_0_arch: ARCHITECTURE IS "base_block_design_rst_processing_system7_0_50M_0,proc_sys_reset,{x_ipProduct=Vivado 2015.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=0,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF base_block_design_rst_processing_system7_0_50M_0_arch: ARCHITECTURE IS "base_block_design_rst_processing_system7_0_50M_0,proc_sys_reset,{x_ipProduct=Vivado 2016.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=9,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=0,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF slowest_sync_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clock CLK";
   ATTRIBUTE X_INTERFACE_INFO OF ext_reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 ext_reset RST";

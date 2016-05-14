@@ -55,7 +55,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_arbiter_resp #
+module axi_crossbar_v2_1_9_arbiter_resp #
   (
    parameter         C_FAMILY       = "none",
    parameter integer C_NUM_S        = 4,      // Number of requesting Slave ports = [2:16]

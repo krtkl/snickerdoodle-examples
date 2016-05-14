@@ -1,16 +1,16 @@
-Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Fri Apr 29 16:22:09 2016
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date             : Sat May 14 15:51:19 2016
 | Host             : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
-| Command          : report_power -file base_block_design_wrapper_power_routed.rpt -pb base_block_design_wrapper_power_summary_routed.pb
+| Command          : report_power -file base_block_design_wrapper_power_routed.rpt -pb base_block_design_wrapper_power_summary_routed.pb -rpx base_block_design_wrapper_power_routed.rpx
 | Design           : base_block_design_wrapper
 | Device           : xc7z010clg400-1
 | Design State     : routed
 | Grade            : commercial
 | Process          : typical
 | Characterization : Production
--------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Power Report
 
@@ -50,13 +50,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.004 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |     2790 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      682 |     17600 |            3.88 |
-|   Register              |    <0.001 |     1652 |     35200 |            4.69 |
+| Slice Logic             |    <0.001 |     2757 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      666 |     17600 |            3.78 |
+|   Register              |    <0.001 |     1644 |     35200 |            4.67 |
 |   CARRY4                |    <0.001 |       18 |      4400 |            0.41 |
 |   LUT as Shift Register |    <0.001 |       68 |      6000 |            1.13 |
-|   Others                |     0.000 |      217 |       --- |             --- |
-| Signals                 |     0.001 |     2234 |       --- |             --- |
+|   Others                |     0.000 |      215 |       --- |             --- |
+| Signals                 |     0.001 |     2217 |       --- |             --- |
 | I/O                     |     0.018 |      100 |       100 |          100.00 |
 | PS7                     |     1.045 |        1 |       --- |             --- |
 | Static Power            |     0.124 |          |           |                 |
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.011 |       0.006 |      0.006 |
+| Vccint    |       1.000 |     0.011 |       0.005 |      0.006 |
 | Vccaux    |       1.800 |     0.012 |       0.001 |      0.011 |
 | Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -166,9 +166,7 @@ Table of Contents
 |           Dual.INPUT_DOUBLE_REGS5                |    <0.001 |
 |     processing_system7_0                         |     1.045 |
 |       inst                                       |     1.045 |
-|         xlnx_axi_wrshim_unwrap_inst_gp0          |     0.000 |
-|         xlnx_axi_wrshim_unwrap_inst_gp1          |     0.000 |
-|     processing_system7_0_axi_periph              |     0.003 |
+|     processing_system7_0_axi_periph              |     0.002 |
 |       s00_couplers                               |     0.002 |
 |         auto_pc                                  |     0.002 |
 |           inst                                   |     0.002 |

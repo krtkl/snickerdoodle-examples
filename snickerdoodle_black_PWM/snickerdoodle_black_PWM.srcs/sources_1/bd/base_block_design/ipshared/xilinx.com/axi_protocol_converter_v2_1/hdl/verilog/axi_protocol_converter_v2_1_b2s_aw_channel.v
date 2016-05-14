@@ -2,7 +2,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_b2s_aw_channel #
+module axi_protocol_converter_v2_1_8_b2s_aw_channel #
 (
 ///////////////////////////////////////////////////////////////////////////////
 // Parameter Definitions
@@ -37,7 +37,7 @@ module axi_protocol_converter_v2_1_7_b2s_aw_channel #
   output wire [C_AXI_ADDR_WIDTH-1:0]          m_awaddr          ,
   input  wire                                 m_awready         ,
 
-  // Connections to/from axi_protocol_converter_v2_1_7_b2s_b_channel module
+  // Connections to/from axi_protocol_converter_v2_1_8_b2s_b_channel module
   output wire                                 b_push           ,
   output wire [C_ID_WIDTH-1:0]                b_awid           ,
   output wire [7:0]                           b_awlen          ,
@@ -61,7 +61,7 @@ reg  [7:0]                  s_awlen_r;
 ////////////////////////////////////////////////////////////////////////////////
 
 // Translate the AXI transaction to the MC transaction(s)
-axi_protocol_converter_v2_1_7_b2s_cmd_translator #
+axi_protocol_converter_v2_1_8_b2s_cmd_translator #
 (
   .C_AXI_ADDR_WIDTH ( C_AXI_ADDR_WIDTH )
 )
@@ -81,7 +81,7 @@ cmd_translator_0
 );
 
 
-axi_protocol_converter_v2_1_7_b2s_wr_cmd_fsm aw_cmd_fsm_0
+axi_protocol_converter_v2_1_8_b2s_wr_cmd_fsm aw_cmd_fsm_0
 (
   .clk          ( clk            ) ,
   .reset        ( reset          ) ,

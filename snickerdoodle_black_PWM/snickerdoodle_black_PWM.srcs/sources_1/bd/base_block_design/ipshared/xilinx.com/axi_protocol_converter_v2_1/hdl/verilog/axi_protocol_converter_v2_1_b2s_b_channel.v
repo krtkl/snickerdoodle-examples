@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// File name: axi_protocol_converter_v2_1_7_b2s_b_channel.v
+// File name: axi_protocol_converter_v2_1_8_b2s_b_channel.v
 //
 ///////////////////////////////////////////////////////////////////////////////
 `timescale 1ps/1ps
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_b2s_b_channel #
+module axi_protocol_converter_v2_1_8_b2s_b_channel #
 (
 ///////////////////////////////////////////////////////////////////////////////
 // Parameter Definitions
@@ -34,7 +34,7 @@ module axi_protocol_converter_v2_1_7_b2s_b_channel #
   output wire                                 m_bready,
 
 
-  // Signals to/from the axi_protocol_converter_v2_1_7_b2s_aw_channel modules
+  // Signals to/from the axi_protocol_converter_v2_1_8_b2s_aw_channel modules
   input  wire                                 b_push,
   input  wire [C_ID_WIDTH-1:0]                b_awid,
   input  wire [7:0]                           b_awlen,
@@ -108,7 +108,7 @@ always @(posedge clk) begin
   mhandshake_r <= mhandshake;
 end
 
-axi_protocol_converter_v2_1_7_b2s_simple_fifo #(
+axi_protocol_converter_v2_1_8_b2s_simple_fifo #(
   .C_WIDTH                  (P_WIDTH),
   .C_AWIDTH                 (P_AWIDTH),
   .C_DEPTH                  (P_DEPTH)
@@ -162,7 +162,7 @@ always @ (posedge clk) begin
   end
 end
 
-axi_protocol_converter_v2_1_7_b2s_simple_fifo #(
+axi_protocol_converter_v2_1_8_b2s_simple_fifo #(
   .C_WIDTH                  (P_RWIDTH),
   .C_AWIDTH                 (P_RAWIDTH),
   .C_DEPTH                  (P_RDEPTH)

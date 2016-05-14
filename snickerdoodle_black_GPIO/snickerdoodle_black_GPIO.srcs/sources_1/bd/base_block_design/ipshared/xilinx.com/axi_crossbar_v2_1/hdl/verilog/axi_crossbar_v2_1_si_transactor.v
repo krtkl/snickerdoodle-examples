@@ -78,7 +78,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_si_transactor #
+module axi_crossbar_v2_1_9_si_transactor #
   (
    parameter         C_FAMILY                       = "none", 
    parameter integer C_SI             =   0, // SI-slot number of current instance.
@@ -232,7 +232,7 @@ module axi_crossbar_v2_1_8_si_transactor #
     
   generate
     if (C_ADDR_DECODE) begin : gen_addr_decoder
-      axi_crossbar_v2_1_8_addr_decoder #
+      axi_crossbar_v2_1_9_addr_decoder #
         (
           .C_FAMILY          (C_FAMILY),
           .C_NUM_TARGETS     (C_NUM_M),
@@ -379,7 +379,7 @@ module axi_crossbar_v2_1_8_si_transactor #
         end  // Clocked process
         
         // DEBUG R-CHANNEL TRANSACTION SEQUENCE FIFO
-        axi_data_fifo_v2_1_6_axic_srl_fifo #
+        axi_data_fifo_v2_1_7_axic_srl_fifo #
           (
            .C_FAMILY          (C_FAMILY),
            .C_FIFO_WIDTH      (8),
@@ -485,7 +485,7 @@ module axi_crossbar_v2_1_8_si_transactor #
         end  // Clocked process
         
         // DEBUG R-CHANNEL TRANSACTION SEQUENCE FIFO
-        axi_data_fifo_v2_1_6_axic_srl_fifo #
+        axi_data_fifo_v2_1_7_axic_srl_fifo #
           (
            .C_FAMILY          (C_FAMILY),
            .C_FIFO_WIDTH      (8),
@@ -528,7 +528,7 @@ module axi_crossbar_v2_1_8_si_transactor #
       wire any_push;
       wire any_pop;
         
-      axi_crossbar_v2_1_8_arbiter_resp #  // Multi-thread response arbiter
+      axi_crossbar_v2_1_9_arbiter_resp #  // Multi-thread response arbiter
         (
          .C_FAMILY                (C_FAMILY),
          .C_NUM_S                 (C_NUM_M+1),
@@ -639,7 +639,7 @@ module axi_crossbar_v2_1_8_si_transactor #
             end  // Clocked process
             
             // DEBUG R-CHANNEL TRANSACTION SEQUENCE FIFO
-            axi_data_fifo_v2_1_6_axic_srl_fifo #
+            axi_data_fifo_v2_1_7_axic_srl_fifo #
               (
                .C_FAMILY          (C_FAMILY),
                .C_FIFO_WIDTH      (8),

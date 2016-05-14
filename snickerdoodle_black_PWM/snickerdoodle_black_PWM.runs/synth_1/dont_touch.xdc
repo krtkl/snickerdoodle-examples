@@ -15,9 +15,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_desi
 # IP: bd/base_block_design/ip/base_block_design_processing_system7_0_axi_periph_2/base_block_design_processing_system7_0_axi_periph_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_processing_system7_0_axi_periph_2 || ORIG_REF_NAME==base_block_design_processing_system7_0_axi_periph_2}]
 
-# IP: bd/base_block_design/ip/base_block_design_xbar_2/base_block_design_xbar_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_xbar_2 || ORIG_REF_NAME==base_block_design_xbar_2}]
-
 # IP: bd/base_block_design/ip/base_block_design_axi_timer_0_4/base_block_design_axi_timer_0_4.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_4 || ORIG_REF_NAME==base_block_design_axi_timer_0_4}]
 
@@ -90,6 +87,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_desi
 # IP: bd/base_block_design/ip/base_block_design_axi_timer_0_27/base_block_design_axi_timer_0_27.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_27 || ORIG_REF_NAME==base_block_design_axi_timer_0_27}]
 
+# IP: bd/base_block_design/ip/base_block_design_xbar_0/base_block_design_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_xbar_0 || ORIG_REF_NAME==base_block_design_xbar_0}]
+
 # IP: bd/base_block_design/ip/base_block_design_tier2_xbar_0_0/base_block_design_tier2_xbar_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_tier2_xbar_0_0 || ORIG_REF_NAME==base_block_design_tier2_xbar_0_0}]
 
@@ -121,134 +121,134 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_desi
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_processing_system7_0_0 || ORIG_REF_NAME==base_block_design_processing_system7_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_board.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}]
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_rst_processing_system7_0_50M_0 || ORIG_REF_NAME==base_block_design_rst_processing_system7_0_50M_0}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0_ooc.xdc
 
-# XDC: bd/base_block_design/ip/base_block_design_xbar_2/base_block_design_xbar_2_ooc.xdc
-
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_4/base_block_design_axi_timer_0_4.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_4 || ORIG_REF_NAME==base_block_design_axi_timer_0_4}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_4 || ORIG_REF_NAME==base_block_design_axi_timer_0_4}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_4/base_block_design_axi_timer_0_4_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_5/base_block_design_axi_timer_0_5.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_5 || ORIG_REF_NAME==base_block_design_axi_timer_0_5}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_5 || ORIG_REF_NAME==base_block_design_axi_timer_0_5}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_5/base_block_design_axi_timer_0_5_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_6/base_block_design_axi_timer_0_6.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_6 || ORIG_REF_NAME==base_block_design_axi_timer_0_6}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_6 || ORIG_REF_NAME==base_block_design_axi_timer_0_6}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_6/base_block_design_axi_timer_0_6_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_7/base_block_design_axi_timer_0_7.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_7 || ORIG_REF_NAME==base_block_design_axi_timer_0_7}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_7 || ORIG_REF_NAME==base_block_design_axi_timer_0_7}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_7/base_block_design_axi_timer_0_7_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_8/base_block_design_axi_timer_0_8.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_8 || ORIG_REF_NAME==base_block_design_axi_timer_0_8}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_8 || ORIG_REF_NAME==base_block_design_axi_timer_0_8}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_8/base_block_design_axi_timer_0_8_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_9/base_block_design_axi_timer_0_9.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_9 || ORIG_REF_NAME==base_block_design_axi_timer_0_9}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_9 || ORIG_REF_NAME==base_block_design_axi_timer_0_9}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_9/base_block_design_axi_timer_0_9_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_10/base_block_design_axi_timer_0_10.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_10 || ORIG_REF_NAME==base_block_design_axi_timer_0_10}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_10 || ORIG_REF_NAME==base_block_design_axi_timer_0_10}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_10/base_block_design_axi_timer_0_10_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_11/base_block_design_axi_timer_0_11.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_11 || ORIG_REF_NAME==base_block_design_axi_timer_0_11}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_11 || ORIG_REF_NAME==base_block_design_axi_timer_0_11}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_11/base_block_design_axi_timer_0_11_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_12/base_block_design_axi_timer_0_12.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_12 || ORIG_REF_NAME==base_block_design_axi_timer_0_12}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_12 || ORIG_REF_NAME==base_block_design_axi_timer_0_12}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_12/base_block_design_axi_timer_0_12_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_13/base_block_design_axi_timer_0_13.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_13 || ORIG_REF_NAME==base_block_design_axi_timer_0_13}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_13 || ORIG_REF_NAME==base_block_design_axi_timer_0_13}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_13/base_block_design_axi_timer_0_13_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_14/base_block_design_axi_timer_0_14.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_14 || ORIG_REF_NAME==base_block_design_axi_timer_0_14}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_14 || ORIG_REF_NAME==base_block_design_axi_timer_0_14}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_14/base_block_design_axi_timer_0_14_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_15/base_block_design_axi_timer_0_15.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_15 || ORIG_REF_NAME==base_block_design_axi_timer_0_15}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_15 || ORIG_REF_NAME==base_block_design_axi_timer_0_15}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_15/base_block_design_axi_timer_0_15_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_16/base_block_design_axi_timer_0_16.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_16 || ORIG_REF_NAME==base_block_design_axi_timer_0_16}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_16 || ORIG_REF_NAME==base_block_design_axi_timer_0_16}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_16/base_block_design_axi_timer_0_16_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_17/base_block_design_axi_timer_0_17.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_17 || ORIG_REF_NAME==base_block_design_axi_timer_0_17}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_17 || ORIG_REF_NAME==base_block_design_axi_timer_0_17}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_17/base_block_design_axi_timer_0_17_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_18/base_block_design_axi_timer_0_18.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_18 || ORIG_REF_NAME==base_block_design_axi_timer_0_18}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_18 || ORIG_REF_NAME==base_block_design_axi_timer_0_18}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_18/base_block_design_axi_timer_0_18_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_19/base_block_design_axi_timer_0_19.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_19 || ORIG_REF_NAME==base_block_design_axi_timer_0_19}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_19 || ORIG_REF_NAME==base_block_design_axi_timer_0_19}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_19/base_block_design_axi_timer_0_19_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_20/base_block_design_axi_timer_0_20.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_20 || ORIG_REF_NAME==base_block_design_axi_timer_0_20}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_20 || ORIG_REF_NAME==base_block_design_axi_timer_0_20}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_20/base_block_design_axi_timer_0_20_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_21/base_block_design_axi_timer_0_21.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_21 || ORIG_REF_NAME==base_block_design_axi_timer_0_21}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_21 || ORIG_REF_NAME==base_block_design_axi_timer_0_21}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_21/base_block_design_axi_timer_0_21_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_22/base_block_design_axi_timer_0_22.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_22 || ORIG_REF_NAME==base_block_design_axi_timer_0_22}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_22 || ORIG_REF_NAME==base_block_design_axi_timer_0_22}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_22/base_block_design_axi_timer_0_22_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_23/base_block_design_axi_timer_0_23.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_23 || ORIG_REF_NAME==base_block_design_axi_timer_0_23}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_23 || ORIG_REF_NAME==base_block_design_axi_timer_0_23}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_23/base_block_design_axi_timer_0_23_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_24/base_block_design_axi_timer_0_24.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_24 || ORIG_REF_NAME==base_block_design_axi_timer_0_24}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_24 || ORIG_REF_NAME==base_block_design_axi_timer_0_24}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_24/base_block_design_axi_timer_0_24_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_25/base_block_design_axi_timer_0_25.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_25 || ORIG_REF_NAME==base_block_design_axi_timer_0_25}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_25 || ORIG_REF_NAME==base_block_design_axi_timer_0_25}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_25/base_block_design_axi_timer_0_25_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_26/base_block_design_axi_timer_0_26.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_26 || ORIG_REF_NAME==base_block_design_axi_timer_0_26}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_26 || ORIG_REF_NAME==base_block_design_axi_timer_0_26}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_26/base_block_design_axi_timer_0_26_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_27/base_block_design_axi_timer_0_27.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_27 || ORIG_REF_NAME==base_block_design_axi_timer_0_27}]
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_block_design_axi_timer_0_27 || ORIG_REF_NAME==base_block_design_axi_timer_0_27}] {/U0 }]/U0 ]]
 
 # XDC: bd/base_block_design/ip/base_block_design_axi_timer_0_27/base_block_design_axi_timer_0_27_ooc.xdc
+
+# XDC: bd/base_block_design/ip/base_block_design_xbar_0/base_block_design_xbar_0_ooc.xdc
 
 # XDC: bd/base_block_design/ip/base_block_design_tier2_xbar_0_0/base_block_design_tier2_xbar_0_0_ooc.xdc
 

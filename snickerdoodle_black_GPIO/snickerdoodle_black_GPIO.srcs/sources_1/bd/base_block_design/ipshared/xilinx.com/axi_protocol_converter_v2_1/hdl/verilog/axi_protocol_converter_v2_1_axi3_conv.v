@@ -66,7 +66,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_axi3_conv #
+module axi_protocol_converter_v2_1_8_axi3_conv #
   (
    parameter C_FAMILY                            = "none",
    parameter integer C_AXI_ID_WIDTH              = 1,
@@ -246,7 +246,7 @@ module axi_protocol_converter_v2_1_7_axi3_conv #
       wire                              wr_cmd_b_ready;
       
       // Write Address Channel.
-      axi_protocol_converter_v2_1_7_a_axi3_conv #
+      axi_protocol_converter_v2_1_8_a_axi3_conv #
       (
        .C_FAMILY                    (C_FAMILY),
        .C_AXI_ID_WIDTH              (C_AXI_ID_WIDTH),
@@ -307,7 +307,7 @@ module axi_protocol_converter_v2_1_7_axi3_conv #
        );
        
       // Write Data Channel.
-      axi_protocol_converter_v2_1_7_w_axi3_conv #
+      axi_protocol_converter_v2_1_8_w_axi3_conv #
       (
        .C_FAMILY                    (C_FAMILY),
        .C_AXI_ID_WIDTH              (C_AXI_ID_WIDTH),
@@ -349,7 +349,7 @@ module axi_protocol_converter_v2_1_7_axi3_conv #
       if ( C_SUPPORT_SPLITTING == 1 && C_SUPPORT_BURSTS == 1 ) begin : USE_SPLIT_W
       
         // Write Data Response Channel.
-        axi_protocol_converter_v2_1_7_b_downsizer #
+        axi_protocol_converter_v2_1_8_b_downsizer #
         (
          .C_FAMILY                    (C_FAMILY),
          .C_AXI_ID_WIDTH              (C_AXI_ID_WIDTH),
@@ -445,7 +445,7 @@ module axi_protocol_converter_v2_1_7_axi3_conv #
         wire                              rd_cmd_ready;
         
         // Write Address Channel.
-        axi_protocol_converter_v2_1_7_a_axi3_conv #
+        axi_protocol_converter_v2_1_8_a_axi3_conv #
         (
          .C_FAMILY                    (C_FAMILY),
          .C_AXI_ID_WIDTH              (C_AXI_ID_WIDTH),
@@ -506,7 +506,7 @@ module axi_protocol_converter_v2_1_7_axi3_conv #
          );
          
         // Read Data Channel.
-        axi_protocol_converter_v2_1_7_r_axi3_conv #
+        axi_protocol_converter_v2_1_8_r_axi3_conv #
         (
          .C_FAMILY                    (C_FAMILY),
          .C_AXI_ID_WIDTH              (C_AXI_ID_WIDTH),

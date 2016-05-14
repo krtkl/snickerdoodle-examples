@@ -1,4 +1,4 @@
-src/nand.o src/nand.d: ../src/nand.c \
+src/nand.o src/nand.o: ../src/nand.c \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xparameters_ps.h ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \

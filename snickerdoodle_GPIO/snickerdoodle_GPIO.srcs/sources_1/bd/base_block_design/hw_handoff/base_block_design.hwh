@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 19 17:11:33 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat May 14 15:47:39 2016" VIVADOVERSION="2016.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="base_block_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -55,59 +55,59 @@
       <PARAMETER NAME="CAS_LATENCY" VALUE="11"/>
       <PARAMETER NAME="CAS_WRITE_LATENCY" VALUE="11"/>
       <PORTMAPS>
-        <PORTMAP PHYSICAL="DDR_cas_n"/>
-        <PORTMAP PHYSICAL="DDR_cke"/>
-        <PORTMAP PHYSICAL="DDR_ck_n"/>
-        <PORTMAP PHYSICAL="DDR_ck_p"/>
-        <PORTMAP PHYSICAL="DDR_cs_n"/>
-        <PORTMAP PHYSICAL="DDR_reset_n"/>
-        <PORTMAP PHYSICAL="DDR_odt"/>
-        <PORTMAP PHYSICAL="DDR_ras_n"/>
-        <PORTMAP PHYSICAL="DDR_we_n"/>
-        <PORTMAP PHYSICAL="DDR_ba"/>
-        <PORTMAP PHYSICAL="DDR_addr"/>
-        <PORTMAP PHYSICAL="DDR_dm"/>
-        <PORTMAP PHYSICAL="DDR_dq"/>
-        <PORTMAP PHYSICAL="DDR_dqs_n"/>
-        <PORTMAP PHYSICAL="DDR_dqs_p"/>
+        <PORTMAP LOGICAL="CAS_N" PHYSICAL="DDR_cas_n"/>
+        <PORTMAP LOGICAL="CKE" PHYSICAL="DDR_cke"/>
+        <PORTMAP LOGICAL="CK_N" PHYSICAL="DDR_ck_n"/>
+        <PORTMAP LOGICAL="CK_P" PHYSICAL="DDR_ck_p"/>
+        <PORTMAP LOGICAL="CS_N" PHYSICAL="DDR_cs_n"/>
+        <PORTMAP LOGICAL="RESET_N" PHYSICAL="DDR_reset_n"/>
+        <PORTMAP LOGICAL="ODT" PHYSICAL="DDR_odt"/>
+        <PORTMAP LOGICAL="RAS_N" PHYSICAL="DDR_ras_n"/>
+        <PORTMAP LOGICAL="WE_N" PHYSICAL="DDR_we_n"/>
+        <PORTMAP LOGICAL="BA" PHYSICAL="DDR_ba"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="DDR_addr"/>
+        <PORTMAP LOGICAL="DM" PHYSICAL="DDR_dm"/>
+        <PORTMAP LOGICAL="DQ" PHYSICAL="DDR_dq"/>
+        <PORTMAP LOGICAL="DQS_N" PHYSICAL="DDR_dqs_n"/>
+        <PORTMAP LOGICAL="DQS_P" PHYSICAL="DDR_dqs_p"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="processing_system7_0_FIXED_IO" NAME="FIXED_IO" TYPE="INITIATOR">
       <PORTMAPS>
-        <PORTMAP PHYSICAL="FIXED_IO_mio"/>
-        <PORTMAP PHYSICAL="FIXED_IO_ddr_vrn"/>
-        <PORTMAP PHYSICAL="FIXED_IO_ddr_vrp"/>
-        <PORTMAP PHYSICAL="FIXED_IO_ps_srstb"/>
-        <PORTMAP PHYSICAL="FIXED_IO_ps_clk"/>
-        <PORTMAP PHYSICAL="FIXED_IO_ps_porb"/>
+        <PORTMAP LOGICAL="MIO" PHYSICAL="FIXED_IO_mio"/>
+        <PORTMAP LOGICAL="DDR_VRN" PHYSICAL="FIXED_IO_ddr_vrn"/>
+        <PORTMAP LOGICAL="DDR_VRP" PHYSICAL="FIXED_IO_ddr_vrp"/>
+        <PORTMAP LOGICAL="PS_SRSTB" PHYSICAL="FIXED_IO_ps_srstb"/>
+        <PORTMAP LOGICAL="PS_CLK" PHYSICAL="FIXED_IO_ps_clk"/>
+        <PORTMAP LOGICAL="PS_PORB" PHYSICAL="FIXED_IO_ps_porb"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="GPIO0" TYPE="INITIATOR">
       <PORTMAPS>
-        <PORTMAP PHYSICAL="GPIO0_tri_i"/>
-        <PORTMAP PHYSICAL="GPIO0_tri_o"/>
-        <PORTMAP PHYSICAL="GPIO0_tri_t"/>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO0_tri_i"/>
+        <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO0_tri_o"/>
+        <PORTMAP LOGICAL="TRI_T" PHYSICAL="GPIO0_tri_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO2" NAME="GPIO1" TYPE="INITIATOR">
       <PORTMAPS>
-        <PORTMAP PHYSICAL="GPIO1_tri_i"/>
-        <PORTMAP PHYSICAL="GPIO1_tri_o"/>
-        <PORTMAP PHYSICAL="GPIO1_tri_t"/>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO1_tri_i"/>
+        <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO1_tri_o"/>
+        <PORTMAP LOGICAL="TRI_T" PHYSICAL="GPIO1_tri_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="axi_gpio_1_GPIO" NAME="GPIO2" TYPE="INITIATOR">
       <PORTMAPS>
-        <PORTMAP PHYSICAL="GPIO2_tri_i"/>
-        <PORTMAP PHYSICAL="GPIO2_tri_o"/>
-        <PORTMAP PHYSICAL="GPIO2_tri_t"/>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO2_tri_i"/>
+        <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO2_tri_o"/>
+        <PORTMAP LOGICAL="TRI_T" PHYSICAL="GPIO2_tri_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="axi_gpio_1_GPIO2" NAME="GPIO3" TYPE="INITIATOR">
       <PORTMAPS>
-        <PORTMAP PHYSICAL="GPIO3_tri_i"/>
-        <PORTMAP PHYSICAL="GPIO3_tri_o"/>
-        <PORTMAP PHYSICAL="GPIO3_tri_t"/>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO3_tri_i"/>
+        <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO3_tri_o"/>
+        <PORTMAP LOGICAL="TRI_T" PHYSICAL="GPIO3_tri_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -404,7 +404,7 @@
         <PORT DIR="O" LEFT="24" NAME="gpio2_io_t" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE">
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
@@ -432,37 +432,37 @@
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="base_block_design_processing_system7_0_0_FCLK_CLK0"/>
           <PORTMAPS>
-            <PORTMAP PHYSICAL="s_axi_araddr"/>
-            <PORTMAP PHYSICAL="s_axi_arready"/>
-            <PORTMAP PHYSICAL="s_axi_arvalid"/>
-            <PORTMAP PHYSICAL="s_axi_awaddr"/>
-            <PORTMAP PHYSICAL="s_axi_awready"/>
-            <PORTMAP PHYSICAL="s_axi_awvalid"/>
-            <PORTMAP PHYSICAL="s_axi_bready"/>
-            <PORTMAP PHYSICAL="s_axi_bresp"/>
-            <PORTMAP PHYSICAL="s_axi_bvalid"/>
-            <PORTMAP PHYSICAL="s_axi_rdata"/>
-            <PORTMAP PHYSICAL="s_axi_rready"/>
-            <PORTMAP PHYSICAL="s_axi_rresp"/>
-            <PORTMAP PHYSICAL="s_axi_rvalid"/>
-            <PORTMAP PHYSICAL="s_axi_wdata"/>
-            <PORTMAP PHYSICAL="s_axi_wready"/>
-            <PORTMAP PHYSICAL="s_axi_wstrb"/>
-            <PORTMAP PHYSICAL="s_axi_wvalid"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="GPIO" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="gpio_io_i"/>
-            <PORTMAP PHYSICAL="gpio_io_o"/>
-            <PORTMAP PHYSICAL="gpio_io_t"/>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
+            <PORTMAP LOGICAL="TRI_T" PHYSICAL="gpio_io_t"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO2" NAME="GPIO2" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO2" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="gpio2_io_i"/>
-            <PORTMAP PHYSICAL="gpio2_io_o"/>
-            <PORTMAP PHYSICAL="gpio2_io_t"/>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio2_io_i"/>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio2_io_o"/>
+            <PORTMAP LOGICAL="TRI_T" PHYSICAL="gpio2_io_t"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -758,7 +758,7 @@
         <PORT DIR="O" LEFT="24" NAME="gpio2_io_t" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M01_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE">
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M01_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
@@ -786,37 +786,37 @@
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="base_block_design_processing_system7_0_0_FCLK_CLK0"/>
           <PORTMAPS>
-            <PORTMAP PHYSICAL="s_axi_araddr"/>
-            <PORTMAP PHYSICAL="s_axi_arready"/>
-            <PORTMAP PHYSICAL="s_axi_arvalid"/>
-            <PORTMAP PHYSICAL="s_axi_awaddr"/>
-            <PORTMAP PHYSICAL="s_axi_awready"/>
-            <PORTMAP PHYSICAL="s_axi_awvalid"/>
-            <PORTMAP PHYSICAL="s_axi_bready"/>
-            <PORTMAP PHYSICAL="s_axi_bresp"/>
-            <PORTMAP PHYSICAL="s_axi_bvalid"/>
-            <PORTMAP PHYSICAL="s_axi_rdata"/>
-            <PORTMAP PHYSICAL="s_axi_rready"/>
-            <PORTMAP PHYSICAL="s_axi_rresp"/>
-            <PORTMAP PHYSICAL="s_axi_rvalid"/>
-            <PORTMAP PHYSICAL="s_axi_wdata"/>
-            <PORTMAP PHYSICAL="s_axi_wready"/>
-            <PORTMAP PHYSICAL="s_axi_wstrb"/>
-            <PORTMAP PHYSICAL="s_axi_wvalid"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_1_GPIO" NAME="GPIO" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="axi_gpio_1_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="gpio_io_i"/>
-            <PORTMAP PHYSICAL="gpio_io_o"/>
-            <PORTMAP PHYSICAL="gpio_io_t"/>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
+            <PORTMAP LOGICAL="TRI_T" PHYSICAL="gpio_io_t"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_gpio_1_GPIO2" NAME="GPIO2" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="axi_gpio_1_GPIO2" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="gpio2_io_i"/>
-            <PORTMAP PHYSICAL="gpio2_io_o"/>
-            <PORTMAP PHYSICAL="gpio2_io_t"/>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio2_io_i"/>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio2_io_o"/>
+            <PORTMAP LOGICAL="TRI_T" PHYSICAL="gpio2_io_t"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -1952,13 +1952,13 @@
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
-            <CONNECTION INSTANCE="rst_processing_system7_0_50M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_gpio_1" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ACLK"/>
+            <CONNECTION INSTANCE="rst_processing_system7_0_50M" PORT="slowest_sync_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -1989,14 +1989,14 @@
         <PORT DIR="IO" NAME="PS_PORB" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO_0" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO_0" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="GPIO_I"/>
-            <PORTMAP PHYSICAL="GPIO_O"/>
-            <PORTMAP PHYSICAL="GPIO_T"/>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO_I"/>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO_O"/>
+            <PORTMAP LOGICAL="TRI_T" PHYSICAL="GPIO_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="processing_system7_0_DDR" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="processing_system7_0_DDR" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR" VLNV="xilinx.com:interface:ddrx:1.0">
           <PARAMETER NAME="TIMEPERIOD_PS" VALUE="1250"/>
           <PARAMETER NAME="MEMORY_TYPE" VALUE="COMPONENTS"/>
           <PARAMETER NAME="MEMORY_PART"/>
@@ -2011,34 +2011,34 @@
           <PARAMETER NAME="CAS_LATENCY" VALUE="11"/>
           <PARAMETER NAME="CAS_WRITE_LATENCY" VALUE="11"/>
           <PORTMAPS>
-            <PORTMAP PHYSICAL="DDR_CAS_n"/>
-            <PORTMAP PHYSICAL="DDR_CKE"/>
-            <PORTMAP PHYSICAL="DDR_Clk_n"/>
-            <PORTMAP PHYSICAL="DDR_Clk"/>
-            <PORTMAP PHYSICAL="DDR_CS_n"/>
-            <PORTMAP PHYSICAL="DDR_DRSTB"/>
-            <PORTMAP PHYSICAL="DDR_ODT"/>
-            <PORTMAP PHYSICAL="DDR_RAS_n"/>
-            <PORTMAP PHYSICAL="DDR_WEB"/>
-            <PORTMAP PHYSICAL="DDR_BankAddr"/>
-            <PORTMAP PHYSICAL="DDR_Addr"/>
-            <PORTMAP PHYSICAL="DDR_DM"/>
-            <PORTMAP PHYSICAL="DDR_DQ"/>
-            <PORTMAP PHYSICAL="DDR_DQS_n"/>
-            <PORTMAP PHYSICAL="DDR_DQS"/>
+            <PORTMAP LOGICAL="CAS_N" PHYSICAL="DDR_CAS_n"/>
+            <PORTMAP LOGICAL="CKE" PHYSICAL="DDR_CKE"/>
+            <PORTMAP LOGICAL="CK_N" PHYSICAL="DDR_Clk_n"/>
+            <PORTMAP LOGICAL="CK_P" PHYSICAL="DDR_Clk"/>
+            <PORTMAP LOGICAL="CS_N" PHYSICAL="DDR_CS_n"/>
+            <PORTMAP LOGICAL="RESET_N" PHYSICAL="DDR_DRSTB"/>
+            <PORTMAP LOGICAL="ODT" PHYSICAL="DDR_ODT"/>
+            <PORTMAP LOGICAL="RAS_N" PHYSICAL="DDR_RAS_n"/>
+            <PORTMAP LOGICAL="WE_N" PHYSICAL="DDR_WEB"/>
+            <PORTMAP LOGICAL="BA" PHYSICAL="DDR_BankAddr"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="DDR_Addr"/>
+            <PORTMAP LOGICAL="DM" PHYSICAL="DDR_DM"/>
+            <PORTMAP LOGICAL="DQ" PHYSICAL="DDR_DQ"/>
+            <PORTMAP LOGICAL="DQS_N" PHYSICAL="DDR_DQS_n"/>
+            <PORTMAP LOGICAL="DQS_P" PHYSICAL="DDR_DQS"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="processing_system7_0_FIXED_IO" NAME="FIXED_IO" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="processing_system7_0_FIXED_IO" NAME="FIXED_IO" TYPE="INITIATOR" VLNV="xilinx.com:display_processing_system7:fixedio:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="MIO"/>
-            <PORTMAP PHYSICAL="DDR_VRN"/>
-            <PORTMAP PHYSICAL="DDR_VRP"/>
-            <PORTMAP PHYSICAL="PS_SRSTB"/>
-            <PORTMAP PHYSICAL="PS_CLK"/>
-            <PORTMAP PHYSICAL="PS_PORB"/>
+            <PORTMAP LOGICAL="MIO" PHYSICAL="MIO"/>
+            <PORTMAP LOGICAL="DDR_VRN" PHYSICAL="DDR_VRN"/>
+            <PORTMAP LOGICAL="DDR_VRP" PHYSICAL="DDR_VRP"/>
+            <PORTMAP LOGICAL="PS_SRSTB" PHYSICAL="PS_SRSTB"/>
+            <PORTMAP LOGICAL="PS_CLK" PHYSICAL="PS_CLK"/>
+            <PORTMAP LOGICAL="PS_PORB" PHYSICAL="PS_PORB"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="M_AXI_GP0" TYPE="MASTER">
+        <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="M_AXI_GP0" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
@@ -2066,44 +2066,44 @@
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="base_block_design_processing_system7_0_0_FCLK_CLK0"/>
           <PORTMAPS>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARVALID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWVALID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_BREADY"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_RREADY"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_WLAST"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_WVALID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_WID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARBURST"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARLOCK"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARSIZE"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWBURST"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWLOCK"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWSIZE"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARPROT"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWPROT"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARADDR"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWADDR"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_WDATA"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARCACHE"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARLEN"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARQOS"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWCACHE"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWLEN"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWQOS"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_WSTRB"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_ARREADY"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_AWREADY"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_BVALID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_RLAST"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_RVALID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_WREADY"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_BID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_RID"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_BRESP"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_RRESP"/>
-            <PORTMAP PHYSICAL="M_AXI_GP0_RDATA"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M_AXI_GP0_ARVALID"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M_AXI_GP0_AWVALID"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M_AXI_GP0_BREADY"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M_AXI_GP0_RREADY"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="M_AXI_GP0_WLAST"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M_AXI_GP0_WVALID"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="M_AXI_GP0_ARID"/>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="M_AXI_GP0_AWID"/>
+            <PORTMAP LOGICAL="WID" PHYSICAL="M_AXI_GP0_WID"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M_AXI_GP0_ARBURST"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M_AXI_GP0_ARLOCK"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M_AXI_GP0_ARSIZE"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M_AXI_GP0_AWBURST"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M_AXI_GP0_AWLOCK"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M_AXI_GP0_AWSIZE"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M_AXI_GP0_ARPROT"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M_AXI_GP0_AWPROT"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M_AXI_GP0_ARADDR"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M_AXI_GP0_AWADDR"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M_AXI_GP0_WDATA"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M_AXI_GP0_ARCACHE"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M_AXI_GP0_ARLEN"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M_AXI_GP0_ARQOS"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M_AXI_GP0_AWCACHE"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M_AXI_GP0_AWLEN"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M_AXI_GP0_AWQOS"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M_AXI_GP0_WSTRB"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M_AXI_GP0_ARREADY"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M_AXI_GP0_AWREADY"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M_AXI_GP0_BVALID"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="M_AXI_GP0_RLAST"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M_AXI_GP0_RVALID"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M_AXI_GP0_WREADY"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="M_AXI_GP0_BID"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="M_AXI_GP0_RID"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M_AXI_GP0_BRESP"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M_AXI_GP0_RRESP"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M_AXI_GP0_RDATA"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -2419,6 +2419,22 @@
         <PARAMETER NAME="M61_SECURE" VALUE="0"/>
         <PARAMETER NAME="M62_SECURE" VALUE="0"/>
         <PARAMETER NAME="M63_SECURE" VALUE="0"/>
+        <PARAMETER NAME="S00_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S01_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S02_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S03_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S04_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S05_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S06_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S07_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S08_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S09_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S10_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S11_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S12_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S13_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S14_ARB_PRIORITY" VALUE="0"/>
+        <PARAMETER NAME="S15_ARB_PRIORITY" VALUE="0"/>
         <PARAMETER NAME="Component_Name" VALUE="base_block_design_processing_system7_0_axi_periph_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
@@ -2449,6 +2465,16 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="M00_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_50M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_processing_system7_0_50M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M01_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_50M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_processing_system7_0_50M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
@@ -2721,16 +2747,6 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M01_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_50M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_processing_system7_0_50M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_1_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_1" PORT="s_axi_awaddr"/>
@@ -2861,124 +2877,124 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE">
+        <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="S00_AXI_awaddr"/>
-            <PORTMAP PHYSICAL="S00_AXI_awlen"/>
-            <PORTMAP PHYSICAL="S00_AXI_awsize"/>
-            <PORTMAP PHYSICAL="S00_AXI_awburst"/>
-            <PORTMAP PHYSICAL="S00_AXI_awlock"/>
-            <PORTMAP PHYSICAL="S00_AXI_awcache"/>
-            <PORTMAP PHYSICAL="S00_AXI_awprot"/>
-            <PORTMAP PHYSICAL="S00_AXI_awqos"/>
-            <PORTMAP PHYSICAL="S00_AXI_awvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_awready"/>
-            <PORTMAP PHYSICAL="S00_AXI_wdata"/>
-            <PORTMAP PHYSICAL="S00_AXI_wstrb"/>
-            <PORTMAP PHYSICAL="S00_AXI_wlast"/>
-            <PORTMAP PHYSICAL="S00_AXI_wvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_wready"/>
-            <PORTMAP PHYSICAL="S00_AXI_bresp"/>
-            <PORTMAP PHYSICAL="S00_AXI_bvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_bready"/>
-            <PORTMAP PHYSICAL="S00_AXI_araddr"/>
-            <PORTMAP PHYSICAL="S00_AXI_arlen"/>
-            <PORTMAP PHYSICAL="S00_AXI_arsize"/>
-            <PORTMAP PHYSICAL="S00_AXI_arburst"/>
-            <PORTMAP PHYSICAL="S00_AXI_arlock"/>
-            <PORTMAP PHYSICAL="S00_AXI_arcache"/>
-            <PORTMAP PHYSICAL="S00_AXI_arprot"/>
-            <PORTMAP PHYSICAL="S00_AXI_arqos"/>
-            <PORTMAP PHYSICAL="S00_AXI_arvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_arready"/>
-            <PORTMAP PHYSICAL="S00_AXI_rdata"/>
-            <PORTMAP PHYSICAL="S00_AXI_rresp"/>
-            <PORTMAP PHYSICAL="S00_AXI_rlast"/>
-            <PORTMAP PHYSICAL="S00_AXI_rvalid"/>
-            <PORTMAP PHYSICAL="S00_AXI_rready"/>
-            <PORTMAP PHYSICAL="S00_AXI_arid"/>
-            <PORTMAP PHYSICAL="S00_AXI_awid"/>
-            <PORTMAP PHYSICAL="S00_AXI_bid"/>
-            <PORTMAP PHYSICAL="S00_AXI_rid"/>
-            <PORTMAP PHYSICAL="S00_AXI_wid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S00_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="S00_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S00_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="S00_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="S00_AXI_awlock"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S00_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="S00_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="S00_AXI_awqos"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S00_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S00_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="S00_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S00_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="S00_AXI_wlast"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="S00_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="S00_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="S00_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="S00_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="S00_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="S00_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="S00_AXI_arlen"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S00_AXI_arsize"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="S00_AXI_arburst"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="S00_AXI_arlock"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="S00_AXI_arcache"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="S00_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="S00_AXI_arqos"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="S00_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="S00_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="S00_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="S00_AXI_rresp"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="S00_AXI_rlast"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="S00_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="S00_AXI_arid"/>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="S00_AXI_awid"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="S00_AXI_bid"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="S00_AXI_rid"/>
+            <PORTMAP LOGICAL="WID" PHYSICAL="S00_AXI_wid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER">
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="M00_AXI_awaddr"/>
-            <PORTMAP PHYSICAL="M00_AXI_awlen"/>
-            <PORTMAP PHYSICAL="M00_AXI_awsize"/>
-            <PORTMAP PHYSICAL="M00_AXI_awburst"/>
-            <PORTMAP PHYSICAL="M00_AXI_awlock"/>
-            <PORTMAP PHYSICAL="M00_AXI_awcache"/>
-            <PORTMAP PHYSICAL="M00_AXI_awprot"/>
-            <PORTMAP PHYSICAL="M00_AXI_awregion"/>
-            <PORTMAP PHYSICAL="M00_AXI_awqos"/>
-            <PORTMAP PHYSICAL="M00_AXI_awvalid"/>
-            <PORTMAP PHYSICAL="M00_AXI_awready"/>
-            <PORTMAP PHYSICAL="M00_AXI_wdata"/>
-            <PORTMAP PHYSICAL="M00_AXI_wstrb"/>
-            <PORTMAP PHYSICAL="M00_AXI_wlast"/>
-            <PORTMAP PHYSICAL="M00_AXI_wvalid"/>
-            <PORTMAP PHYSICAL="M00_AXI_wready"/>
-            <PORTMAP PHYSICAL="M00_AXI_bresp"/>
-            <PORTMAP PHYSICAL="M00_AXI_bvalid"/>
-            <PORTMAP PHYSICAL="M00_AXI_bready"/>
-            <PORTMAP PHYSICAL="M00_AXI_araddr"/>
-            <PORTMAP PHYSICAL="M00_AXI_arlen"/>
-            <PORTMAP PHYSICAL="M00_AXI_arsize"/>
-            <PORTMAP PHYSICAL="M00_AXI_arburst"/>
-            <PORTMAP PHYSICAL="M00_AXI_arlock"/>
-            <PORTMAP PHYSICAL="M00_AXI_arcache"/>
-            <PORTMAP PHYSICAL="M00_AXI_arprot"/>
-            <PORTMAP PHYSICAL="M00_AXI_arregion"/>
-            <PORTMAP PHYSICAL="M00_AXI_arqos"/>
-            <PORTMAP PHYSICAL="M00_AXI_arvalid"/>
-            <PORTMAP PHYSICAL="M00_AXI_arready"/>
-            <PORTMAP PHYSICAL="M00_AXI_rdata"/>
-            <PORTMAP PHYSICAL="M00_AXI_rresp"/>
-            <PORTMAP PHYSICAL="M00_AXI_rlast"/>
-            <PORTMAP PHYSICAL="M00_AXI_rvalid"/>
-            <PORTMAP PHYSICAL="M00_AXI_rready"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M00_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M00_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M00_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M00_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M00_AXI_awlock"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M00_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M00_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M00_AXI_awregion"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M00_AXI_awqos"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M00_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M00_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M00_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M00_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="M00_AXI_wlast"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M00_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M00_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M00_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M00_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M00_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M00_AXI_arlen"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M00_AXI_arsize"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M00_AXI_arburst"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M00_AXI_arlock"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M00_AXI_arcache"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M00_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M00_AXI_arregion"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M00_AXI_arqos"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M00_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M00_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M00_AXI_rresp"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="M00_AXI_rlast"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M00_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M00_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M01_AXI" DATAWIDTH="32" NAME="M01_AXI" TYPE="MASTER">
+        <BUSINTERFACE BUSNAME="processing_system7_0_axi_periph_M01_AXI" DATAWIDTH="32" NAME="M01_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
-            <PORTMAP PHYSICAL="M01_AXI_awaddr"/>
-            <PORTMAP PHYSICAL="M01_AXI_awlen"/>
-            <PORTMAP PHYSICAL="M01_AXI_awsize"/>
-            <PORTMAP PHYSICAL="M01_AXI_awburst"/>
-            <PORTMAP PHYSICAL="M01_AXI_awlock"/>
-            <PORTMAP PHYSICAL="M01_AXI_awcache"/>
-            <PORTMAP PHYSICAL="M01_AXI_awprot"/>
-            <PORTMAP PHYSICAL="M01_AXI_awregion"/>
-            <PORTMAP PHYSICAL="M01_AXI_awqos"/>
-            <PORTMAP PHYSICAL="M01_AXI_awvalid"/>
-            <PORTMAP PHYSICAL="M01_AXI_awready"/>
-            <PORTMAP PHYSICAL="M01_AXI_wdata"/>
-            <PORTMAP PHYSICAL="M01_AXI_wstrb"/>
-            <PORTMAP PHYSICAL="M01_AXI_wlast"/>
-            <PORTMAP PHYSICAL="M01_AXI_wvalid"/>
-            <PORTMAP PHYSICAL="M01_AXI_wready"/>
-            <PORTMAP PHYSICAL="M01_AXI_bresp"/>
-            <PORTMAP PHYSICAL="M01_AXI_bvalid"/>
-            <PORTMAP PHYSICAL="M01_AXI_bready"/>
-            <PORTMAP PHYSICAL="M01_AXI_araddr"/>
-            <PORTMAP PHYSICAL="M01_AXI_arlen"/>
-            <PORTMAP PHYSICAL="M01_AXI_arsize"/>
-            <PORTMAP PHYSICAL="M01_AXI_arburst"/>
-            <PORTMAP PHYSICAL="M01_AXI_arlock"/>
-            <PORTMAP PHYSICAL="M01_AXI_arcache"/>
-            <PORTMAP PHYSICAL="M01_AXI_arprot"/>
-            <PORTMAP PHYSICAL="M01_AXI_arregion"/>
-            <PORTMAP PHYSICAL="M01_AXI_arqos"/>
-            <PORTMAP PHYSICAL="M01_AXI_arvalid"/>
-            <PORTMAP PHYSICAL="M01_AXI_arready"/>
-            <PORTMAP PHYSICAL="M01_AXI_rdata"/>
-            <PORTMAP PHYSICAL="M01_AXI_rresp"/>
-            <PORTMAP PHYSICAL="M01_AXI_rlast"/>
-            <PORTMAP PHYSICAL="M01_AXI_rvalid"/>
-            <PORTMAP PHYSICAL="M01_AXI_rready"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M01_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M01_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M01_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M01_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M01_AXI_awlock"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M01_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M01_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M01_AXI_awregion"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M01_AXI_awqos"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M01_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M01_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M01_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M01_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="M01_AXI_wlast"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M01_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M01_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M01_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M01_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M01_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M01_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M01_AXI_arlen"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M01_AXI_arsize"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M01_AXI_arburst"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M01_AXI_arlock"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M01_AXI_arcache"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M01_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M01_AXI_arregion"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M01_AXI_arqos"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M01_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M01_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M01_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M01_AXI_rresp"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="M01_AXI_rlast"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M01_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M01_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -3026,10 +3042,10 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_50M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_gpio_1" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ARESETN"/>
           </CONNECTIONS>
         </PORT>

@@ -1,4 +1,4 @@
-src/image_mover.o src/image_mover.d: ../src/image_mover.c ../src/fsbl.h \
+src/image_mover.o src/image_mover.o: ../src/image_mover.c ../src/fsbl.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \

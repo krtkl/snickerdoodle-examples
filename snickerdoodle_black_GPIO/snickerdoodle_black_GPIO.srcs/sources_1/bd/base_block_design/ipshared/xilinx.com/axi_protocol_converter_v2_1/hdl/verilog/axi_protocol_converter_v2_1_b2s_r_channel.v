@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// File name: axi_protocol_converter_v2_1_7_b2s_r_channel.v
+// File name: axi_protocol_converter_v2_1_8_b2s_r_channel.v
 //
 // Description:
 // Read data channel module to buffer read data from MC, ignore
 // extra data in case of BL8 and send the data to AXI.
 // The MC will send out the read data as it is ready and it has to be
-// accepted. The read data FIFO in the axi_protocol_converter_v2_1_7_b2s_r_channel module will buffer
+// accepted. The read data FIFO in the axi_protocol_converter_v2_1_8_b2s_r_channel module will buffer
 // the data before being sent to AXI. The address channel module will
 // send the transaction information for every command that is sent to the
 // MC. The transaction information will be buffered in a transaction FIFO.
@@ -18,7 +18,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_b2s_r_channel #
+module axi_protocol_converter_v2_1_8_b2s_r_channel #
 (
 ///////////////////////////////////////////////////////////////////////////////
 // Parameter Definitions
@@ -49,7 +49,7 @@ module axi_protocol_converter_v2_1_7_b2s_r_channel #
   input  wire                                 m_rvalid  ,
   output wire                                 m_rready  ,
 
-  // Connections to/from axi_protocol_converter_v2_1_7_b2s_ar_channel module
+  // Connections to/from axi_protocol_converter_v2_1_8_b2s_ar_channel module
   input  wire                                 r_push           ,
   output wire                                 r_full           ,
   // length not needed. Can be removed.
@@ -126,7 +126,7 @@ assign trans_in[1+:C_ID_WIDTH]  = r_arid_r;
 
 
 // rd data fifo
-axi_protocol_converter_v2_1_7_b2s_simple_fifo #(
+axi_protocol_converter_v2_1_8_b2s_simple_fifo #(
   .C_WIDTH                (P_D_WIDTH),
   .C_AWIDTH               (P_D_AWIDTH),
   .C_DEPTH                (P_D_DEPTH)
@@ -147,7 +147,7 @@ rd_data_fifo_0
 
 assign rd_data_fifo_in = {m_rresp, m_rdata};
 
-axi_protocol_converter_v2_1_7_b2s_simple_fifo #(
+axi_protocol_converter_v2_1_8_b2s_simple_fifo #(
   .C_WIDTH                  (P_WIDTH),
   .C_AWIDTH                 (P_AWIDTH),
   .C_DEPTH                  (P_DEPTH)

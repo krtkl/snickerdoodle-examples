@@ -103,7 +103,7 @@ use std.textio.all;
 
 
 -------------------------------------------------------------------------------
--- axi_gpio_v2_0_9 library is used for axi4 component declarations
+-- axi_gpio_v2_0_10 library is used for axi4 component declarations
 -------------------------------------------------------------------------------
 library axi_lite_ipif_v3_0_3; 
 use axi_lite_ipif_v3_0_3.ipif_pkg.calc_num_ce;
@@ -111,17 +111,17 @@ use axi_lite_ipif_v3_0_3.ipif_pkg.INTEGER_ARRAY_TYPE;
 use axi_lite_ipif_v3_0_3.ipif_pkg.SLV64_ARRAY_TYPE;
 
 -------------------------------------------------------------------------------
--- axi_gpio_v2_0_9 library is used for interrupt controller component 
+-- axi_gpio_v2_0_10 library is used for interrupt controller component 
 -- declarations
 -------------------------------------------------------------------------------
 
 library interrupt_control_v3_1_3; 
 
 -------------------------------------------------------------------------------
--- axi_gpio_v2_0_9 library is used for axi_gpio component declarations
+-- axi_gpio_v2_0_10 library is used for axi_gpio component declarations
 -------------------------------------------------------------------------------
 
-library axi_gpio_v2_0_9; 
+library axi_gpio_v2_0_10; 
 
 -------------------------------------------------------------------------------
 --                     Defination of Generics :                              --
@@ -766,7 +766,7 @@ begin -- architecture IMP
 
     end generate REMOVE_INTERRUPT; 
 
-    gpio_core_1 : entity axi_gpio_v2_0_9.gpio_core
+    gpio_core_1 : entity axi_gpio_v2_0_10.gpio_core
       generic map 
            (
              C_DW                => C_S_AXI_DATA_WIDTH,

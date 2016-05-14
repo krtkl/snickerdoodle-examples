@@ -58,7 +58,7 @@
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_w_axi3_conv #
+module axi_protocol_converter_v2_1_8_w_axi3_conv #
   (
    parameter C_FAMILY                            = "none",
    parameter integer C_AXI_ID_WIDTH              = 1,

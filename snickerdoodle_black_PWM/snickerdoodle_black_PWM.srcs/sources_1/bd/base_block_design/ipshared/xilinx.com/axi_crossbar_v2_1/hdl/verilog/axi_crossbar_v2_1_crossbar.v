@@ -48,11 +48,11 @@
 // File name: crossbar.v
 //
 // Description: 
-//   This module is a M-master to N-slave AXI axi_crossbar_v2_1_8_crossbar switch.
+//   This module is a M-master to N-slave AXI axi_crossbar_v2_1_9_crossbar switch.
 //   The interface of this module consists of a vectored slave and master interface
 //     in which all slots are sized and synchronized to the native width and clock 
 //     of the interconnect.
-//   The SAMD axi_crossbar_v2_1_8_crossbar supports only AXI4 and AXI3 protocols.
+//   The SAMD axi_crossbar_v2_1_9_crossbar supports only AXI4 and AXI3 protocols.
 //   All width, clock and protocol conversions are done outside this block, as are
 //     any pipeline registers or data FIFOs.
 //   This module contains all arbitration, decoders and channel multiplexing logic.
@@ -87,7 +87,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_crossbar #
+module axi_crossbar_v2_1_9_crossbar #
   (
    parameter         C_FAMILY                       = "none", 
    parameter integer C_NUM_SLAVE_SLOTS              =   1, 
@@ -478,7 +478,7 @@ module axi_crossbar_v2_1_8_crossbar #
   generate
     for (gen_si_slot=0; gen_si_slot<C_NUM_SLAVE_SLOTS; gen_si_slot=gen_si_slot+1) begin : gen_slave_slots
       if (C_S_AXI_SUPPORTS_READ[gen_si_slot]) begin : gen_si_read
-        axi_crossbar_v2_1_8_si_transactor #  // "ST": SI Transactor (read channel)
+        axi_crossbar_v2_1_9_si_transactor #  // "ST": SI Transactor (read channel)
           (
            .C_FAMILY                (C_FAMILY),
            .C_SI                    (gen_si_slot),
@@ -583,7 +583,7 @@ module axi_crossbar_v2_1_8_crossbar #
       end  // gen_si_read
         
       if (C_S_AXI_SUPPORTS_WRITE[gen_si_slot]) begin : gen_si_write
-        axi_crossbar_v2_1_8_si_transactor #  // "ST": SI Transactor (write channel)
+        axi_crossbar_v2_1_9_si_transactor #  // "ST": SI Transactor (write channel)
           (
            .C_FAMILY                (C_FAMILY),
            .C_SI                    (gen_si_slot),
@@ -674,7 +674,7 @@ module axi_crossbar_v2_1_8_crossbar #
         assign S_AXI_BUSER[gen_si_slot*C_AXI_BUSER_WIDTH+:C_AXI_BUSER_WIDTH] = st_si_bmesg[gen_si_slot*P_ST_BMESG_WIDTH+2 +: C_AXI_BUSER_WIDTH];
                        
         // AW SI-transactor transfer completes upon completion of both W-router address acceptance (command push) and AW arbitration
-        axi_crossbar_v2_1_8_splitter #  // "SS": Splitter from SI-Transactor (write channel)
+        axi_crossbar_v2_1_9_splitter #  // "SS": Splitter from SI-Transactor (write channel)
           (
             .C_NUM_M                (2)
           )
@@ -688,7 +688,7 @@ module axi_crossbar_v2_1_8_crossbar #
              .M_READY              ({ss_wr_awready[gen_si_slot], ss_aa_awready[gen_si_slot]})
           );
       
-        axi_crossbar_v2_1_8_wdata_router #  // "WR": Write data Router
+        axi_crossbar_v2_1_9_wdata_router #  // "WR": Write data Router
           (
            .C_FAMILY                   (C_FAMILY),
            .C_NUM_MASTER_SLOTS         (C_NUM_MASTER_SLOTS+1),
@@ -743,7 +743,7 @@ module axi_crossbar_v2_1_8_crossbar #
     for (gen_mi_slot=0; gen_mi_slot<C_NUM_MASTER_SLOTS+1; gen_mi_slot=gen_mi_slot+1) begin : gen_master_slots
       if (P_M_AXI_SUPPORTS_READ[gen_mi_slot]) begin : gen_mi_read
         if (C_NUM_SLAVE_SLOTS>1) begin : gen_rid_decoder
-          axi_crossbar_v2_1_8_addr_decoder #
+          axi_crossbar_v2_1_9_addr_decoder #
             (
               .C_FAMILY          (C_FAMILY),
               .C_NUM_TARGETS     (C_NUM_SLAVE_SLOTS),
@@ -784,7 +784,7 @@ module axi_crossbar_v2_1_8_crossbar #
       
       if (P_M_AXI_SUPPORTS_WRITE[gen_mi_slot]) begin : gen_mi_write
         if (C_NUM_SLAVE_SLOTS>1) begin : gen_bid_decoder
-          axi_crossbar_v2_1_8_addr_decoder #
+          axi_crossbar_v2_1_9_addr_decoder #
             (
               .C_FAMILY          (C_FAMILY),
               .C_NUM_TARGETS     (C_NUM_SLAVE_SLOTS),
@@ -812,7 +812,7 @@ module axi_crossbar_v2_1_8_crossbar #
           assign bid_match[gen_mi_slot] = 1'b1;
         end
       
-        axi_crossbar_v2_1_8_wdata_mux #  // "WM": Write data Mux, per MI-slot (incl error-handler)
+        axi_crossbar_v2_1_9_wdata_mux #  // "WM": Write data Mux, per MI-slot (incl error-handler)
           (
            .C_FAMILY                   (C_FAMILY),
            .C_NUM_SLAVE_SLOTS         (C_NUM_SLAVE_SLOTS),
@@ -857,7 +857,7 @@ module axi_crossbar_v2_1_8_crossbar #
           end  // clocked process
   
           // DEBUG W-CHANNEL TRANSACTION SEQUENCE QUEUE
-          axi_data_fifo_v2_1_6_axic_srl_fifo #
+          axi_data_fifo_v2_1_7_axic_srl_fifo #
             (
              .C_FAMILY          (C_FAMILY),
              .C_FIFO_WIDTH      (8),
@@ -950,7 +950,7 @@ module axi_crossbar_v2_1_8_crossbar #
       // Reg-slice must break combinatorial path from M_BID and M_RID inputs to M_BREADY and M_RREADY outputs.
       //   (See m_rready_i and m_resp_en combinatorial assignments in si_transactor.)
       //   Reg-slice incurs +1 latency, but no bubble-cycles.
-      axi_register_slice_v2_1_7_axi_register_slice #  // "MR": MI-side R/B-channel Reg-slice, per MI-slot (pass-through if only 1 SI-slot configured)
+      axi_register_slice_v2_1_8_axi_register_slice #  // "MR": MI-side R/B-channel Reg-slice, per MI-slot (pass-through if only 1 SI-slot configured)
         (
           .C_FAMILY                         (C_FAMILY),
           .C_AXI_PROTOCOL                   ((C_AXI_PROTOCOL == P_AXI3) ? P_AXI3 : P_AXI4),
@@ -1090,7 +1090,7 @@ module axi_crossbar_v2_1_8_crossbar #
     assign M_AXI_WSTRB = mi_wstrb[0+:C_NUM_MASTER_SLOTS*C_AXI_DATA_WIDTH/8];
     assign mi_wready[0+:C_NUM_MASTER_SLOTS] = M_AXI_WREADY;
 
-    axi_crossbar_v2_1_8_addr_arbiter #  // "AA": Addr Arbiter (AW channel)
+    axi_crossbar_v2_1_9_addr_arbiter #  // "AA": Addr Arbiter (AW channel)
       (
        .C_FAMILY                (C_FAMILY),
        .C_NUM_M                 (C_NUM_MASTER_SLOTS+1),
@@ -1131,7 +1131,7 @@ module axi_crossbar_v2_1_8_crossbar #
     assign M_AXI_AWQOS       = {C_NUM_MASTER_SLOTS{aa_mi_awmesg[C_AXI_ID_WIDTH+C_AXI_ADDR_WIDTH+8+3+2+3+4+2+4 +:4]}};
     assign M_AXI_AWUSER      = {C_NUM_MASTER_SLOTS{aa_mi_awmesg[C_AXI_ID_WIDTH+C_AXI_ADDR_WIDTH+8+3+2+3+4+2+4+4 +:C_AXI_AWUSER_WIDTH]}};
          
-    axi_crossbar_v2_1_8_addr_arbiter #  // "AA": Addr Arbiter (AR channel)
+    axi_crossbar_v2_1_9_addr_arbiter #  // "AA": Addr Arbiter (AR channel)
       (
        .C_FAMILY                (C_FAMILY),
        .C_NUM_M                 (C_NUM_MASTER_SLOTS+1),
@@ -1197,7 +1197,7 @@ module axi_crossbar_v2_1_8_crossbar #
     assign M_AXI_ARUSER      = {C_NUM_MASTER_SLOTS{aa_mi_armesg[C_AXI_ID_WIDTH+C_AXI_ADDR_WIDTH+8+3+2+3+4+2+4+4 +:C_AXI_ARUSER_WIDTH]}};
          
     // AW arbiter command transfer completes upon completion of both M-side AW-channel transfer and W-mux address acceptance (command push).
-    axi_crossbar_v2_1_8_splitter #  // "SA": Splitter for Write Addr Arbiter
+    axi_crossbar_v2_1_9_splitter #  // "SA": Splitter for Write Addr Arbiter
       (
         .C_NUM_M                (2)
       )
@@ -1225,7 +1225,7 @@ module axi_crossbar_v2_1_8_crossbar #
     
     // MI-slot # C_NUM_MASTER_SLOTS is the error handler
     if (C_RANGE_CHECK) begin : gen_decerr_slave
-      axi_crossbar_v2_1_8_decerr_slave #
+      axi_crossbar_v2_1_9_decerr_slave #
         (
          .C_AXI_ID_WIDTH                 (C_AXI_ID_WIDTH),
          .C_AXI_DATA_WIDTH               (C_AXI_DATA_WIDTH),

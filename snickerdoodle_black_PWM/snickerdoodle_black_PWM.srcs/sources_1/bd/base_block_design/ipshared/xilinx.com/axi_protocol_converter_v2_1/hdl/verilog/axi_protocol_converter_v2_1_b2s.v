@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// File name: axi_protocol_converter_v2_1_7_b2s.v
+// File name: axi_protocol_converter_v2_1_8_b2s.v
 //
 // Description:
 // To handle AXI4 transactions to external memory on Virtex-6 architectures
@@ -18,7 +18,7 @@
 // Write acceptance depth is:
 //
 // Structure:
-// axi_protocol_converter_v2_1_7_b2s
+// axi_protocol_converter_v2_1_8_b2s
 //   WRITE_BUNDLE
 //     aw_channel_0
 //       cmd_translator_0
@@ -36,7 +36,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_b2s #(
+module axi_protocol_converter_v2_1_8_b2s #(
   parameter C_S_AXI_PROTOCOL                      = 0,
                     // Width of all master and slave ID signals.
                     // Range: >= 1.
@@ -186,7 +186,7 @@ wire                                        rs_mi_rvalid;
 wire                                        rs_mi_rready;
 
 
-axi_register_slice_v2_1_7_axi_register_slice #(
+axi_register_slice_v2_1_8_axi_register_slice #(
   .C_AXI_PROTOCOL              ( C_S_AXI_PROTOCOL            ) ,
   .C_AXI_ID_WIDTH              ( C_AXI_ID_WIDTH              ) ,
   .C_AXI_ADDR_WIDTH            ( C_AXI_ADDR_WIDTH            ) ,
@@ -299,7 +299,7 @@ axi_register_slice_v2_1_7_axi_register_slice #(
 
 generate
   if (C_AXI_SUPPORTS_WRITE == 1) begin : WR
-    axi_protocol_converter_v2_1_7_b2s_aw_channel #
+    axi_protocol_converter_v2_1_8_b2s_aw_channel #
     (
       .C_ID_WIDTH                       ( C_AXI_ID_WIDTH   ),
       .C_AXI_ADDR_WIDTH                 ( C_AXI_ADDR_WIDTH )
@@ -324,7 +324,7 @@ generate
       .b_full                           ( b_full            )
     );
 
-    axi_protocol_converter_v2_1_7_b2s_b_channel #
+    axi_protocol_converter_v2_1_8_b2s_b_channel #
     (
       .C_ID_WIDTH                       ( C_AXI_ID_WIDTH   )
     )
@@ -377,7 +377,7 @@ wire                                r_full        ;
 
 generate
   if (C_AXI_SUPPORTS_READ == 1) begin : RD
-    axi_protocol_converter_v2_1_7_b2s_ar_channel #
+    axi_protocol_converter_v2_1_8_b2s_ar_channel #
     (
       .C_ID_WIDTH                       ( C_AXI_ID_WIDTH   ),
       .C_AXI_ADDR_WIDTH                 ( C_AXI_ADDR_WIDTH )
@@ -403,7 +403,7 @@ generate
       .r_full                           ( r_full            )
     );
     
-    axi_protocol_converter_v2_1_7_b2s_r_channel #
+    axi_protocol_converter_v2_1_8_b2s_r_channel #
     (
       .C_ID_WIDTH                       ( C_AXI_ID_WIDTH   ),
       .C_DATA_WIDTH                     ( C_AXI_DATA_WIDTH )
@@ -441,7 +441,7 @@ generate
   end
 endgenerate
 
-axi_register_slice_v2_1_7_axi_register_slice #(
+axi_register_slice_v2_1_8_axi_register_slice #(
   .C_AXI_PROTOCOL              ( 2 ) ,
   .C_AXI_ID_WIDTH              ( 1 ) ,
   .C_AXI_ADDR_WIDTH            ( C_AXI_ADDR_WIDTH            ) ,

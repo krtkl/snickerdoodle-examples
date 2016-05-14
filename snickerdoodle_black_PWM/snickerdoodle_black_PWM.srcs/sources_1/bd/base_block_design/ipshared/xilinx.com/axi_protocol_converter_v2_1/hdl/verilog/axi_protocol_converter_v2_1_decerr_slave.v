@@ -61,7 +61,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_protocol_converter_v2_1_7_decerr_slave #
+module axi_protocol_converter_v2_1_8_decerr_slave #
   (
    parameter integer C_AXI_ID_WIDTH           = 1,
    parameter integer C_AXI_DATA_WIDTH         = 32,

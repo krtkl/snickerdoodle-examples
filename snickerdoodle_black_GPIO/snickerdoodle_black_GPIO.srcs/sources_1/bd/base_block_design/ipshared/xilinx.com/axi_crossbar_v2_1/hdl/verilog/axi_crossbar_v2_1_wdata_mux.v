@@ -65,7 +65,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_crossbar_v2_1_8_wdata_mux #
+module axi_crossbar_v2_1_9_wdata_mux #
   (
    parameter         C_FAMILY       = "none", // FPGA Family.
    parameter integer C_WMESG_WIDTH            =  1, // Width of W-channel payload.
@@ -117,7 +117,7 @@ module axi_crossbar_v2_1_8_wdata_mux #
   generate
     if (C_NUM_SLAVE_SLOTS>1) begin : gen_wmux
       // SI-side write command queue
-      axi_data_fifo_v2_1_6_axic_reg_srl_fifo #
+      axi_data_fifo_v2_1_7_axic_reg_srl_fifo #
         (
          .C_FAMILY          (C_FAMILY),
          .C_FIFO_WIDTH      (C_SELECT_WIDTH),

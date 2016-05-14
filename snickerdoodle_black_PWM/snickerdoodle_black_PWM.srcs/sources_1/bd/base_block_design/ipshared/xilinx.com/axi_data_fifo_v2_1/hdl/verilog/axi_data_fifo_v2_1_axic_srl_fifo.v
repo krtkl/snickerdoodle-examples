@@ -58,7 +58,7 @@
 `default_nettype none
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_data_fifo_v2_1_6_axic_srl_fifo #
+module axi_data_fifo_v2_1_7_axic_srl_fifo #
   (
    parameter         C_FAMILY   = "none", // FPGA Family
    parameter integer C_FIFO_WIDTH  = 1, // Width of S_MESG/M_MESG.
@@ -166,7 +166,7 @@ module axi_data_fifo_v2_1_6_axic_srl_fifo #
     //---------------------------------------------------------------------------
     for (i=0;i<(C_FIFO_WIDTH/C_MAX_CTRL_FANOUT)+((C_FIFO_WIDTH%C_MAX_CTRL_FANOUT)>0);i=i+1) begin : gen_srls
       for (j=0;((j<C_MAX_CTRL_FANOUT)&&(i*C_MAX_CTRL_FANOUT+j<C_FIFO_WIDTH));j=j+1) begin : gen_rep
-        axi_data_fifo_v2_1_6_ndeep_srl #
+        axi_data_fifo_v2_1_7_ndeep_srl #
           (
            .C_FAMILY  (C_FAMILY),
            .C_A_WIDTH (P_FIFO_DEPTH_LOG)

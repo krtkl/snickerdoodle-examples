@@ -61,7 +61,7 @@
 
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_data_fifo_v2_1_6_axic_fifo #
+module axi_data_fifo_v2_1_7_axic_fifo #
   (
    parameter         C_FAMILY          = "virtex6",
    parameter integer C_FIFO_DEPTH_LOG  = 5,      // FIFO depth = 2**C_FIFO_DEPTH_LOG
@@ -85,7 +85,7 @@ module axi_data_fifo_v2_1_6_axic_fifo #
    input  wire                        M_READY  // FIFO pop
    );
 
-   axi_data_fifo_v2_1_6_fifo_gen #(
+   axi_data_fifo_v2_1_7_fifo_gen #(
      .C_FAMILY(C_FAMILY),
      .C_COMMON_CLOCK(1),
      .C_FIFO_DEPTH_LOG(C_FIFO_DEPTH_LOG),

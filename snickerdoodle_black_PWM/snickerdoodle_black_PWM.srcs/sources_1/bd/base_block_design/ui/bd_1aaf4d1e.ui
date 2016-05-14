@@ -1,5 +1,5 @@
 {
-   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
+   guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
 preplace port pwm7 -pg 1 -y 560 -defaultsOSRD
 preplace port DDR -pg 1 -y 60 -defaultsOSRD
@@ -50,8 +50,8 @@ preplace netloc axi_pwm_pwm10 1 2 1 NJ
 preplace netloc axi_pwm_pwm8 1 2 1 NJ
 preplace netloc axi_pwm_pwm11 1 2 1 NJ
 preplace netloc axi_pwm_pwm9 1 2 1 NJ
-preplace netloc S00_AXI_1 1 1 1 410
 preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 80 NJ
+preplace netloc S00_AXI_1 1 1 1 410
 preplace netloc axi_pwm_pwm12 1 2 1 NJ
 preplace netloc axi_pwm_pwm13 1 2 1 NJ
 preplace netloc axi_pwm_pwm14 1 2 1 NJ

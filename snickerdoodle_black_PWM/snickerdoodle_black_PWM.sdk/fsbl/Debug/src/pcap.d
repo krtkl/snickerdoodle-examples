@@ -1,4 +1,4 @@
-src/pcap.o src/pcap.d: ../src/pcap.c ../src/pcap.h \
+src/pcap.o src/pcap.o: ../src/pcap.c ../src/pcap.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xdevcfg.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xdevcfg_hw.h \
  ../../fsbl_bsp/ps7_cortexa9_0/include/xil_types.h \
