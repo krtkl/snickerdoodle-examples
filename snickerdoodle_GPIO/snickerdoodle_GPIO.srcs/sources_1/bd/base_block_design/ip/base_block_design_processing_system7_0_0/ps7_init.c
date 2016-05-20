@@ -550,14 +550,14 @@ unsigned long ps7_ddr_init_data_3_0[] = {
     // .. .. reg_ddrc_t_rc = 0x1a
     // .. .. ==> 0XF8006014[5:0] = 0x0000001AU
     // .. ..     ==> MASK : 0x0000003FU    VAL : 0x0000001AU
-    // .. .. reg_ddrc_t_rfc_min = 0x34
-    // .. .. ==> 0XF8006014[13:6] = 0x00000034U
-    // .. ..     ==> MASK : 0x00003FC0U    VAL : 0x00000D00U
+    // .. .. reg_ddrc_t_rfc_min = 0x54
+    // .. .. ==> 0XF8006014[13:6] = 0x00000054U
+    // .. ..     ==> MASK : 0x00003FC0U    VAL : 0x00001500U
     // .. .. reg_ddrc_post_selfref_gap_x32 = 0x10
     // .. .. ==> 0XF8006014[20:14] = 0x00000010U
     // .. ..     ==> MASK : 0x001FC000U    VAL : 0x00040000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006014, 0x001FFFFFU ,0x00040D1AU),
+    EMIT_MASKWRITE(0XF8006014, 0x001FFFFFU ,0x0004151AU),
     // .. .. reg_ddrc_wr2pre = 0xf
     // .. .. ==> 0XF8006018[4:0] = 0x0000000FU
     // .. ..     ==> MASK : 0x0000001FU    VAL : 0x0000000FU
@@ -708,15 +708,15 @@ unsigned long ps7_ddr_init_data_3_0[] = {
     // .. ..     ==> MASK : 0x00000002U    VAL : 0x00000000U
     // .. .. 
     EMIT_MASKWRITE(0XF8006038, 0x00000003U ,0x00000000U),
-    // .. .. reg_ddrc_addrmap_bank_b0 = 0x7
-    // .. .. ==> 0XF800603C[3:0] = 0x00000007U
-    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000007U
-    // .. .. reg_ddrc_addrmap_bank_b1 = 0x7
-    // .. .. ==> 0XF800603C[7:4] = 0x00000007U
-    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000070U
-    // .. .. reg_ddrc_addrmap_bank_b2 = 0x7
-    // .. .. ==> 0XF800603C[11:8] = 0x00000007U
-    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000700U
+    // .. .. reg_ddrc_addrmap_bank_b0 = 0x8
+    // .. .. ==> 0XF800603C[3:0] = 0x00000008U
+    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000008U
+    // .. .. reg_ddrc_addrmap_bank_b1 = 0x8
+    // .. .. ==> 0XF800603C[7:4] = 0x00000008U
+    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000080U
+    // .. .. reg_ddrc_addrmap_bank_b2 = 0x8
+    // .. .. ==> 0XF800603C[11:8] = 0x00000008U
+    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000800U
     // .. .. reg_ddrc_addrmap_col_b5 = 0x0
     // .. .. ==> 0XF800603C[15:12] = 0x00000000U
     // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00000000U
@@ -724,7 +724,7 @@ unsigned long ps7_ddr_init_data_3_0[] = {
     // .. .. ==> 0XF800603C[19:16] = 0x00000000U
     // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF800603C, 0x000FFFFFU ,0x00000777U),
+    EMIT_MASKWRITE(0XF800603C, 0x000FFFFFU ,0x00000888U),
     // .. .. reg_ddrc_addrmap_col_b2 = 0x0
     // .. .. ==> 0XF8006040[3:0] = 0x00000000U
     // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000000U
@@ -740,9 +740,9 @@ unsigned long ps7_ddr_init_data_3_0[] = {
     // .. .. reg_ddrc_addrmap_col_b8 = 0x0
     // .. .. ==> 0XF8006040[19:16] = 0x00000000U
     // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00000000U
-    // .. .. reg_ddrc_addrmap_col_b9 = 0xf
-    // .. .. ==> 0XF8006040[23:20] = 0x0000000FU
-    // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00F00000U
+    // .. .. reg_ddrc_addrmap_col_b9 = 0x0
+    // .. .. ==> 0XF8006040[23:20] = 0x00000000U
+    // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00000000U
     // .. .. reg_ddrc_addrmap_col_b10 = 0xf
     // .. .. ==> 0XF8006040[27:24] = 0x0000000FU
     // .. ..     ==> MASK : 0x0F000000U    VAL : 0x0F000000U
@@ -750,22 +750,22 @@ unsigned long ps7_ddr_init_data_3_0[] = {
     // .. .. ==> 0XF8006040[31:28] = 0x0000000FU
     // .. ..     ==> MASK : 0xF0000000U    VAL : 0xF0000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006040, 0xFFFFFFFFU ,0xFFF00000U),
-    // .. .. reg_ddrc_addrmap_row_b0 = 0x6
-    // .. .. ==> 0XF8006044[3:0] = 0x00000006U
-    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000006U
-    // .. .. reg_ddrc_addrmap_row_b1 = 0x6
-    // .. .. ==> 0XF8006044[7:4] = 0x00000006U
-    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000060U
-    // .. .. reg_ddrc_addrmap_row_b2_11 = 0x6
-    // .. .. ==> 0XF8006044[11:8] = 0x00000006U
-    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000600U
-    // .. .. reg_ddrc_addrmap_row_b12 = 0x6
-    // .. .. ==> 0XF8006044[15:12] = 0x00000006U
-    // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00006000U
-    // .. .. reg_ddrc_addrmap_row_b13 = 0x6
-    // .. .. ==> 0XF8006044[19:16] = 0x00000006U
-    // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00060000U
+    EMIT_MASKWRITE(0XF8006040, 0xFFFFFFFFU ,0xFF000000U),
+    // .. .. reg_ddrc_addrmap_row_b0 = 0x7
+    // .. .. ==> 0XF8006044[3:0] = 0x00000007U
+    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000007U
+    // .. .. reg_ddrc_addrmap_row_b1 = 0x7
+    // .. .. ==> 0XF8006044[7:4] = 0x00000007U
+    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000070U
+    // .. .. reg_ddrc_addrmap_row_b2_11 = 0x7
+    // .. .. ==> 0XF8006044[11:8] = 0x00000007U
+    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000700U
+    // .. .. reg_ddrc_addrmap_row_b12 = 0x7
+    // .. .. ==> 0XF8006044[15:12] = 0x00000007U
+    // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00007000U
+    // .. .. reg_ddrc_addrmap_row_b13 = 0x7
+    // .. .. ==> 0XF8006044[19:16] = 0x00000007U
+    // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00070000U
     // .. .. reg_ddrc_addrmap_row_b14 = 0xf
     // .. .. ==> 0XF8006044[23:20] = 0x0000000FU
     // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00F00000U
@@ -773,7 +773,7 @@ unsigned long ps7_ddr_init_data_3_0[] = {
     // .. .. ==> 0XF8006044[27:24] = 0x0000000FU
     // .. ..     ==> MASK : 0x0F000000U    VAL : 0x0F000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006044, 0x0FFFFFFFU ,0x0FF66666U),
+    EMIT_MASKWRITE(0XF8006044, 0x0FFFFFFFU ,0x0FF77777U),
     // .. .. reg_phy_rd_local_odt = 0x0
     // .. .. ==> 0XF8006048[13:12] = 0x00000000U
     // .. ..     ==> MASK : 0x00003000U    VAL : 0x00000000U
@@ -4702,14 +4702,14 @@ unsigned long ps7_ddr_init_data_2_0[] = {
     // .. .. reg_ddrc_t_rc = 0x1a
     // .. .. ==> 0XF8006014[5:0] = 0x0000001AU
     // .. ..     ==> MASK : 0x0000003FU    VAL : 0x0000001AU
-    // .. .. reg_ddrc_t_rfc_min = 0x34
-    // .. .. ==> 0XF8006014[13:6] = 0x00000034U
-    // .. ..     ==> MASK : 0x00003FC0U    VAL : 0x00000D00U
+    // .. .. reg_ddrc_t_rfc_min = 0x54
+    // .. .. ==> 0XF8006014[13:6] = 0x00000054U
+    // .. ..     ==> MASK : 0x00003FC0U    VAL : 0x00001500U
     // .. .. reg_ddrc_post_selfref_gap_x32 = 0x10
     // .. .. ==> 0XF8006014[20:14] = 0x00000010U
     // .. ..     ==> MASK : 0x001FC000U    VAL : 0x00040000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006014, 0x001FFFFFU ,0x00040D1AU),
+    EMIT_MASKWRITE(0XF8006014, 0x001FFFFFU ,0x0004151AU),
     // .. .. reg_ddrc_wr2pre = 0xf
     // .. .. ==> 0XF8006018[4:0] = 0x0000000FU
     // .. ..     ==> MASK : 0x0000001FU    VAL : 0x0000000FU
@@ -4881,15 +4881,15 @@ unsigned long ps7_ddr_init_data_2_0[] = {
     // .. ..     ==> MASK : 0x00001E00U    VAL : 0x00000000U
     // .. .. 
     EMIT_MASKWRITE(0XF8006038, 0x00001FC3U ,0x00000000U),
-    // .. .. reg_ddrc_addrmap_bank_b0 = 0x7
-    // .. .. ==> 0XF800603C[3:0] = 0x00000007U
-    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000007U
-    // .. .. reg_ddrc_addrmap_bank_b1 = 0x7
-    // .. .. ==> 0XF800603C[7:4] = 0x00000007U
-    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000070U
-    // .. .. reg_ddrc_addrmap_bank_b2 = 0x7
-    // .. .. ==> 0XF800603C[11:8] = 0x00000007U
-    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000700U
+    // .. .. reg_ddrc_addrmap_bank_b0 = 0x8
+    // .. .. ==> 0XF800603C[3:0] = 0x00000008U
+    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000008U
+    // .. .. reg_ddrc_addrmap_bank_b1 = 0x8
+    // .. .. ==> 0XF800603C[7:4] = 0x00000008U
+    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000080U
+    // .. .. reg_ddrc_addrmap_bank_b2 = 0x8
+    // .. .. ==> 0XF800603C[11:8] = 0x00000008U
+    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000800U
     // .. .. reg_ddrc_addrmap_col_b5 = 0x0
     // .. .. ==> 0XF800603C[15:12] = 0x00000000U
     // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00000000U
@@ -4897,7 +4897,7 @@ unsigned long ps7_ddr_init_data_2_0[] = {
     // .. .. ==> 0XF800603C[19:16] = 0x00000000U
     // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF800603C, 0x000FFFFFU ,0x00000777U),
+    EMIT_MASKWRITE(0XF800603C, 0x000FFFFFU ,0x00000888U),
     // .. .. reg_ddrc_addrmap_col_b2 = 0x0
     // .. .. ==> 0XF8006040[3:0] = 0x00000000U
     // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000000U
@@ -4913,9 +4913,9 @@ unsigned long ps7_ddr_init_data_2_0[] = {
     // .. .. reg_ddrc_addrmap_col_b8 = 0x0
     // .. .. ==> 0XF8006040[19:16] = 0x00000000U
     // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00000000U
-    // .. .. reg_ddrc_addrmap_col_b9 = 0xf
-    // .. .. ==> 0XF8006040[23:20] = 0x0000000FU
-    // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00F00000U
+    // .. .. reg_ddrc_addrmap_col_b9 = 0x0
+    // .. .. ==> 0XF8006040[23:20] = 0x00000000U
+    // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00000000U
     // .. .. reg_ddrc_addrmap_col_b10 = 0xf
     // .. .. ==> 0XF8006040[27:24] = 0x0000000FU
     // .. ..     ==> MASK : 0x0F000000U    VAL : 0x0F000000U
@@ -4923,22 +4923,22 @@ unsigned long ps7_ddr_init_data_2_0[] = {
     // .. .. ==> 0XF8006040[31:28] = 0x0000000FU
     // .. ..     ==> MASK : 0xF0000000U    VAL : 0xF0000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006040, 0xFFFFFFFFU ,0xFFF00000U),
-    // .. .. reg_ddrc_addrmap_row_b0 = 0x6
-    // .. .. ==> 0XF8006044[3:0] = 0x00000006U
-    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000006U
-    // .. .. reg_ddrc_addrmap_row_b1 = 0x6
-    // .. .. ==> 0XF8006044[7:4] = 0x00000006U
-    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000060U
-    // .. .. reg_ddrc_addrmap_row_b2_11 = 0x6
-    // .. .. ==> 0XF8006044[11:8] = 0x00000006U
-    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000600U
-    // .. .. reg_ddrc_addrmap_row_b12 = 0x6
-    // .. .. ==> 0XF8006044[15:12] = 0x00000006U
-    // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00006000U
-    // .. .. reg_ddrc_addrmap_row_b13 = 0x6
-    // .. .. ==> 0XF8006044[19:16] = 0x00000006U
-    // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00060000U
+    EMIT_MASKWRITE(0XF8006040, 0xFFFFFFFFU ,0xFF000000U),
+    // .. .. reg_ddrc_addrmap_row_b0 = 0x7
+    // .. .. ==> 0XF8006044[3:0] = 0x00000007U
+    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000007U
+    // .. .. reg_ddrc_addrmap_row_b1 = 0x7
+    // .. .. ==> 0XF8006044[7:4] = 0x00000007U
+    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000070U
+    // .. .. reg_ddrc_addrmap_row_b2_11 = 0x7
+    // .. .. ==> 0XF8006044[11:8] = 0x00000007U
+    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000700U
+    // .. .. reg_ddrc_addrmap_row_b12 = 0x7
+    // .. .. ==> 0XF8006044[15:12] = 0x00000007U
+    // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00007000U
+    // .. .. reg_ddrc_addrmap_row_b13 = 0x7
+    // .. .. ==> 0XF8006044[19:16] = 0x00000007U
+    // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00070000U
     // .. .. reg_ddrc_addrmap_row_b14 = 0xf
     // .. .. ==> 0XF8006044[23:20] = 0x0000000FU
     // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00F00000U
@@ -4946,7 +4946,7 @@ unsigned long ps7_ddr_init_data_2_0[] = {
     // .. .. ==> 0XF8006044[27:24] = 0x0000000FU
     // .. ..     ==> MASK : 0x0F000000U    VAL : 0x0F000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006044, 0x0FFFFFFFU ,0x0FF66666U),
+    EMIT_MASKWRITE(0XF8006044, 0x0FFFFFFFU ,0x0FF77777U),
     // .. .. reg_ddrc_rank0_rd_odt = 0x0
     // .. .. ==> 0XF8006048[2:0] = 0x00000000U
     // .. ..     ==> MASK : 0x00000007U    VAL : 0x00000000U
@@ -8992,14 +8992,14 @@ unsigned long ps7_ddr_init_data_1_0[] = {
     // .. .. reg_ddrc_t_rc = 0x1a
     // .. .. ==> 0XF8006014[5:0] = 0x0000001AU
     // .. ..     ==> MASK : 0x0000003FU    VAL : 0x0000001AU
-    // .. .. reg_ddrc_t_rfc_min = 0x34
-    // .. .. ==> 0XF8006014[13:6] = 0x00000034U
-    // .. ..     ==> MASK : 0x00003FC0U    VAL : 0x00000D00U
+    // .. .. reg_ddrc_t_rfc_min = 0x54
+    // .. .. ==> 0XF8006014[13:6] = 0x00000054U
+    // .. ..     ==> MASK : 0x00003FC0U    VAL : 0x00001500U
     // .. .. reg_ddrc_post_selfref_gap_x32 = 0x10
     // .. .. ==> 0XF8006014[20:14] = 0x00000010U
     // .. ..     ==> MASK : 0x001FC000U    VAL : 0x00040000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006014, 0x001FFFFFU ,0x00040D1AU),
+    EMIT_MASKWRITE(0XF8006014, 0x001FFFFFU ,0x0004151AU),
     // .. .. reg_ddrc_wr2pre = 0xf
     // .. .. ==> 0XF8006018[4:0] = 0x0000000FU
     // .. ..     ==> MASK : 0x0000001FU    VAL : 0x0000000FU
@@ -9171,15 +9171,15 @@ unsigned long ps7_ddr_init_data_1_0[] = {
     // .. ..     ==> MASK : 0x00001E00U    VAL : 0x00000000U
     // .. .. 
     EMIT_MASKWRITE(0XF8006038, 0x00001FC3U ,0x00000000U),
-    // .. .. reg_ddrc_addrmap_bank_b0 = 0x7
-    // .. .. ==> 0XF800603C[3:0] = 0x00000007U
-    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000007U
-    // .. .. reg_ddrc_addrmap_bank_b1 = 0x7
-    // .. .. ==> 0XF800603C[7:4] = 0x00000007U
-    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000070U
-    // .. .. reg_ddrc_addrmap_bank_b2 = 0x7
-    // .. .. ==> 0XF800603C[11:8] = 0x00000007U
-    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000700U
+    // .. .. reg_ddrc_addrmap_bank_b0 = 0x8
+    // .. .. ==> 0XF800603C[3:0] = 0x00000008U
+    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000008U
+    // .. .. reg_ddrc_addrmap_bank_b1 = 0x8
+    // .. .. ==> 0XF800603C[7:4] = 0x00000008U
+    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000080U
+    // .. .. reg_ddrc_addrmap_bank_b2 = 0x8
+    // .. .. ==> 0XF800603C[11:8] = 0x00000008U
+    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000800U
     // .. .. reg_ddrc_addrmap_col_b5 = 0x0
     // .. .. ==> 0XF800603C[15:12] = 0x00000000U
     // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00000000U
@@ -9187,7 +9187,7 @@ unsigned long ps7_ddr_init_data_1_0[] = {
     // .. .. ==> 0XF800603C[19:16] = 0x00000000U
     // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF800603C, 0x000FFFFFU ,0x00000777U),
+    EMIT_MASKWRITE(0XF800603C, 0x000FFFFFU ,0x00000888U),
     // .. .. reg_ddrc_addrmap_col_b2 = 0x0
     // .. .. ==> 0XF8006040[3:0] = 0x00000000U
     // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000000U
@@ -9203,9 +9203,9 @@ unsigned long ps7_ddr_init_data_1_0[] = {
     // .. .. reg_ddrc_addrmap_col_b8 = 0x0
     // .. .. ==> 0XF8006040[19:16] = 0x00000000U
     // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00000000U
-    // .. .. reg_ddrc_addrmap_col_b9 = 0xf
-    // .. .. ==> 0XF8006040[23:20] = 0x0000000FU
-    // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00F00000U
+    // .. .. reg_ddrc_addrmap_col_b9 = 0x0
+    // .. .. ==> 0XF8006040[23:20] = 0x00000000U
+    // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00000000U
     // .. .. reg_ddrc_addrmap_col_b10 = 0xf
     // .. .. ==> 0XF8006040[27:24] = 0x0000000FU
     // .. ..     ==> MASK : 0x0F000000U    VAL : 0x0F000000U
@@ -9213,22 +9213,22 @@ unsigned long ps7_ddr_init_data_1_0[] = {
     // .. .. ==> 0XF8006040[31:28] = 0x0000000FU
     // .. ..     ==> MASK : 0xF0000000U    VAL : 0xF0000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006040, 0xFFFFFFFFU ,0xFFF00000U),
-    // .. .. reg_ddrc_addrmap_row_b0 = 0x6
-    // .. .. ==> 0XF8006044[3:0] = 0x00000006U
-    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000006U
-    // .. .. reg_ddrc_addrmap_row_b1 = 0x6
-    // .. .. ==> 0XF8006044[7:4] = 0x00000006U
-    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000060U
-    // .. .. reg_ddrc_addrmap_row_b2_11 = 0x6
-    // .. .. ==> 0XF8006044[11:8] = 0x00000006U
-    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000600U
-    // .. .. reg_ddrc_addrmap_row_b12 = 0x6
-    // .. .. ==> 0XF8006044[15:12] = 0x00000006U
-    // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00006000U
-    // .. .. reg_ddrc_addrmap_row_b13 = 0x6
-    // .. .. ==> 0XF8006044[19:16] = 0x00000006U
-    // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00060000U
+    EMIT_MASKWRITE(0XF8006040, 0xFFFFFFFFU ,0xFF000000U),
+    // .. .. reg_ddrc_addrmap_row_b0 = 0x7
+    // .. .. ==> 0XF8006044[3:0] = 0x00000007U
+    // .. ..     ==> MASK : 0x0000000FU    VAL : 0x00000007U
+    // .. .. reg_ddrc_addrmap_row_b1 = 0x7
+    // .. .. ==> 0XF8006044[7:4] = 0x00000007U
+    // .. ..     ==> MASK : 0x000000F0U    VAL : 0x00000070U
+    // .. .. reg_ddrc_addrmap_row_b2_11 = 0x7
+    // .. .. ==> 0XF8006044[11:8] = 0x00000007U
+    // .. ..     ==> MASK : 0x00000F00U    VAL : 0x00000700U
+    // .. .. reg_ddrc_addrmap_row_b12 = 0x7
+    // .. .. ==> 0XF8006044[15:12] = 0x00000007U
+    // .. ..     ==> MASK : 0x0000F000U    VAL : 0x00007000U
+    // .. .. reg_ddrc_addrmap_row_b13 = 0x7
+    // .. .. ==> 0XF8006044[19:16] = 0x00000007U
+    // .. ..     ==> MASK : 0x000F0000U    VAL : 0x00070000U
     // .. .. reg_ddrc_addrmap_row_b14 = 0xf
     // .. .. ==> 0XF8006044[23:20] = 0x0000000FU
     // .. ..     ==> MASK : 0x00F00000U    VAL : 0x00F00000U
@@ -9236,7 +9236,7 @@ unsigned long ps7_ddr_init_data_1_0[] = {
     // .. .. ==> 0XF8006044[27:24] = 0x0000000FU
     // .. ..     ==> MASK : 0x0F000000U    VAL : 0x0F000000U
     // .. .. 
-    EMIT_MASKWRITE(0XF8006044, 0x0FFFFFFFU ,0x0FF66666U),
+    EMIT_MASKWRITE(0XF8006044, 0x0FFFFFFFU ,0x0FF77777U),
     // .. .. reg_ddrc_rank0_rd_odt = 0x0
     // .. .. ==> 0XF8006048[2:0] = 0x00000000U
     // .. ..     ==> MASK : 0x00000007U    VAL : 0x00000000U

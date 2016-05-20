@@ -7599,7 +7599,7 @@
         <spirit:name>HP0_DDR_LOWOCM</spirit:name>
         <spirit:displayName>HP0 DDR LOWOCM</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="32">0x00000000</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">536870912</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">1073741824</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:vendorExtensions>
@@ -7654,7 +7654,7 @@
         <spirit:name>HP1_DDR_LOWOCM</spirit:name>
         <spirit:displayName>HP1 DDR LOWOCM</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="32">0x00000000</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">536870912</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">1073741824</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:vendorExtensions>
@@ -7709,7 +7709,7 @@
         <spirit:name>HP2_DDR_LOWOCM</spirit:name>
         <spirit:displayName>HP2 DDR LOWOCM</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="32">0x00000000</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">536870912</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">1073741824</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:vendorExtensions>
@@ -7764,7 +7764,7 @@
         <spirit:name>HP3_DDR_LOWOCM</spirit:name>
         <spirit:displayName>HP3 DDR LOWOCM</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="32">0x00000000</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">536870912</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">1073741824</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:vendorExtensions>
@@ -7819,7 +7819,7 @@
         <spirit:name>GP0_DDR_LOWOCM</spirit:name>
         <spirit:displayName>GP0 DDR LOWOCM</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="32">0x00000000</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">536870912</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">1073741824</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:vendorExtensions>
@@ -8459,7 +8459,7 @@
         <spirit:name>GP1_DDR_LOWOCM</spirit:name>
         <spirit:displayName>GP1 DDR LOWOCM</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="32">0x00000000</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">536870912</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">1073741824</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:vendorExtensions>
@@ -9099,7 +9099,7 @@
         <spirit:name>ACP_DDR_LOWOCM</spirit:name>
         <spirit:displayName>ACP DDR LOWOCM</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="32">0x00000000</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">536870912</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(PARAM_VALUE.PCW_DDR_RAM_HIGHADDR)))+0x00000001)">1073741824</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:vendorExtensions>
@@ -9731,7 +9731,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat May 14 22:47:34 UTC 2016</spirit:value>
+            <spirit:value>Fri May 20 21:14:26 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -9743,7 +9743,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>450cc194</spirit:value>
+            <spirit:value>8a0b4557</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -9762,7 +9762,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat May 14 22:47:34 UTC 2016</spirit:value>
+            <spirit:value>Fri May 20 21:14:26 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -9774,7 +9774,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>450cc194</spirit:value>
+            <spirit:value>8a0b4557</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -9800,7 +9800,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>94ab29c2</spirit:value>
+            <spirit:value>7554f7fa</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -9818,7 +9818,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat May 14 22:47:35 UTC 2016</spirit:value>
+            <spirit:value>Fri May 20 21:14:27 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -9830,7 +9830,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>94ab29c2</spirit:value>
+            <spirit:value>7554f7fa</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -27058,7 +27058,7 @@
     <spirit:parameter>
       <spirit:name>PCW_DDR_RAM_HIGHADDR</spirit:name>
       <spirit:displayName>PCW DDR RAM HIGHADDR</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_DDR_RAM_HIGHADDR" spirit:choiceRef="choice_list_c11320b6" spirit:order="49500" spirit:bitStringLength="32">0x1FFFFFFF</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_DDR_RAM_HIGHADDR" spirit:choiceRef="choice_list_c11320b6" spirit:order="49500" spirit:bitStringLength="32">0x3FFFFFFF</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -27541,7 +27541,7 @@
     <spirit:parameter>
       <spirit:name>PCW_UIPARAM_DDR_COL_ADDR_COUNT</spirit:name>
       <spirit:displayName>PCW UIPARAM DDR COL ADDR COUNT</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_UIPARAM_DDR_COL_ADDR_COUNT" spirit:order="14300" spirit:minimum="8.000000" spirit:maximum="13.000000">10</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_UIPARAM_DDR_COL_ADDR_COUNT" spirit:order="14300" spirit:minimum="8.000000" spirit:maximum="13.000000">11</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_UIPARAM_DDR_CL</spirit:name>
@@ -30347,7 +30347,7 @@
     <spirit:parameter>
       <spirit:name>PCW_UIPARAM_DDR_DEVICE_CAPACITY</spirit:name>
       <spirit:displayName>PCW UIPARAM DDR DEVICE CAPACITY</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_UIPARAM_DDR_DEVICE_CAPACITY" spirit:choiceRef="choice_list_32c7371b" spirit:order="13800">4096 MBits</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_UIPARAM_DDR_DEVICE_CAPACITY" spirit:choiceRef="choice_list_32c7371b" spirit:order="13800">8192 MBits</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_UIPARAM_DDR_SPEED_BIN</spirit:name>

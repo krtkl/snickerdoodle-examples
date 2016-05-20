@@ -175,7 +175,7 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">base_block_design_processing_system7_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_ROW_ADDR_COUNT">14</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_COL_ADDR_COUNT">10</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_COL_ADDR_COUNT">11</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_CL">6</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_T_RCD">8</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_T_RP">9</spirit:configurableElementValue>
@@ -195,7 +195,7 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_MEMORY_TYPE">LPDDR 2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_PARTNO">Custom</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_DRAM_WIDTH">32 Bits</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_DEVICE_CAPACITY">4096 MBits</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_DEVICE_CAPACITY">8192 MBits</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UIPARAM_DDR_SPEED_BIN">LPDDR2_1066</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_QSPI_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_QSPI_QSPI_IO">MIO 1 .. 6</spirit:configurableElementValue>
@@ -278,11 +278,11 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_1" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_50M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_50M" spirit:portRef="slowest_sync_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>

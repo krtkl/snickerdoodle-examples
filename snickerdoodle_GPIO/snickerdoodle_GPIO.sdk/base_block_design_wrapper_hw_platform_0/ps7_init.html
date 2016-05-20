@@ -1519,7 +1519,7 @@ Provide the width of the DRAM chip
 <B>DRAM Device Capacity</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-4096 MBits
+8192 MBits
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 
@@ -1563,7 +1563,7 @@ Provide the Row address for ACTIVE commands
 <B>COLUMN Address Count</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-10
+11
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 Provide the Row address for READ/WRITE commands
@@ -10855,10 +10855,10 @@ ddrc_ctrl
 <B>3fc0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>34</B>
+<B>54</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>d00</B>
+<B>1500</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>tRFC(min) - Minimum time from refresh to refresh or activate (spec: 75nS to 195nS). DRAM Related. Default value is set for DDR3. Dynamic Bit Field.</B>
@@ -10898,7 +10898,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>40d1a</B>
+<B>4151a</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 0</B>
@@ -12645,10 +12645,10 @@ ddrc_ctrl
 <B>f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the address bits used as bank address bit 0. Valid Range: 0 to 14. Internal Base: 5. The selected address bit for each of the bank address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -12665,10 +12665,10 @@ ddrc_ctrl
 <B>f0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>70</B>
+<B>80</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the address bits used as bank address bit 1. Valid Range: 0 to 14; Internal Base: 6. The selected address bit for each of the bank address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -12685,10 +12685,10 @@ ddrc_ctrl
 <B>f00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>700</B>
+<B>800</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as bank address bit 2. Valid range 0 to 14, and 15. Internal Base: 7. The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, bank address bit 2 is set to 0.</B>
@@ -12748,7 +12748,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>777</B>
+<B>888</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Row/Column address bits</B>
@@ -12932,10 +12932,10 @@ ddrc_ctrl
 <B>f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>f</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>f00000</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Full bus width mode: Selects the address bit used as column address bit 11. (Column address bit 10 in LPDDR2 mode) Half bus width mode: Selects the address bit used as column address bit 12. (Column address bit 11 in LPDDR2 mode) Valid Range: 0 to 7, and 15 Internal Base: 12 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, this column address bit is set to 0. Note: Per JEDEC DDR2 spec, column address bit 10 is reserved for indicating auto-precharge, and hence no source address bit can be mapped to column address bit 10. In LPDDR2, there is a dedicated bit for auto-precharge in the CA bus, and hence column bit 10 is used.</B>
@@ -12995,7 +12995,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>fff00000</B>
+<B>ff000000</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Column address bits</B>
@@ -13079,10 +13079,10 @@ ddrc_ctrl
 <B>f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bit 0. Valid Range: 0 to 11. Internal Base: 9 The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field</B>
@@ -13099,10 +13099,10 @@ ddrc_ctrl
 <B>f0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>60</B>
+<B>70</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bit 1. Valid Range: 0 to 11. Internal Base: 10 The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -13119,10 +13119,10 @@ ddrc_ctrl
 <B>f00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>600</B>
+<B>700</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bits 2 to 11. Valid Range: 0 to 11. Internal Base: 11 (for row address bit 2) to 20 (for row address bit 11) The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -13139,10 +13139,10 @@ ddrc_ctrl
 <B>f000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>6000</B>
+<B>7000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as row address bit 12. Valid Range: 0 to 8, Internal Base: 21 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 12 is set to 0.</B>
@@ -13159,10 +13159,10 @@ ddrc_ctrl
 <B>f0000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>60000</B>
+<B>70000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as row address bit 13. Valid Range: 0 to 7, Internal Base: 22 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 13 is set to 0.</B>
@@ -13222,7 +13222,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>ff66666</B>
+<B>ff77777</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Select DRAM row address bits</B>
@@ -56441,10 +56441,10 @@ ddrc_ctrl
 <B>3fc0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>34</B>
+<B>54</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>d00</B>
+<B>1500</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>tRFC(min) - Minimum time from refresh to refresh or activate (spec: 75nS to 195nS). DRAM Related. Default value is set for DDR3. Dynamic Bit Field.</B>
@@ -56484,7 +56484,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>40d1a</B>
+<B>4151a</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 0</B>
@@ -58371,10 +58371,10 @@ ddrc_ctrl
 <B>f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the address bits used as bank address bit 0. Valid Range: 0 to 14. Internal Base: 5. The selected address bit for each of the bank address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -58391,10 +58391,10 @@ ddrc_ctrl
 <B>f0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>70</B>
+<B>80</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the address bits used as bank address bit 1. Valid Range: 0 to 14; Internal Base: 6. The selected address bit for each of the bank address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -58411,10 +58411,10 @@ ddrc_ctrl
 <B>f00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>700</B>
+<B>800</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as bank address bit 2. Valid range 0 to 14, and 15. Internal Base: 7. The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, bank address bit 2 is set to 0.</B>
@@ -58474,7 +58474,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>777</B>
+<B>888</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Row/Column address bits</B>
@@ -58658,10 +58658,10 @@ ddrc_ctrl
 <B>f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>f</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>f00000</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Full bus width mode: Selects the address bit used as column address bit 11. (Column address bit 10 in LPDDR2 mode) Half bus width mode: Selects the address bit used as column address bit 12. (Column address bit 11 in LPDDR2 mode) Valid Range: 0 to 7, and 15 Internal Base: 12 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, this column address bit is set to 0. Note: Per JEDEC DDR2 spec, column address bit 10 is reserved for indicating auto-precharge, and hence no source address bit can be mapped to column address bit 10. In LPDDR2, there is a dedicated bit for auto-precharge in the CA bus, and hence column bit 10 is used.</B>
@@ -58721,7 +58721,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>fff00000</B>
+<B>ff000000</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Column address bits</B>
@@ -58805,10 +58805,10 @@ ddrc_ctrl
 <B>f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bit 0. Valid Range: 0 to 11. Internal Base: 9 The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field</B>
@@ -58825,10 +58825,10 @@ ddrc_ctrl
 <B>f0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>60</B>
+<B>70</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bit 1. Valid Range: 0 to 11. Internal Base: 10 The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -58845,10 +58845,10 @@ ddrc_ctrl
 <B>f00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>600</B>
+<B>700</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bits 2 to 11. Valid Range: 0 to 11. Internal Base: 11 (for row address bit 2) to 20 (for row address bit 11) The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -58865,10 +58865,10 @@ ddrc_ctrl
 <B>f000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>6000</B>
+<B>7000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as row address bit 12. Valid Range: 0 to 11, and 15 Internal Base: 21 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 12 is set to 0.</B>
@@ -58885,10 +58885,10 @@ ddrc_ctrl
 <B>f0000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>60000</B>
+<B>70000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as row address bit 13. Valid Range: 0 to 11, and 15 Internal Base: 22 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 13 is set to 0.</B>
@@ -58948,7 +58948,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>ff66666</B>
+<B>ff77777</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Select DRAM row address bits</B>
@@ -102989,10 +102989,10 @@ ddrc_ctrl
 <B>3fc0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>34</B>
+<B>54</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>d00</B>
+<B>1500</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>tRFC(min) - Minimum time from refresh to refresh or activate (spec: 75ns to 195ns). DRAM RELATED. Default value is set for DDR3.</B>
@@ -103032,7 +103032,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>40d1a</B>
+<B>4151a</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters register 0</B>
@@ -104919,10 +104919,10 @@ ddrc_ctrl
 <B>f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the address bits used as bank address bit 0. Valid Range: 0 to 14 Internal Base: 5 The selected address bit for each of the bank address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -104939,10 +104939,10 @@ ddrc_ctrl
 <B>f0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>70</B>
+<B>80</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the address bits used as bank address bit 1. Valid Range: 0 to 14; Internal Base: 6. The selected address bit for each of the bank address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -104959,10 +104959,10 @@ ddrc_ctrl
 <B>f00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>700</B>
+<B>800</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as bank address bit 2. Valid range 0 to 14, and 15. Internal Base: 7. The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, bank address bit 2 is set to 0.</B>
@@ -105022,7 +105022,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>777</B>
+<B>888</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Selects the address bits used as DRAM bank address bits</B>
@@ -105206,10 +105206,10 @@ ddrc_ctrl
 <B>f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>f</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>f00000</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Full bus width mode: Selects the address bit used as column address bit 11. (Column address bit 10 in LPDDR2 mode) Half bus width mode: Selects the address bit used as column address bit 12. (Column address bit 11 in LPDDR2 mode) Valid Range: 0 to 7, and 15 Internal Base: 12 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, this column address bit is set to 0. Note: Per JEDEC DDR2 spec, column address bit 10 is reserved for indicating auto-precharge, and hence no source address bit can be mapped to column address bit 10. In LPDDR2, there is a dedicated bit for auto-precharge in the CA bus, and hence column bit 10 is used.</B>
@@ -105269,7 +105269,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>fff00000</B>
+<B>ff000000</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Selects the address bits used as DRAM column address bits</B>
@@ -105353,10 +105353,10 @@ ddrc_ctrl
 <B>f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bit 0. Valid Range: 0 to 11. Internal Base: 9 The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field</B>
@@ -105373,10 +105373,10 @@ ddrc_ctrl
 <B>f0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>60</B>
+<B>70</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bit 1. Valid Range: 0 to 11. Internal Base: 10 The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -105393,10 +105393,10 @@ ddrc_ctrl
 <B>f00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>600</B>
+<B>700</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bits used as row address bits 2 to 11. Valid Range: 0 to 11. Internal Base: 11 (for row address bit 2) to 20 (for row address bit 11) The selected address bit for each of the row address bits is determined by adding the Internal Base to the value of this field.</B>
@@ -105413,10 +105413,10 @@ ddrc_ctrl
 <B>f000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>6000</B>
+<B>7000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as row address bit 12. Valid Range: 0 to 11, and 15 Internal Base: 21 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 12 is set to 0.</B>
@@ -105433,10 +105433,10 @@ ddrc_ctrl
 <B>f0000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
+<B>7</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>60000</B>
+<B>70000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects the AXI address bit used as row address bit 13. Valid Range: 0 to 11, and 15 Internal Base: 22 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 13 is set to 0.</B>
@@ -105496,7 +105496,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>ff66666</B>
+<B>ff77777</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Selects the address bits used as DRAM row address bits</B>

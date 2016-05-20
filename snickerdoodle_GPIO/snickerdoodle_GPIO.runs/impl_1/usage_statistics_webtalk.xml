@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat May 14 15:52:57 2016'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri May 20 14:20:04 2016'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1538259" description="" />
-  <keyValuePair key="date_generated" value="Sat May 14 15:52:56 2016" description="" />
+  <keyValuePair key="date_generated" value="Fri May 20 14:20:03 2016" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2016.1 (64-bit)" description="" />
   <keyValuePair key="project_id" value="7584a7504921423aa0d59c4090c0a8df" description="" />
-  <keyValuePair key="project_iteration" value="12" description="" />
+  <keyValuePair key="project_iteration" value="13" description="" />
   <keyValuePair key="random_id" value="c63067f3f7ec568993a71a14860c7b01" description="" />
   <keyValuePair key="registration_id" value="211036957_0_0_045" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -417,8 +417,8 @@
    <keyValuePair key="pcw_uiparam_ddr_clock_3_package_length" value="54.563" description="" />
    <keyValuePair key="pcw_uiparam_ddr_clock_3_propogation_delay" value="160" description="" />
    <keyValuePair key="pcw_uiparam_ddr_clock_stop_en" value="0" description="" />
-   <keyValuePair key="pcw_uiparam_ddr_col_addr_count" value="10" description="" />
-   <keyValuePair key="pcw_uiparam_ddr_device_capacity" value="4096 MBits" description="" />
+   <keyValuePair key="pcw_uiparam_ddr_col_addr_count" value="11" description="" />
+   <keyValuePair key="pcw_uiparam_ddr_device_capacity" value="8192 MBits" description="" />
    <keyValuePair key="pcw_uiparam_ddr_dq_0_length_mm" value="0" description="" />
    <keyValuePair key="pcw_uiparam_ddr_dq_0_package_length" value="104.5365" description="" />
    <keyValuePair key="pcw_uiparam_ddr_dq_0_propogation_delay" value="160" description="" />
@@ -827,7 +827,7 @@
    <keyValuePair key="nets" value="4262" description="" />
    <keyValuePair key="pins" value="17735" description="" />
    <keyValuePair key="pll" value="0" description="" />
-   <keyValuePair key="router_runtime" value="19.213000" description="" />
+   <keyValuePair key="router_runtime" value="28.815000" description="" />
    <keyValuePair key="router_timing_driven" value="1" description="" />
    <keyValuePair key="threads" value="2" description="" />
    <keyValuePair key="timing_constraints_exist" value="1" description="" />
@@ -870,10 +870,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:01:27s" description="" />
+   <keyValuePair key="elapsed" value="00:02:18s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="611.551MB" description="" />
-   <keyValuePair key="memory_peak" value="879.836MB" description="" />
+   <keyValuePair key="memory_gain" value="610.262MB" description="" />
+   <keyValuePair key="memory_peak" value="878.891MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="8" description="">
@@ -919,7 +919,7 @@
  </section>
  <section name="vivado_usage" level="1" order="9" description="">
   <section name="other_data" level="2" order="1" description="">
-   <keyValuePair key="guimode" value="18" description="" />
+   <keyValuePair key="guimode" value="21" description="" />
   </section>
   <section name="project_data" level="2" order="2" description="">
    <keyValuePair key="constraintsetcount" value="1" description="" />

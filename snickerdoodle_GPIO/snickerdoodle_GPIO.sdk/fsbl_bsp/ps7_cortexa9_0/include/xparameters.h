@@ -23,7 +23,7 @@
 
 /* Definitions for peripheral PS7_DDR_0 */
 #define XPAR_PS7_DDR_0_S_AXI_BASEADDR 0x00100000
-#define XPAR_PS7_DDR_0_S_AXI_HIGHADDR 0x1FFFFFFF
+#define XPAR_PS7_DDR_0_S_AXI_HIGHADDR 0x3FFFFFFF
 
 
 /******************************************************************/

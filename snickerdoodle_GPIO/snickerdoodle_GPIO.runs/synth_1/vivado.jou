@@ -2,8 +2,8 @@
 # Vivado v2016.1 (64-bit)
 # SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
 # IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
-# Start of session at: Sat May 14 15:48:19 2016
-# Process ID: 2104
+# Start of session at: Fri May 20 14:14:37 2016
+# Process ID: 7232
 # Current directory: C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1
 # Command line: vivado.exe -log base_block_design_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source base_block_design_wrapper.tcl
 # Log file: C:/snickerdoodle_GPIO/snickerdoodle_GPIO.runs/synth_1/base_block_design_wrapper.vds

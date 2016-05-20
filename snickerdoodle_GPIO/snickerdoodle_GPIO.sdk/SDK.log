@@ -1,3 +1,3 @@
-15:55:28 INFO  : Launching XSDB server: xsdb.bat -interactive C:\snickerdoodle_GPIO\snickerdoodle_GPIO.sdk\temp_xsdb_launch_script.tcl
-15:55:31 INFO  : XSDB server has started successfully.
-15:55:32 INFO  : Processing command line option -hwspec C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper.hdf.
+14:29:58 INFO  : Launching XSDB server: xsdb.bat -interactive C:\snickerdoodle_GPIO\snickerdoodle_GPIO.sdk\temp_xsdb_launch_script.tcl
+14:30:07 INFO  : XSDB server has started successfully.
+14:30:08 INFO  : Processing command line option -hwspec C:/snickerdoodle_GPIO/snickerdoodle_GPIO.sdk/base_block_design_wrapper.hdf.

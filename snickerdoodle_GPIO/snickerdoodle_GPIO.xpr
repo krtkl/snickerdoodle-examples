@@ -52,17 +52,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_axi_periph_0/base_block_design_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_rst_processing_system7_0_50M_0/base_block_design_rst_processing_system7_0_50M_0.xci"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_gpio_1_0/base_block_design_axi_gpio_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_0/base_block_design_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hdl/base_block_design.v"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_xbar_0/base_block_design_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hdl/base_block_design.hwdef"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hw_handoff/base_block_design_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hw_handoff/base_block_design.hwh"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_processing_system7_0_axi_periph_0/base_block_design_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_axi_gpio_0_0/base_block_design_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="ip/base_block_design_auto_pc_0/base_block_design_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hdl/base_block_design.hwdef"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hw_handoff/base_block_design.hwh"/>
+        <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="hw_handoff/base_block_design_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="base_block_design.bd" FileRelPathName="base_block_design_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/base_block_design/hdl/base_block_design_wrapper.v">
