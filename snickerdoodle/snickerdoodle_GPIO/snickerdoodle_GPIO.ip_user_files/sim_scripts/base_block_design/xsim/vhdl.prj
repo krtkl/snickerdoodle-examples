@@ -1,0 +1,5 @@
+vhdl xil_defaultlib "../../../bd/base_block_design/ip/base_block_design_axi_gpio_0_0/sim/base_block_design_axi_gpio_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/base_block_design/ip/base_block_design_axi_gpio_1_0/sim/base_block_design_axi_gpio_1_0.vhd" 
+vhdl xil_defaultlib "../../../bd/base_block_design/ip/base_block_design_rst_processing_system7_0_50M_0/sim/base_block_design_rst_processing_system7_0_50M_0.vhd" 
+
+nosort

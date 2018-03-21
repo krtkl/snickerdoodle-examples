@@ -1,3 +1,0 @@
-15:40:55 INFO  : Launching XSDB server: xsdb.bat -interactive C:\snickerdoodle_black_PWM\snickerdoodle_black_PWM.sdk\temp_xsdb_launch_script.tcl
-15:41:01 INFO  : XSDB server has started successfully.
-15:41:02 INFO  : Processing command line option -hwspec C:/snickerdoodle_black_PWM/snickerdoodle_black_PWM.sdk/base_block_design_wrapper.hdf.

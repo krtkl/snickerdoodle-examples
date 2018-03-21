@@ -1,0 +1,55 @@
+*
+!*/
+!.gitignore
+
+# Source files:
+!*.vhd
+!*.v
+!*.bd
+!*.edif
+
+#IP files
+!*.xci
+!*.dcp
+!*.vds
+!*.pb
+!*.ui
+!*.ooc
+
+# System Generator
+!*.mdl
+!*.slx
+!*.bxml
+
+# Simulation logic analyzer
+!*.wcfg
+!*.coe
+
+# MIG
+!*.prj
+!*.mem
+
+# Project files
+!*.xpr
+
+# Constraint files
+!*.xdc
+
+# TCL - files
+!*.tcl
+
+# Journal - files
+!*.jou
+
+# Reports
+!*.rpt
+!*.txt
+!*.vdi
+
+# C-files
+!*.c
+!*.h
+!*.elf
+!*.bmm
+!*.xmp
+

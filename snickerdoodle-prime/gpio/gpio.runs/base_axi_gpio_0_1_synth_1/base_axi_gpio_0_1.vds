@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Mar 20 19:04:03 2018
+# Process ID: 2036
+# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle-prime/gpio/gpio.runs/base_axi_gpio_0_1_synth_1
+# Command line: vivado.exe -log base_axi_gpio_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axi_gpio_0_1.tcl
+# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle-prime/gpio/gpio.runs/base_axi_gpio_0_1_synth_1/base_axi_gpio_0_1.vds
+# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle-prime/gpio/gpio.runs/base_axi_gpio_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/Russell Bush/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source base_axi_gpio_0_1.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP base_axi_gpio_0_1, cache-ID = 650e37c676c3cb67.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 20 19:04:23 2018...
