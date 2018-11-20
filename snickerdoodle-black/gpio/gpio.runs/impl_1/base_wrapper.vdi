@@ -1,0 +1,534 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Mar 22 16:17:55 2018
+# Process ID: 4860
+# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1
+# Command line: vivado.exe -log base_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source base_wrapper.tcl -notrace
+# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper.vdi
+# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/Russell Bush/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source base_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 317.555 ; gain = 42.633
+Command: link_design -top base_wrapper -part xc7z020clg400-3
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0.dcp' for cell 'base_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1.dcp' for cell 'base_i/axi_gpio_1'
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2.dcp' for cell 'base_i/axi_gpio_2'
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.dcp' for cell 'base_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0.dcp' for cell 'base_i/rst_ps7_0_49M'
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.dcp' for cell 'base_i/xlconcat_0'
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_xbar_0/base_xbar_0.dcp' for cell 'base_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_auto_pc_0/base_auto_pc_0.dcp' for cell 'base_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z020clg400-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xdc] for cell 'base_i/processing_system7_0/inst'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xdc] for cell 'base_i/processing_system7_0/inst'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0_board.xdc] for cell 'base_i/axi_gpio_0/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0_board.xdc] for cell 'base_i/axi_gpio_0/U0'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0.xdc] for cell 'base_i/axi_gpio_0/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0.xdc] for cell 'base_i/axi_gpio_0/U0'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1_board.xdc] for cell 'base_i/axi_gpio_1/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1_board.xdc] for cell 'base_i/axi_gpio_1/U0'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1.xdc] for cell 'base_i/axi_gpio_1/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1.xdc] for cell 'base_i/axi_gpio_1/U0'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2_board.xdc] for cell 'base_i/axi_gpio_2/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2_board.xdc] for cell 'base_i/axi_gpio_2/U0'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2.xdc] for cell 'base_i/axi_gpio_2/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2.xdc] for cell 'base_i/axi_gpio_2/U0'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0_board.xdc] for cell 'base_i/rst_ps7_0_49M/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0_board.xdc] for cell 'base_i/rst_ps7_0_49M/U0'
+Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0.xdc] for cell 'base_i/rst_ps7_0_49M/U0'
+Finished Parsing XDC File [z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/sources_1/bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0.xdc] for cell 'base_i/rst_ps7_0_49M/U0'
+Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 125 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 125 instances
+
+18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 698.027 ; gain = 380.473
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.664 . Memory (MB): peak = 706.277 ; gain = 8.250
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1f2d6d511
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.428 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 15 cells and removed 64 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1f2d6d511
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.527 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 268f6cc19
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.986 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 167 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 268f6cc19
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 268f6cc19
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1258.859 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1df6bb0f7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: d82e1f9d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1258.859 ; gain = 560.832
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.245 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file base_wrapper_drc_opted.rpt -pb base_wrapper_drc_opted.pb -rpx base_wrapper_drc_opted.rpx
+Command: report_drc -file base_wrapper_drc_opted.rpt -pb base_wrapper_drc_opted.pb -rpx base_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1258.859 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 90515cce
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1258.859 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11a2a7ca7
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: a6b15f34
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: a6b15f34
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1258.859 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: a6b15f34
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: aed986ec
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: aed986ec
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 25697c75a
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1c2ed8cd8
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1c2ed8cd8
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 11ad5d160
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1546e0629
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1546e0629
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.859 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1546e0629
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.859 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: dd61f039
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: dd61f039
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+INFO: [Place 30-746] Post Placement Timing Summary WNS=14.748. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 112d98be7
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+Phase 4.1 Post Commit Optimization | Checksum: 112d98be7
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 112d98be7
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 112d98be7
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 17063e52e
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 17063e52e
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+Ending Placer Task | Checksum: fbfa3622
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1276.059 ; gain = 17.199
+INFO: [Common 17-83] Releasing license: Implementation
+55 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1276.059 ; gain = 17.199
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.974 . Memory (MB): peak = 1276.379 ; gain = 0.320
+INFO: [Common 17-1381] The checkpoint 'Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file base_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 1277.383 ; gain = 1.004
+INFO: [runtcl-4] Executing : report_utilization -file base_wrapper_utilization_placed.rpt -pb base_wrapper_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1277.383 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file base_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1277.383 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 78f099dd ConstDB: 0 ShapeSum: 83099c45 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 29ab8bb3
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1411.449 ; gain = 133.379
+Post Restoration Checksum: NetGraph: ae5e909 NumContArr: 1ec5a2aa Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 29ab8bb3
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1411.449 ; gain = 133.379
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 29ab8bb3
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1411.449 ; gain = 133.379
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 29ab8bb3
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1411.449 ; gain = 133.379
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: b2d86fc9
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1421.809 ; gain = 143.738
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=14.775 | TNS=0.000  | WHS=-0.197 | THS=-136.008|
+
+Phase 2 Router Initialization | Checksum: 12ba59fe1
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 15806682e
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 223
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=13.613 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 71f57298
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+Phase 4 Rip-up And Reroute | Checksum: 71f57298
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 71f57298
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 71f57298
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+Phase 5 Delay and Skew Optimization | Checksum: 71f57298
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 444aebd0
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=13.624 | TNS=0.000  | WHS=0.053  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 444aebd0
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+Phase 6 Post Hold Fix | Checksum: 444aebd0
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.882572 %
+  Global Horizontal Routing Utilization  = 0.978026 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 5772aa3c
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 5772aa3c
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 138b3ef2f
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=13.624 | TNS=0.000  | WHS=0.053  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 138b3ef2f
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.809 ; gain = 143.738
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.809 ; gain = 143.738
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+71 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1421.809 ; gain = 144.426
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1421.809 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file base_wrapper_drc_routed.rpt -pb base_wrapper_drc_routed.pb -rpx base_wrapper_drc_routed.rpx
+Command: report_drc -file base_wrapper_drc_routed.rpt -pb base_wrapper_drc_routed.pb -rpx base_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file base_wrapper_methodology_drc_routed.rpt -pb base_wrapper_methodology_drc_routed.pb -rpx base_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file base_wrapper_methodology_drc_routed.rpt -pb base_wrapper_methodology_drc_routed.pb -rpx base_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file base_wrapper_power_routed.rpt -pb base_wrapper_power_summary_routed.pb -rpx base_wrapper_power_routed.rpx
+Command: report_power -file base_wrapper_power_routed.rpt -pb base_wrapper_power_summary_routed.pb -rpx base_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+83 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file base_wrapper_route_status.rpt -pb base_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file base_wrapper_timing_summary_routed.rpt -rpx base_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file base_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file base_wrapper_clock_utilization_routed.rpt
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 22 16:20:02 2018...
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Mar 22 16:29:16 2018
+# Process ID: 9012
+# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1
+# Command line: vivado.exe -log base_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source base_wrapper.tcl -notrace
+# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/base_wrapper.vdi
+# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/Russell Bush/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source base_wrapper.tcl -notrace
+Command: open_checkpoint base_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 233.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z020clg400-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/.Xil/Vivado-9012-WIN-MJ2I8SI0RJV/dcp1/base_wrapper_board.xdc]
+Finished Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/.Xil/Vivado-9012-WIN-MJ2I8SI0RJV/dcp1/base_wrapper_board.xdc]
+Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/.Xil/Vivado-9012-WIN-MJ2I8SI0RJV/dcp1/base_wrapper_early.xdc]
+Finished Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/.Xil/Vivado-9012-WIN-MJ2I8SI0RJV/dcp1/base_wrapper_early.xdc]
+Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/.Xil/Vivado-9012-WIN-MJ2I8SI0RJV/dcp1/base_wrapper.xdc]
+Finished Parsing XDC File [Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/.Xil/Vivado-9012-WIN-MJ2I8SI0RJV/dcp1/base_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.701 . Memory (MB): peak = 642.766 ; gain = 2.871
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.703 . Memory (MB): peak = 642.766 ; gain = 2.871
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 125 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 125 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.4 (64-bit) build 2086221
+open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 643.027 ; gain = 416.441
+Command: write_bitstream -force base_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./base_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu Mar 22 16:30:08 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.4/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+20 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 1124.707 ; gain = 481.680
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 22 16:30:09 2018...

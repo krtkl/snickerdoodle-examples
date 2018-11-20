@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# 
+# Start of session at: Fri Mar 23 18:40:09 2018
+# Process ID: 10668
+# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.sdk/webtalk/webtalk.log
+# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# 
+# Start of session at: Mon Nov 19 20:00:44 2018
+# Process ID: 9368
+# Current directory: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle-black/periph-test/periph-test.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle-black/periph-test/periph-test.sdk/webtalk/webtalk.log
+# Journal file: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle-black/periph-test/periph-test.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

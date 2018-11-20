@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Mar 23 17:40:52 2018
+# Process ID: 9492
+# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/synth_1
+# Command line: vivado.exe -log base_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_wrapper.tcl
+# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/synth_1/base_wrapper.vds
+# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_wrapper.tcl -notrace

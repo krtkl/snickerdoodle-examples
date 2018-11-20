@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Mar 22 15:39:02 2018
+# Process ID: 8140
+# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/base_axi_gpio_0_2_synth_1
+# Command line: vivado.exe -log base_axi_gpio_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axi_gpio_0_2.tcl
+# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/base_axi_gpio_0_2_synth_1/base_axi_gpio_0_2.vds
+# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle-black/gpio/gpio.runs/base_axi_gpio_0_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_axi_gpio_0_2.tcl -notrace
