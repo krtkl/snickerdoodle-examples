@@ -1,28 +1,28 @@
 #-----------------------------------------------------------
-# Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Mar 22 13:30:21 2018
-# Process ID: 1756
-# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Tue Nov 20 12:59:27 2018
+# Process ID: 6736
+# Current directory: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1
 # Command line: vivado.exe -log base_xlconcat_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_xlconcat_0_0.tcl
-# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1/base_xlconcat_0_0.vds
-# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1\vivado.jou
+# Log file: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1/base_xlconcat_0_0.vds
+# Journal file: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 Sourcing tcl script 'C:/Users/Russell Bush/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 source base_xlconcat_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 268.461 ; gain = 42.191
+create_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 234.723 ; gain = 16.227
 Command: synth_design -top base_xlconcat_0_0 -part xc7z010clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1276 
+INFO: Helper process launched with PID 5756 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 396.613 ; gain = 100.867
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 377.207 ; gain = 99.801
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'base_xlconcat_0_0' [z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/synth/base_xlconcat_0_0.v:58]
-INFO: [Synth 8-638] synthesizing module 'xlconcat_v2_1_1_xlconcat' [z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6157] synthesizing module 'base_xlconcat_0_0' [z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/synth/base_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
 	Parameter IN1_WIDTH bound to: 1 - type: integer 
 	Parameter IN2_WIDTH bound to: 1 - type: integer 
@@ -57,8 +57,8 @@ INFO: [Synth 8-638] synthesizing module 'xlconcat_v2_1_1_xlconcat' [z:/Software/
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 2 - type: integer 
 	Parameter NUM_PORTS bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (1#1) [z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-256] done synthesizing module 'base_xlconcat_0_0' (2#1) [z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/synth/base_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (1#1) [z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'base_xlconcat_0_0' (2#1) [z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/synth/base_xlconcat_0_0.v:58]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In4[0]
@@ -90,7 +90,7 @@ WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In30[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In31[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 448.645 ; gain = 152.898
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 431.453 ; gain = 154.047
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -100,7 +100,13 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 448.645 ; gain = 152.898
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 431.453 ; gain = 154.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 431.453 ; gain = 154.047
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -112,25 +118,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 684.121 ; gain = 0.012
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.515 . Memory (MB): peak = 666.043 ; gain = 1.293
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 684.121 ; gain = 388.375
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 666.043 ; gain = 388.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 684.121 ; gain = 388.375
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 666.043 ; gain = 388.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 684.121 ; gain = 388.375
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 666.043 ; gain = 388.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 684.121 ; gain = 388.375
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 666.043 ; gain = 388.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -164,9 +171,10 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
 WARNING: [Synth 8-3330] design base_xlconcat_0_0 has an empty top module
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 684.121 ; gain = 388.375
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 666.043 ; gain = 388.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -178,13 +186,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:53 . Memory (MB): peak = 750.102 ; gain = 454.355
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 733.035 ; gain = 455.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:53 . Memory (MB): peak = 750.102 ; gain = 454.355
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 733.035 ; gain = 455.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -196,7 +204,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:53 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 733.035 ; gain = 455.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,7 +228,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -233,7 +241,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -245,25 +253,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -288,11 +296,11 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 759.625 ; gain = 228.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 759.625 ; gain = 463.879
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 734.164 ; gain = 222.168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 734.164 ; gain = 456.758
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -300,12 +308,14 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-13 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+13 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:00 . Memory (MB): peak = 772.859 ; gain = 488.586
-INFO: [Common 17-1381] The checkpoint 'Z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1/base_xlconcat_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.xci
-INFO: [Common 17-1381] The checkpoint 'Z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1/base_xlconcat_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 755.176 ; gain = 483.953
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1/base_xlconcat_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.xci
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.runs/base_xlconcat_0_0_synth_1/base_xlconcat_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_xlconcat_0_0_utilization_synth.rpt -pb base_xlconcat_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 777.242 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 22 13:32:06 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 759.492 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 20 13:01:27 2018...

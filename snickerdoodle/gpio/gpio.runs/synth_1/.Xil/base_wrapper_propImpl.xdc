@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:Z:/Software/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/constrs_1/new/top.xdc rfile:../../../gpio.srcs/constrs_1/new/top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle/gpio/gpio.srcs/constrs_1/new/top.xdc rfile:../../../gpio.srcs/constrs_1/new/top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G14 [get_ports {GPIO0_tri_io[24]}];        # JA1.4
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

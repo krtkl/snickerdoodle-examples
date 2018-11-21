@@ -1,16 +1,17 @@
 #-----------------------------------------------------------
-# Vivado v2017.4 (64-bit)
-# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri Mar 23 17:37:42 2018
-# Process ID: 5272
-# Current directory: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/base_axi_gpio_0_1_synth_1
+# Vivado v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
+# Start of session at: Wed Nov 21 14:06:55 2018
+# Process ID: 1020
+# Current directory: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/base_axi_gpio_0_1_synth_1
 # Command line: vivado.exe -log base_axi_gpio_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axi_gpio_0_1.tcl
-# Log file: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/base_axi_gpio_0_1_synth_1/base_axi_gpio_0_1.vds
-# Journal file: Z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/base_axi_gpio_0_1_synth_1\vivado.jou
+# Log file: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/base_axi_gpio_0_1_synth_1/base_axi_gpio_0_1.vds
+# Journal file: Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.runs/base_axi_gpio_0_1_synth_1\vivado.jou
 #-----------------------------------------------------------
 Sourcing tcl script 'C:/Users/Russell Bush/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 source base_axi_gpio_0_1.tcl -notrace
-create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 269.066 ; gain = 42.867
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP base_axi_gpio_0_1, cache-ID = a443174ec8114f12.
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 23 17:38:22 2018...
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 233.723 ; gain = 17.113
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP base_axi_gpio_0_1, cache-ID = 9ceb19ad8a7afaf7.
+config_ip_cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:20 . Memory (MB): peak = 271.621 ; gain = 0.930
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 21 14:08:43 2018...

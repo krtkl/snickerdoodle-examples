@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# Constraints file for snickerdoodle Black
+# Constraints file for snickerdoodle black
 #
 # Copyright (c) 2018 krtkl inc.
 #
@@ -133,30 +133,30 @@ set_property IOSTANDARD LVCMOS33 [list [get_ports {GPIO3_tri_io[*]}]]
 #------------------------------------------------------------------------------
 # JC1 Connector
 #------------------------------------------------------------------------------
-set_property PACKAGE_PIN V5 [get_ports {GPIO4_tri_io[24]}];         # JC1.4
-set_property PACKAGE_PIN U7 [get_ports {GPIO4_tri_io[8]}];          # JC1.5
+set_property PACKAGE_PIN V5  [get_ports {GPIO4_tri_io[24]}];        # JC1.4
+set_property PACKAGE_PIN U7  [get_ports {GPIO4_tri_io[8]}];         # JC1.5
 set_property PACKAGE_PIN U10 [get_ports {GPIO4_tri_io[11]}];        # JC1.6
-set_property PACKAGE_PIN V7 [get_ports {GPIO4_tri_io[9]}];          # JC1.7
-set_property PACKAGE_PIN T9 [get_ports {GPIO4_tri_io[10]}];         # JC1.8
-set_property PACKAGE_PIN T5 [get_ports {GPIO4_tri_io[12]}];         # JC1.11
+set_property PACKAGE_PIN V7  [get_ports {GPIO4_tri_io[9]}];         # JC1.7
+set_property PACKAGE_PIN T9  [get_ports {GPIO4_tri_io[10]}];        # JC1.8
+set_property PACKAGE_PIN T5  [get_ports {GPIO4_tri_io[12]}];        # JC1.11
 set_property PACKAGE_PIN Y13 [get_ports {GPIO4_tri_io[15]}];        # JC1.12
-set_property PACKAGE_PIN U5 [get_ports {GPIO4_tri_io[13]}];         # JC1.13
+set_property PACKAGE_PIN U5  [get_ports {GPIO4_tri_io[13]}];        # JC1.13
 set_property PACKAGE_PIN Y12 [get_ports {GPIO4_tri_io[14]}];        # JC1.14
 set_property PACKAGE_PIN V11 [get_ports {GPIO4_tri_io[20]}];        # JC1.17
-set_property PACKAGE_PIN W6 [get_ports {GPIO4_tri_io[17]}];         # JC1.18
+set_property PACKAGE_PIN W6  [get_ports {GPIO4_tri_io[17]}];        # JC1.18
 set_property PACKAGE_PIN V10 [get_ports {GPIO4_tri_io[21]}];        # JC1.19
-set_property PACKAGE_PIN V6 [get_ports {GPIO4_tri_io[16]}];         # JC1.20
-set_property PACKAGE_PIN V8 [get_ports {GPIO4_tri_io[18]}];         # JC1.23
+set_property PACKAGE_PIN V6  [get_ports {GPIO4_tri_io[16]}];        # JC1.20
+set_property PACKAGE_PIN V8  [get_ports {GPIO4_tri_io[18]}];        # JC1.23
 set_property PACKAGE_PIN Y11 [get_ports {GPIO4_tri_io[1]}];         # JC1.24
-set_property PACKAGE_PIN W8 [get_ports {GPIO4_tri_io[19]}];         # JC1.25
+set_property PACKAGE_PIN W8  [get_ports {GPIO4_tri_io[19]}];        # JC1.25
 set_property PACKAGE_PIN W11 [get_ports {GPIO4_tri_io[0]}];         # JC1.26
-set_property PACKAGE_PIN U9 [get_ports {GPIO4_tri_io[2]}];          # JC1.29
-set_property PACKAGE_PIN W9 [get_ports {GPIO4_tri_io[5]}];          # JC1.30
-set_property PACKAGE_PIN U8 [get_ports {GPIO4_tri_io[3]}];          # JC1.31
+set_property PACKAGE_PIN U9  [get_ports {GPIO4_tri_io[2]}];         # JC1.29
+set_property PACKAGE_PIN W9  [get_ports {GPIO4_tri_io[5]}];         # JC1.30
+set_property PACKAGE_PIN U8  [get_ports {GPIO4_tri_io[3]}];         # JC1.31
 set_property PACKAGE_PIN W10 [get_ports {GPIO4_tri_io[4]}];         # JC1.32
-set_property PACKAGE_PIN Y9 [get_ports {GPIO4_tri_io[6]}];          # JC1.35
-set_property PACKAGE_PIN Y6 [get_ports {GPIO4_tri_io[23]}];         # JC1.36
-set_property PACKAGE_PIN Y8 [get_ports {GPIO4_tri_io[7]}];          # JC1.37
-set_property PACKAGE_PIN Y7 [get_ports {GPIO4_tri_io[22]}];         # JC1.38
+set_property PACKAGE_PIN Y9  [get_ports {GPIO4_tri_io[6]}];         # JC1.35
+set_property PACKAGE_PIN Y6  [get_ports {GPIO4_tri_io[23]}];        # JC1.36
+set_property PACKAGE_PIN Y8  [get_ports {GPIO4_tri_io[7]}];         # JC1.37
+set_property PACKAGE_PIN Y7  [get_ports {GPIO4_tri_io[22]}];        # JC1.38
 
 set_property IOSTANDARD LVCMOS33 [list [get_ports {GPIO4_tri_io[*]}]]

@@ -6,9 +6,6 @@
 # Block Designs: bd/base/base.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base || ORIG_REF_NAME==base} -quiet] -quiet
 
-# IP: bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_processing_system7_0_0 || ORIG_REF_NAME==base_processing_system7_0_0} -quiet] -quiet
-
 # IP: bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xlconcat_0_0 || ORIG_REF_NAME==base_xlconcat_0_0} -quiet] -quiet
 
@@ -30,7 +27,45 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_
 # IP: bd/base/ip/base_xbar_0/base_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xbar_0 || ORIG_REF_NAME==base_xbar_0} -quiet] -quiet
 
+# IP: bd/base/ip/base_processing_system7_0_1/base_processing_system7_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_processing_system7_0_1 || ORIG_REF_NAME==base_processing_system7_0_1} -quiet] -quiet
+
 # IP: bd/base/ip/base_auto_pc_0/base_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet
+
+# XDC: bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_axi_gpio_0_0 || ORIG_REF_NAME==base_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0_ooc.xdc
+
+# XDC: bd/base/ip/base_axi_gpio_0_0/base_axi_gpio_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_axi_gpio_0_0 || ORIG_REF_NAME==base_axi_gpio_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_axi_gpio_0_1 || ORIG_REF_NAME==base_axi_gpio_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1_ooc.xdc
+
+# XDC: bd/base/ip/base_axi_gpio_0_1/base_axi_gpio_0_1.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_axi_gpio_0_1 || ORIG_REF_NAME==base_axi_gpio_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_axi_gpio_0_2 || ORIG_REF_NAME==base_axi_gpio_0_2} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2_ooc.xdc
+
+# XDC: bd/base/ip/base_axi_gpio_0_2/base_axi_gpio_0_2.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_axi_gpio_0_2 || ORIG_REF_NAME==base_axi_gpio_0_2} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_49M_0 || ORIG_REF_NAME==base_rst_ps7_0_49M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_49M_0 || ORIG_REF_NAME==base_rst_ps7_0_49M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_processing_system7_0_1/base_processing_system7_0_1.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==base_processing_system7_0_1 || ORIG_REF_NAME==base_processing_system7_0_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: bd/base/ip/base_auto_pc_0/base_auto_pc_0_ooc.xdc
 
 # XDC: bd/base/base_ooc.xdc

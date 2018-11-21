@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Fri Mar 23 17:35:38 2018
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Wed Nov 21 14:05:59 2018
 // Host        : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               z:/Software/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.srcs/sources_1/bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0_sim_netlist.v
+//               Z:/Projects/snickerdoodle/snickerdoodle-examples/snickerdoodle-one/gpio/gpio.srcs/sources_1/bd/base/ip/base_rst_ps7_0_49M_0/base_rst_ps7_0_49M_0_sim_netlist.v
 // Design      : base_rst_ps7_0_49M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "base_rst_ps7_0_49M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.4" *) 
+(* CHECK_LICENSE_TYPE = "base_rst_ps7_0_49M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2018.2.2" *) 
 (* NotValidForBitStream *)
 module base_rst_ps7_0_49M_0
    (slowest_sync_clk,
@@ -25,7 +25,7 @@ module base_rst_ps7_0_49M_0
     peripheral_reset,
     interconnect_aresetn,
     peripheral_aresetn);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 49999947, PHASE 0.000, CLK_DOMAIN base_processing_system7_0_0_FCLK_CLK0" *) input slowest_sync_clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 99999901, PHASE 0.000, CLK_DOMAIN base_processing_system7_0_1_FCLK_CLK1" *) input slowest_sync_clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW" *) input ext_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 aux_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW" *) input aux_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 dbg_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME dbg_reset, POLARITY ACTIVE_HIGH" *) input mb_debug_sys_rst;
@@ -74,17 +74,17 @@ module base_rst_ps7_0_49M_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
     lpf_asr,
-    asr_lpf,
     p_1_in,
     p_2_in,
+    asr_lpf,
     aux_reset_in,
     slowest_sync_clk);
   output lpf_asr_reg;
   output scndry_out;
   input lpf_asr;
-  input [0:0]asr_lpf;
   input p_1_in;
   input p_2_in;
+  input [0:0]asr_lpf;
   input aux_reset_in;
   input slowest_sync_clk;
 
@@ -114,7 +114,7 @@ module base_rst_ps7_0_49M_0_cdc_sync
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
        (.I0(aux_reset_in),
         .O(asr_d1));
   (* ASYNC_REG *) 
@@ -154,10 +154,10 @@ module base_rst_ps7_0_49M_0_cdc_sync
     .INIT(32'hEAAAAAA8)) 
     lpf_asr_i_1
        (.I0(lpf_asr),
-        .I1(asr_lpf),
-        .I2(scndry_out),
-        .I3(p_1_in),
-        .I4(p_2_in),
+        .I1(p_1_in),
+        .I2(p_2_in),
+        .I3(scndry_out),
+        .I4(asr_lpf),
         .O(lpf_asr_reg));
 endmodule
 
@@ -178,7 +178,7 @@ module base_rst_ps7_0_49M_0_cdc_sync_0
   input ext_reset_in;
   input slowest_sync_clk;
 
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ;
+  wire exr_d1;
   wire ext_reset_in;
   wire lpf_exr;
   wire lpf_exr_reg;
@@ -198,15 +198,15 @@ module base_rst_ps7_0_49M_0_cdc_sync_0
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
        (.C(slowest_sync_clk),
         .CE(1'b1),
-        .D(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ),
+        .D(exr_d1),
         .Q(s_level_out_d1_cdc_to),
         .R(1'b0));
   LUT2 #(
     .INIT(4'hB)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
        (.I0(mb_debug_sys_rst),
         .I1(ext_reset_in),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ));
+        .O(exr_d1));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -244,10 +244,10 @@ module base_rst_ps7_0_49M_0_cdc_sync_0
     .INIT(32'hEAAAAAA8)) 
     lpf_exr_i_1
        (.I0(lpf_exr),
-        .I1(p_3_out[0]),
-        .I2(scndry_out),
-        .I3(p_3_out[1]),
-        .I4(p_3_out[2]),
+        .I1(p_3_out[1]),
+        .I2(p_3_out[2]),
+        .I3(scndry_out),
+        .I4(p_3_out[0]),
         .O(lpf_exr_reg));
 endmodule
 
@@ -256,15 +256,15 @@ module base_rst_ps7_0_49M_0_lpf
    (lpf_int,
     slowest_sync_clk,
     dcm_locked,
-    aux_reset_in,
     mb_debug_sys_rst,
-    ext_reset_in);
+    ext_reset_in,
+    aux_reset_in);
   output lpf_int;
   input slowest_sync_clk;
   input dcm_locked;
-  input aux_reset_in;
   input mb_debug_sys_rst;
   input ext_reset_in;
+  input aux_reset_in;
 
   wire \ACTIVE_LOW_AUX.ACT_LO_AUX_n_0 ;
   wire \ACTIVE_LOW_EXT.ACT_LO_EXT_n_0 ;
@@ -380,12 +380,12 @@ module base_rst_ps7_0_49M_0_lpf
         .Q(lpf_exr),
         .R(1'b0));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFFFD)) 
     lpf_int0
-       (.I0(Q),
-        .I1(lpf_asr),
-        .I2(dcm_locked),
-        .I3(lpf_exr),
+       (.I0(dcm_locked),
+        .I1(lpf_exr),
+        .I2(lpf_asr),
+        .I3(Q),
         .O(lpf_int0__0));
   FDRE #(
     .INIT(1'b0)) 
@@ -594,12 +594,12 @@ module base_rst_ps7_0_49M_0_sequence_psr
         .seq_cnt_en(seq_cnt_en),
         .slowest_sync_clk(slowest_sync_clk));
   LUT4 #(
-    .INIT(16'h0804)) 
+    .INIT(16'h0090)) 
     \bsr_dec[0]_i_1 
        (.I0(seq_cnt_en),
-        .I1(seq_cnt[3]),
-        .I2(seq_cnt[5]),
-        .I3(seq_cnt[4]),
+        .I1(seq_cnt[4]),
+        .I2(seq_cnt[3]),
+        .I3(seq_cnt[5]),
         .O(p_5_out[0]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
@@ -641,12 +641,12 @@ module base_rst_ps7_0_49M_0_sequence_psr
         .S(lpf_int));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h8040)) 
+    .INIT(16'h9000)) 
     \core_dec[0]_i_1 
-       (.I0(seq_cnt[4]),
-        .I1(seq_cnt[3]),
-        .I2(seq_cnt[5]),
-        .I3(seq_cnt_en),
+       (.I0(seq_cnt_en),
+        .I1(seq_cnt[4]),
+        .I2(seq_cnt[3]),
+        .I3(seq_cnt[5]),
         .O(\core_dec[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
@@ -695,20 +695,20 @@ module base_rst_ps7_0_49M_0_sequence_psr
         .Q(seq_cnt_en),
         .S(lpf_int));
   LUT4 #(
-    .INIT(16'h0210)) 
+    .INIT(16'h0018)) 
     pr_dec0
-       (.I0(seq_cnt[0]),
-        .I1(seq_cnt[1]),
+       (.I0(seq_cnt_en),
+        .I1(seq_cnt[0]),
         .I2(seq_cnt[2]),
-        .I3(seq_cnt_en),
+        .I3(seq_cnt[1]),
         .O(pr_dec0__0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h1080)) 
+    .INIT(16'h0480)) 
     \pr_dec[0]_i_1 
        (.I0(seq_cnt_en),
-        .I1(seq_cnt[5]),
-        .I2(seq_cnt[3]),
+        .I1(seq_cnt[3]),
+        .I2(seq_cnt[5]),
         .I3(seq_cnt[4]),
         .O(p_3_out[0]));
   LUT2 #(
