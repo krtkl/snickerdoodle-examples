@@ -1,0 +1,12 @@
+# vivado files
+*.jou
+*.log
+*.str
+
+# simulation files
+*.wcfg
+
+.Xil
+
+project
+export_sim

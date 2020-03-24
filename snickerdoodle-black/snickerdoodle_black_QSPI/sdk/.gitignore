@@ -1,0 +1,8 @@
+# ignore eclipse files
+.metadata
+.SDK
+.sdk
+
+# ignore outputs
+Debug
+Release
