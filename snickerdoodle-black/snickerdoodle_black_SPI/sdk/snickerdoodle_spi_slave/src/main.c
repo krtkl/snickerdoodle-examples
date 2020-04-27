@@ -6,8 +6,12 @@
  */
 
 
+#include "assert.h"
 #include "xparameters.h"	/* SDK generated parameters */
+#include "xplatform_info.h"
 #include "xspips.h"		/* SPI device driver */
+#include "xscugic.h"		/* Interrupt controller device driver */
+#include "xil_exception.h"
 #include "xil_printf.h"
 #include "crc.h"
 #include "spi_link.h"
@@ -20,12 +24,8 @@
  * change all the needed parameters in one place.
  */
 #define SPI_DEVICE_ID		XPAR_XSPIPS_0_DEVICE_ID
-
-/*
- * The following constant specify the max amount of data the slave is
- * expecting to receive from the master.
- */
-//#define MAX_DATA		(4 + 64 + 2)
+#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define SPI_INTR_ID		XPAR_XSPIPS_1_INTR
 
 /**************************** Type Definitions *******************************/
 
@@ -39,13 +39,17 @@
 
 /************************** Function Prototypes ******************************/
 
-static spi_link_status_t SpiSlave(u8 *tx_data, u8 *rx_data, size_t length);
+static spi_link_status_t SpiSlaveTxRx(u8 *tx_data, u8 *rx_data, size_t length);
 
-void SpiSlaveRead(int ByteCount);
+static int SpiPsSetupIntrSystem(XScuGic *IntcInstancePtr,
+			       XSpiPs *SpiInstancePtr, u16 SpiIntrId);
 
-void SpiSlaveWrite(u8 *Sendbuffer, int ByteCount);
+static void SpiPsDisableIntrSystem(XScuGic *IntcInstancePtr, u16 SpiIntrId);
 
-int SpiPsSlavePolledExample(u16 SpiDeviceId);
+static void SpiPsInterruptHandler(XSpiPs *InstancePtr);
+
+static int SpiPsSlavePolledExample(XScuGic *IntcInstancePtr,
+		XSpiPs *SpiInstancePtr, u16 SpiDeviceId, u16 SpiIntrId);
 
 /************************** Variable Definitions *****************************/
 
@@ -54,6 +58,7 @@ int SpiPsSlavePolledExample(u16 SpiDeviceId);
  * are initialized to zero each time the program runs. They could be local
  * but should at least be static so they are zeroed.
  */
+static XScuGic IntcInstance;
 static XSpiPs SpiInstance;
 
 /*
@@ -67,6 +72,8 @@ volatile int rx_counter = 0;
 u8 *s_tx_data;
 u8 *s_rx_data;
 size_t s_length;
+
+u32 xfer_count = 0;
 
 /*****************************************************************************/
 /**
@@ -86,12 +93,13 @@ int main(void)
 {
 	int Status;
 
-	xil_printf("Running SpiPS Slave Polled Example \r\n");
+	xil_printf("\r\nSnickerdoodle SPI Slave bare metal test.\r\n");
 
 	/*
 	 * Run the SpiPs Slave Polled example.
 	 */
-	Status = SpiPsSlavePolledExample(SPI_DEVICE_ID);
+	Status = SpiPsSlavePolledExample(&IntcInstance, &SpiInstance,
+			SPI_DEVICE_ID, SPI_INTR_ID);
 	if (Status != XST_SUCCESS) {
 		xil_printf("SpiPs Slave Polled Example Failed \r\n");
 		return XST_FAILURE;
@@ -118,10 +126,18 @@ int main(void)
 *
 *
 *****************************************************************************/
-int SpiPsSlavePolledExample(u16 SpiDeviceId)
+static int SpiPsSlavePolledExample(XScuGic *IntcInstancePtr,
+		XSpiPs *SpiInstancePtr, u16 SpiDeviceId, u16 SpiIntrId)
 {
 	int Status;
 	XSpiPs_Config *SpiConfig;
+	u32 Platform;
+
+	Platform = XGetPlatform_Info();
+	if ((Platform == XPLAT_ZYNQ_ULTRA_MP) || (Platform == XPLAT_versal))
+	{
+		SpiIntrId = XPAR_XSPIPS_0_INTR;
+	}
 
 	/*
 	 * Initialize the SPI driver so that it's ready to use
@@ -133,6 +149,16 @@ int SpiPsSlavePolledExample(u16 SpiDeviceId)
 
 	Status = XSpiPs_CfgInitialize((&SpiInstance), SpiConfig,
 					SpiConfig->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Connect the Spi device to the interrupt subsystem such that
+	 * interrupts can occur. This function is application specific
+	 */
+	Status = SpiPsSetupIntrSystem(IntcInstancePtr, SpiInstancePtr,
+				     SpiIntrId);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
@@ -150,19 +176,8 @@ int SpiPsSlavePolledExample(u16 SpiDeviceId)
 		return XST_FAILURE;
 	}
 
-#if 0
-	//memset(ReadBuffer, 0x00, sizeof(ReadBuffer));
-	for (int index = 0; index < (MAX_DATA - 2); index++)
-	{
-		ReadBuffer[index] = (u8)(MAX_DATA - index);
-	}
-	uint16_t crc = crc16message(&ReadBuffer[0], MAX_DATA - 2);
-	ReadBuffer[MAX_DATA - 1] = (uint8_t)crc;
-	ReadBuffer[MAX_DATA - 2] = (uint8_t)(crc >> 8);
-#endif
-
 	/*
-	 * Set the Rx FIFO Threshold to the Max Data
+	 * Set the Rx FIFO Threshold to the fixed spi_link message size
 	 */
 	XSpiPs_SetRXWatermark((&SpiInstance), SPI_LINK_MSG_SIZE);
 
@@ -172,11 +187,12 @@ int SpiPsSlavePolledExample(u16 SpiDeviceId)
 	XSpiPs_Enable((&SpiInstance));
 
 	spi_link_init();
-	spi_link_register_server(&SpiSlave, &crc16message);
+	spi_link_register_server(&SpiSlaveTxRx, &crc16message);
 	spi_link_start();
 
 	for ( ;; )
 	{
+#if 0
 		int Count;
 		u32 StatusReg;
 
@@ -210,6 +226,7 @@ int SpiPsSlavePolledExample(u16 SpiDeviceId)
 		{
 			spi_link_transaction_result(SPI_LINK_OK);
 		}
+#endif
 	}
 
 #if 0
@@ -238,6 +255,8 @@ int SpiPsSlavePolledExample(u16 SpiDeviceId)
 	}
 #endif
 
+	SpiPsDisableIntrSystem(IntcInstancePtr, SpiIntrId);
+
 	/*
 	 * Disable the device.
 	 */
@@ -247,96 +266,186 @@ int SpiPsSlavePolledExample(u16 SpiDeviceId)
 }
 
 /*****************************************************************************/
-/**
-*
-* This function reads from the Rx buffer
-*
-* @param	ByteCount is the number of bytes to be read from Rx buffer.
-*
-* @return	None.
-*
-* @note		None.
-*
-******************************************************************************/
-void SpiSlaveRead(int ByteCount)
+static spi_link_status_t SpiSlaveTxRx(u8 *tx_data, u8 *rx_data, size_t length)
 {
-	int Count;
-	u32 StatusReg;
+	int index = 0;
+	assert(length == SPI_LINK_MSG_SIZE);
 
-	StatusReg = XSpiPs_ReadReg(SpiInstance.Config.BaseAddress,
-					XSPIPS_SR_OFFSET);
-
-	/*
-	 * Polling the Rx Buffer for Data
-	 */
-	do{
-		StatusReg = XSpiPs_ReadReg(SpiInstance.Config.BaseAddress,
-					XSPIPS_SR_OFFSET);
-	}while(!(StatusReg & XSPIPS_IXR_RXNEMPTY_MASK));
+	s_tx_data = tx_data;
+	s_rx_data = rx_data;
+	s_length = length;
 
 	/*
-	 * Reading the Rx Buffer
+	 * Clear all interrupts.
 	 */
-	for(Count = 0; Count < ByteCount; Count++){
-		ReadBuffer[Count] = SpiPs_RecvByte(
-				SpiInstance.Config.BaseAddress);
+	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_SR_OFFSET,
+			XSPIPS_IXR_WR_TO_CLR_MASK);
+
+	/*
+	 * Write the message bytes to the TX FIFO.
+	 */
+	while ((index < length) && (index < XSPIPS_FIFO_DEPTH))
+	{
+		SpiPs_SendByte(SpiInstance.Config.BaseAddress, *tx_data++);
+		index++;
 	}
 
+	/*
+	 * Enable interrupts (connecting to the interrupt controller and
+	 * enabling interrupts should have been done by the caller).
+	 */
+	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress,
+			XSPIPS_IER_OFFSET,
+			( XSPIPS_IXR_RXNEMPTY_MASK
+			| XSPIPS_IXR_TXUF_MASK
+			| XSPIPS_IXR_MODF_MASK
+			| XSPIPS_IXR_RXOVR_MASK ));
+
+	return SPI_LINK_OK;
 }
 
 /*****************************************************************************/
 /**
 *
-* This function writes Data into the Tx buffer
+* This function setups the interrupt system for an Spi device.
 *
-* @param	Sendbuffer is the buffer whose data is to be sent onto the
-* 		Tx FIFO.
-* @param	ByteCount is the number of bytes to be read from Rx buffer.
+* @param	IntcInstancePtr is a pointer to the instance of the Intc device.
+* @param	SpiInstancePtr is a pointer to the instance of the Spi device.
+* @param	SpiIntrId is the interrupt Id for an SPI device.
+*
+* @return
+*		- XST_SUCCESS if successful
+*		- XST_FAILURE if not successful
+*
+* @note		None.
+*
+******************************************************************************/
+static int SpiPsSetupIntrSystem(XScuGic *IntcInstancePtr,
+			       XSpiPs *SpiInstancePtr, u16 SpiIntrId)
+{
+	int Status;
+
+	XScuGic_Config *IntcConfig; /* Instance of the interrupt controller */
+
+	Xil_ExceptionInit();
+
+	/*
+	 * Initialize the interrupt controller driver so that it is ready to
+	 * use.
+	 */
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+	if (NULL == IntcConfig) {
+		return XST_FAILURE;
+	}
+
+	Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
+					IntcConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Connect the interrupt controller interrupt handler to the hardware
+	 * interrupt handling logic in the processor.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+				(Xil_ExceptionHandler)XScuGic_InterruptHandler,
+				IntcInstancePtr);
+
+	/*
+	 * Connect the device driver handler that will be called when an
+	 * interrupt for the device occurs, the handler defined above performs
+	 * the specific interrupt processing for the device.
+	 */
+	Status = XScuGic_Connect(IntcInstancePtr, SpiIntrId,
+				(Xil_ExceptionHandler)SpiPsInterruptHandler,
+				(void *)SpiInstancePtr);
+	if (Status != XST_SUCCESS) {
+		return Status;
+	}
+
+	/*
+	 * Enable the interrupt for the Spi device.
+	 */
+	XScuGic_Enable(IntcInstancePtr, SpiIntrId);
+
+	/*
+	 * Enable interrupts in the Processor.
+	 */
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function disables the interrupts that occur for the Spi device.
+*
+* @param	IntcInstancePtr is the pointer to an INTC instance.
+* @param	SpiIntrId is the interrupt Id for an SPI device.
 *
 * @return	None.
 *
 * @note		None.
 *
 ******************************************************************************/
-void SpiSlaveWrite(u8 *Sendbuffer, int ByteCount)
+static void SpiPsDisableIntrSystem(XScuGic *IntcInstancePtr, u16 SpiIntrId)
 {
-	u32 StatusReg;
-	int TransCount = 0;
-
-	StatusReg = XSpiPs_ReadReg(SpiInstance.Config.BaseAddress,
-				XSPIPS_SR_OFFSET);
+	/*
+	 * Disable the interrupt for the SPI device.
+	 */
+	XScuGic_Disable(IntcInstancePtr, SpiIntrId);
 
 	/*
-	 * Fill the TXFIFO with as many bytes as it will take (or as
-	 * many as we have to send).
+	 * Disconnect and disable the interrupt for the Spi device.
 	 */
-	while ((ByteCount > 0) &&
-		(TransCount < XSPIPS_FIFO_DEPTH)) {
-		SpiPs_SendByte(SpiInstance.Config.BaseAddress,
-				*Sendbuffer);
-		Sendbuffer++;
-		++TransCount;
-		ByteCount--;
-	}
-
-#if 0
-	/*
-	 * Wait for the transfer to finish by polling Tx fifo status.
-	 */
-	do {
-		StatusReg = XSpiPs_ReadReg(
-				SpiInstance.Config.BaseAddress,
-					XSPIPS_SR_OFFSET);
-	} while ((StatusReg & XSPIPS_IXR_TXOW_MASK) == 0);
-#endif
-
+	XScuGic_Disconnect(IntcInstancePtr, SpiIntrId);
 }
 
-static spi_link_status_t SpiSlave(u8 *tx_data, u8 *rx_data, size_t length)
+/*****************************************************************************/
+static void SpiPsInterruptHandler(XSpiPs *InstancePtr)
 {
-	s_tx_data = tx_data;
-	s_rx_data = rx_data;
-	s_length = length;
-	SpiSlaveWrite(tx_data, length);
-	return SPI_LINK_OK;
+	spi_link_status_t result;
+	XSpiPs *SpiPtr = InstancePtr;
+	u32 IntrStatus;
+
+	Xil_AssertVoid(InstancePtr != NULL);
+	Xil_AssertVoid(SpiPtr->IsReady == XIL_COMPONENT_IS_READY);
+
+	/*
+	 * Immediately clear the interrupts in case the ISR causes another
+	 * interrupt to be generated. If we clear at the end of the ISR,
+	 * we may miss newly generated interrupts.
+	 */
+	IntrStatus = XSpiPs_ReadReg(SpiPtr->Config.BaseAddress, XSPIPS_SR_OFFSET);
+	XSpiPs_WriteReg(SpiPtr->Config.BaseAddress, XSPIPS_SR_OFFSET,
+			(IntrStatus & XSPIPS_IXR_WR_TO_CLR_MASK));
+
+	if ((u32)XSPIPS_IXR_RXNEMPTY_MASK == (u32)(IntrStatus & XSPIPS_IXR_RXNEMPTY_MASK))
+	{
+		result = SPI_LINK_OK;
+		/*
+		 * Read the received data from the FIFO
+		 */
+		volatile u8 data;
+		for (int index = 0; index < s_length; index++)
+		{
+			data = SpiPs_RecvByte(SpiInstance.Config.BaseAddress);
+			if (s_rx_data)
+			{
+				s_rx_data[index] = data;
+			}
+		}
+	}
+	else
+	{
+		result = SPI_LINK_FAILED;
+	}
+
+	if (s_rx_data)
+	{
+		xfer_count++;
+		spi_link_transaction_result(result);
+	}
 }
