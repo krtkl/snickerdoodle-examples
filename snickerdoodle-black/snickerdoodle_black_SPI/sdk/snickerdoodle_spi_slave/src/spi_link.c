@@ -53,15 +53,14 @@
  *****************************************************************************/
 
 /* Offset defining structure of a message. */
-#define SPI_LINK_MSG_OFFSET_SEQ (0) /* First byte on the wire. */
-#define SPI_LINK_MSG_OFFSET_ACK (1)
-#define SPI_LINK_MSG_OFFSET_CHAN (2) /* Logical channel number */
+#define SPI_LINK_MSG_OFFSET_SEQ (2)
+#define SPI_LINK_MSG_OFFSET_ACK (3)
+#define SPI_LINK_MSG_OFFSET_CHAN (4) /* Logical channel number */
 #define SPI_LINK_MSG_OFFSET_DATA (SPI_LINK_HEADER_SIZE)
-#define SPI_LINK_MSG_OFFSET_CRC_MSB (SPI_LINK_HEADER_SIZE + SPI_LINK_DATA_SIZE)
-#define SPI_LINK_MSG_OFFSET_CRC_LSB (SPI_LINK_MSG_OFFSET_CRC_MSB + 1) /* Last byte on wire. */
 
 #define SPI_LINK_STARTED (1)
 #define SPI_LINK_STOPPED (0)
+#define SPI_LINK_INVALID_SEQ (-1)
 
 /******************************************************************************
  * 			Type definitions
@@ -96,6 +95,7 @@ typedef struct spi_link_context
 	spi_link_msg_handle_t tx_pending;       /* Pending TX message, awaiting ACK. */
 	spi_link_msg_handle_t tx_prior;         /* Prior TX message, in case we need to re-send. */
 	size_t tx_reservation_count;
+	int tx_prior_seq[2];                    /* Prior TX sequence numbers. */
 
 	int started;
 	u8 seq_number;
@@ -108,7 +108,6 @@ typedef struct spi_link_context
 
 	/* Server info */
 	pf_spi_link_transmit_receive tx_rx_callback;
-	pf_spi_link_calculate_crc crc_callback;
 
 	/* Debug */
 	int retransmit_count;
@@ -124,13 +123,12 @@ typedef struct spi_link_context
  * 			Function prototypes
  *****************************************************************************/
 
-static void spi_link_transact(void);
-static void spi_link_fifo_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last);
-static void spi_link_fifo_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last);
-static void spi_link_free_list_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_list);
-static void spi_link_free_list_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_list);
-static spi_link_status_t spi_link_check_crc(spi_link_msg_handle_t msg);
-static void spi_link_append_crc(spi_link_msg_handle_t msg);
+static void spi_link_transact(int rx_ack);
+static inline void spi_link_process_acked_msg(spi_link_msg_handle_t msg);
+static inline void spi_link_fifo_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last);
+static inline void spi_link_fifo_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last);
+static inline void spi_link_free_list_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_list);
+static inline void spi_link_free_list_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_list);
 
 /******************************************************************************
  * 			Public Functions
@@ -148,6 +146,9 @@ void spi_link_init(void)
 	for (int index = 0; index < SPI_LINK_TX_MSG_COUNT; index++)
 	{
 		spi_link_free_list_push(&s_context.tx_messages[index], &s_context.tx_free_list);
+		/* Start Of Frame bytes never change, so write them now. */
+		s_context.tx_messages[index].msg[SPI_LINK_MSG_OFFSET_SOF1] = SPI_LINK_MSG_SOF1;
+		s_context.tx_messages[index].msg[SPI_LINK_MSG_OFFSET_SOF2] = SPI_LINK_MSG_SOF2;
 	}
 
 	/* Reserve a spot in the TX FIFO for each channel. */
@@ -156,9 +157,11 @@ void spi_link_init(void)
 	/* Get a receive buffer. */
 	spi_link_free_list_pop(&s_context.rx_current, &s_context.rx_free_list);
 
-	/* Initialize the sequence number (zero is not valid). */
-	s_context.seq_number = 1;
+	/* Initialize the sequence, acknowledgment numbers, and related. */
+	s_context.seq_number = 0;
 	s_context.ack_number = 255;
+	s_context.tx_prior_seq[0] = SPI_LINK_INVALID_SEQ;
+	s_context.tx_prior_seq[1] = SPI_LINK_INVALID_SEQ;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -168,7 +171,7 @@ void spi_link_start(void)
 	if (SPI_LINK_STARTED != s_context.started)
 	{
 		s_context.started = SPI_LINK_STARTED;
-		spi_link_transact();
+		spi_link_transact(SPI_LINK_INVALID_SEQ);
 	}
 }
 
@@ -268,38 +271,31 @@ void spi_link_msg_processed(spi_link_msg_handle_t msg)
 
 /* -------------------------------------------------------------------------- */
 
-void spi_link_register_server(
-		pf_spi_link_transmit_receive tx_rx_callback,
-		pf_spi_link_calculate_crc crc_callback)
+void spi_link_register_server(pf_spi_link_transmit_receive tx_rx_callback)
 {
 	s_context.tx_rx_callback = tx_rx_callback;
-	s_context.crc_callback = crc_callback;
 }
 
 /* -------------------------------------------------------------------------- */
 
 void spi_link_transaction_result(spi_link_status_t result)
 {
-	if ((result == SPI_LINK_OK) && s_context.crc_callback)
-	{
-		/* Validate CRC of received message */
-		result = spi_link_check_crc(s_context.rx_current);
-	}
-
-	u8 rx_seq;
-	if ((result == SPI_LINK_OK) &&
-		((rx_seq = s_context.rx_current->msg[SPI_LINK_MSG_OFFSET_SEQ]) != 0))
+	int rx_ack = SPI_LINK_INVALID_SEQ;
+	if (result == SPI_LINK_OK)
 	{
 		/* We received a valid message from the other end. */
-		u8 rx_ack = s_context.rx_current->msg[SPI_LINK_MSG_OFFSET_ACK];
+		rx_ack = s_context.rx_current->msg[SPI_LINK_MSG_OFFSET_ACK];
+		u8 rx_seq = s_context.rx_current->msg[SPI_LINK_MSG_OFFSET_SEQ];
 		u8 rx_chan = s_context.rx_current->msg[SPI_LINK_MSG_OFFSET_CHAN];
 
-		/* Is this a new message? */
-		if (s_context.ack_number != rx_seq)
+		/* Is this a new message? We accept a message as new in strict order by
+		 * sequence, one at a time (analogous to a window size of 1 message).
+		 */
+		if (rx_seq == ((u8)(s_context.ack_number + 1)))
 		{
 			if (rx_chan < SPI_LINK_NUM_CHANNELS)
 			{
-				/* Real message. Always make sure we have a free RX message
+				/* Client message. Always make sure we have a free RX message
 				 * object before actually accepting the message.
 				 */
 				spi_link_msg_handle_t rx_next_msg;
@@ -330,24 +326,31 @@ void spi_link_transaction_result(spi_link_status_t result)
 		}
 
 		/* Has a transmission been acknowledged? */
-		if (s_context.tx_prior && (s_context.tx_prior->msg[SPI_LINK_MSG_OFFSET_SEQ] == rx_ack))
+		if (s_context.tx_prior && (s_context.tx_prior->msg[SPI_LINK_MSG_OFFSET_SEQ] == (u8)rx_ack))
 		{
-			u8 tx_chan = s_context.tx_prior->msg[SPI_LINK_MSG_OFFSET_CHAN];
-			if (tx_chan < SPI_LINK_NUM_CHANNELS)
-			{
-				s_context.tx_count[tx_chan]--;
-				if (s_context.tx_count[tx_chan] == 0)
-				{
-					s_context.tx_reservation_count++;
-				}
-			}
-			spi_link_free_list_push(s_context.tx_prior, &s_context.tx_free_list);
+			spi_link_process_acked_msg(s_context.tx_prior);
 			s_context.tx_prior = NULL;
+		}
+		else if (s_context.tx_pending && (s_context.tx_pending->msg[SPI_LINK_MSG_OFFSET_SEQ] == (u8)rx_ack))
+		{
+			spi_link_process_acked_msg(s_context.tx_pending);
+			s_context.tx_pending = NULL;
+
+			if (s_context.tx_prior)
+			{
+				/* Special case that happens rarely. Since the pending message sequence
+				 * will always succeed that of the prior message, then if the pending
+				 * message was ACKed, we must have missed the ACK for the prior.  This
+				 * can happen when the slave loses frame synchronization.
+				 */
+				spi_link_process_acked_msg(s_context.tx_prior);
+				s_context.tx_prior = NULL;
+			}
 		}
 	}
 
 	/* Start the next transaction. */
-	spi_link_transact();
+	spi_link_transact(rx_ack);
 
 	/* Finally, attempt to delivered messages from the RX FIFO to clients. */
 	while (s_context.rx_fifo_first)
@@ -389,11 +392,11 @@ void spi_link_transaction_result(spi_link_status_t result)
 
 /* -------------------------------------------------------------------------- */
 
-static void spi_link_transact(void)
+static void spi_link_transact(int rx_ack)
 {
 	u8 *tx_msg_data;
 	u8 *rx_msg_data;
-	spi_link_msg_handle_t tx_current;
+	spi_link_msg_handle_t tx_current = NULL;
 
 	/* Setup next transmission. */
 	if (s_context.tx_prior)
@@ -403,14 +406,35 @@ static void spi_link_transact(void)
 		tx_current->msg[SPI_LINK_MSG_OFFSET_ACK] = s_context.ack_number;
 		s_context.retransmit_count++;
 	}
-	else
+	else if (s_context.tx_pending)
 	{
-		if (s_context.tx_pending)
+		if (SPI_LINK_INVALID_SEQ == rx_ack)
 		{
-			/* Pending becomes prior. */
-			s_context.tx_prior = s_context.tx_pending;
+			/* Re-send since prior transaction did not succeed. */
+			tx_current = s_context.tx_pending;
+		}
+		else if ((rx_ack == s_context.tx_prior_seq[0]) && (s_context.tx_prior_seq[0] == s_context.tx_prior_seq[1]))
+		{
+			/* Re-send, rather than advance.  This situation occurs on the master side,
+			 * after the slave re-synchronizes.
+			 */
+			tx_current = s_context.tx_pending;
 		}
 
+		if (tx_current)
+		{
+			tx_current->msg[SPI_LINK_MSG_OFFSET_ACK] = s_context.ack_number;
+			s_context.retransmit_count++;
+		}
+		else
+		{
+			/* Advance to next message. */
+			s_context.tx_prior = s_context.tx_pending;
+		}
+	}
+
+	if (!tx_current)
+	{
 		if (s_context.tx_fifo_first)
 		{
 			/* Get next message from FIFO. */
@@ -424,26 +448,17 @@ static void spi_link_transact(void)
 			tx_current->msg[SPI_LINK_MSG_OFFSET_CHAN] = SPI_LINK_DUMMY_CHANNEL;
 		}
 		tx_current->msg[SPI_LINK_MSG_OFFSET_ACK] = s_context.ack_number;
-		tx_current->msg[SPI_LINK_MSG_OFFSET_SEQ] = s_context.seq_number;
-		s_context.seq_number++;
-		if (s_context.seq_number == 0)
-		{
-			s_context.seq_number = 1;
-		}
-
+		tx_current->msg[SPI_LINK_MSG_OFFSET_SEQ] = s_context.seq_number++;
 		s_context.tx_pending = tx_current;
 	}
 
-	if (s_context.crc_callback)
-	{
-		spi_link_append_crc(tx_current);
-	}
-
-	/* Setup actual TX buffer. */
+	/* Get actual TX and RX buffers. */
 	tx_msg_data = &tx_current->msg[0];
-
-	/* Setup RX buffer. */
 	rx_msg_data = &s_context.rx_current->msg[0];
+
+	/* Keep track of TX sequences. */
+	s_context.tx_prior_seq[1] = s_context.tx_prior_seq[0];
+	s_context.tx_prior_seq[0] = tx_msg_data[SPI_LINK_MSG_OFFSET_SEQ];
 
 	if (s_context.tx_rx_callback)
 	{
@@ -457,8 +472,23 @@ static void spi_link_transact(void)
 }
 
 /* -------------------------------------------------------------------------- */
+static inline void spi_link_process_acked_msg(spi_link_msg_handle_t msg)
+{
+	u8 tx_chan = msg->msg[SPI_LINK_MSG_OFFSET_CHAN];
+	if (tx_chan < SPI_LINK_NUM_CHANNELS)
+	{
+		s_context.tx_count[tx_chan]--;
+		if (s_context.tx_count[tx_chan] == 0)
+		{
+			s_context.tx_reservation_count++;
+		}
+	}
+	spi_link_free_list_push(msg, &s_context.tx_free_list);
+}
 
-static void spi_link_fifo_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last)
+/* -------------------------------------------------------------------------- */
+
+static inline void spi_link_fifo_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last)
 {
 	if (*p_last)
 	{
@@ -476,7 +506,7 @@ static void spi_link_fifo_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t 
 
 /* -------------------------------------------------------------------------- */
 
-static void spi_link_fifo_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last)
+static inline void spi_link_fifo_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_first, spi_link_msg_handle_t *p_last)
 {
 	spi_link_msg_handle_t msg;
 	if (*p_first)
@@ -505,7 +535,7 @@ static void spi_link_fifo_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_
 
 /* -------------------------------------------------------------------------- */
 
-static void spi_link_free_list_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_list)
+static inline void spi_link_free_list_push(spi_link_msg_handle_t msg, spi_link_msg_handle_t *p_list)
 {
 	msg->p_prev = NULL;
 	msg->p_next = *p_list;
@@ -514,7 +544,7 @@ static void spi_link_free_list_push(spi_link_msg_handle_t msg, spi_link_msg_hand
 
 /* -------------------------------------------------------------------------- */
 
-static void spi_link_free_list_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_list)
+static inline void spi_link_free_list_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_handle_t *p_list)
 {
 	if (p_msg)
 	{
@@ -524,27 +554,5 @@ static void spi_link_free_list_pop(spi_link_msg_handle_t *p_msg, spi_link_msg_ha
 			*p_list = (*p_list)->p_next;
 		}
 	}
-}
-
-/* -------------------------------------------------------------------------- */
-
-static spi_link_status_t spi_link_check_crc(spi_link_msg_handle_t msg)
-{
-	u16 crc = (*s_context.crc_callback)(&msg->msg[0], SPI_LINK_MSG_SIZE_NO_CRC);
-	if (((u8)crc == msg->msg[SPI_LINK_MSG_OFFSET_CRC_LSB]) &&
-			((u8)(crc >> 8) == msg->msg[SPI_LINK_MSG_OFFSET_CRC_MSB]))
-	{
-		return SPI_LINK_OK;
-	}
-	return SPI_LINK_CRC_ERROR;
-}
-
-/* -------------------------------------------------------------------------- */
-
-static void spi_link_append_crc(spi_link_msg_handle_t msg)
-{
-	u16 crc = (*s_context.crc_callback)(&msg->msg[0], SPI_LINK_MSG_SIZE_NO_CRC);
-	msg->msg[SPI_LINK_MSG_OFFSET_CRC_MSB] = (u8)(crc >> 8);
-	msg->msg[SPI_LINK_MSG_OFFSET_CRC_LSB] = (u8)crc;
 }
 

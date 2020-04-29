@@ -57,9 +57,22 @@
 #define SPI_LINK_DATA_SIZE (64)
 
 /* Other interesting things clients should not be concerned with. */
-#define SPI_LINK_HEADER_SIZE (4)
+#define SPI_LINK_HEADER_SIZE (6)
 #define SPI_LINK_CRC_SIZE (2)
-#define SPI_LINK_MSG_OFFSET_LEN (3)
+#define SPI_LINK_MSG_OFFSET_LEN (5)
+
+/* SPI slave may use this info to synchronize with the master. The first two
+ * bytes of a message always consist of SPI_LINK_MSG_SOF1 and SPI_LINK_MSG_SOF2.
+ * The last two bytes are the CRC value. NOTE: Calculation and verification
+ * of the message CRC is the responsibility of the SPI server, the spi_link
+ * implementation reserves space at the end of the message for this purpose.
+ */
+#define SPI_LINK_MSG_SOF1 (0xaa)
+#define SPI_LINK_MSG_SOF2 (0x55)
+#define SPI_LINK_MSG_OFFSET_SOF1 (0)
+#define SPI_LINK_MSG_OFFSET_SOF2 (1)
+#define SPI_LINK_MSG_OFFSET_CRC_MSB (SPI_LINK_HEADER_SIZE + SPI_LINK_DATA_SIZE)
+#define SPI_LINK_MSG_OFFSET_CRC_LSB (SPI_LINK_MSG_OFFSET_CRC_MSB + 1)
 
 /* Bulk message sizes on the wire. */
 #define SPI_LINK_MSG_SIZE (SPI_LINK_HEADER_SIZE + SPI_LINK_DATA_SIZE + SPI_LINK_CRC_SIZE)
@@ -86,7 +99,7 @@ typedef enum
 	SPI_LINK_OK,
 	SPI_LINK_FAILED,
 	SPI_LINK_BUSY,
-	SPI_LINK_CRC_ERROR
+	SPI_LINK_MSG_ERROR
 } spi_link_status_t;
 
 /* Forward reference to opaque message structure. */
@@ -125,20 +138,6 @@ typedef spi_link_status_t (*pf_spi_link_receive_msg)(spi_link_msg_handle_t msg);
  */
 typedef spi_link_status_t (*pf_spi_link_transmit_receive)(
 		u8 *tx_data, u8 *rx_data, size_t length);
-
-/**
- * @brief Callback type for calculation of CRC-16.
- *
- * Function must calculate the CRC-16/CCITT (i.e. x^16 + x^12 + x^5 + x^0)
- * for the data passed, with zero initial value, not data reflection,
- * and no final XOR of the output.
- *
- * @param data Address of the data.
- * @param length Length of the data in bytes.
- *
- * @param uint16_t The CRC value.
- */
-typedef uint16_t (*pf_spi_link_calculate_crc)(const u8 *data, size_t length);
 
 /******************************************************************************
  * 			Function prototypes
@@ -248,13 +247,8 @@ extern void spi_link_msg_processed(spi_link_msg_handle_t msg);
  * SPI transfers.
  *
  * @param tx_rx_callback Callback to initiate SPI transactions.
- * @param crc_callback Callback to calculate the data CRC value.
- *                     If NULL then it is assumed the server calculates
- *                     and verifies the CRC for all messages.
  */
-extern void spi_link_register_server(
-		pf_spi_link_transmit_receive tx_rx_callback,
-		pf_spi_link_calculate_crc crc_callback);
+extern void spi_link_register_server(pf_spi_link_transmit_receive tx_rx_callback);
 
 /**
  * @brief Called to report the result of a transmit-receive operation.
