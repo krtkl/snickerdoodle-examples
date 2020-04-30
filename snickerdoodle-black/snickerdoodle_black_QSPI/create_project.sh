@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# source the vivaod settings file so we have access to
+# source the vivado settings file so we have access to
 # the ecosystem of applications
 source /opt/Xilinx/Vivado/2018.2/settings64.sh
 

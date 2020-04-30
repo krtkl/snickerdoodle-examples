@@ -1,4 +1,4 @@
-REM source the vivaod settings file so we have access to
+REM source the vivado settings file so we have access to
 REM the ecosystem of applications
 call c:\Xilinx\Vivado\2018.2\settings64.bat
 

@@ -190,7 +190,7 @@ void FlashRead(XQspiPs *QspiPtr, u32 Address, u32 ByteCount, u8 Command, u8 *Rea
 	u8 WriteBuffer[4];
 
 #ifdef DEBUG_PRINTF
-	xil_printf("[DEBUG  ] Requesting %i bytes form addres 0x%08X ... ", ByteCount, Address);
+	xil_printf("[DEBUG  ] Requesting %i bytes form address 0x%08X ... ", ByteCount, Address);
 #endif
 
 	// build up the command
@@ -411,7 +411,7 @@ int main()
 	}
 	else
 	{
-		xil_printf("[INFO   ] Device ID written and verified successfull.\r\n");
+		xil_printf("[INFO   ] Device ID written and verified successful.\r\n");
 	}
 
 	return 0;
