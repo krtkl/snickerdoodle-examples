@@ -8,7 +8,7 @@ _Note: Requires Vivado 2018.2_
 
 1. Extract the contents of the IP file.
 
-2. Execute the `create_project-2018.2.bat` (`create_prject-2018.2.sh` on Linux), which will open Vivado and create the project.
+2. Execute the `create_project-2018.2.bat` (`create_project-2018.2.sh` on Linux), which will open Vivado and create the project.
 
 3. Generate the bitstream.
 
