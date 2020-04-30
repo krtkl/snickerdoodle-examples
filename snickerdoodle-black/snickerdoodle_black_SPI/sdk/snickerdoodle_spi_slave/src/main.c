@@ -11,11 +11,13 @@
 #include "xplatform_info.h"
 #include "xspips.h"		/* SPI device driver */
 #include "xscugic.h"		/* Interrupt controller device driver */
+#include "xuartps_hw.h"
 #include "xil_cache.h"
 #include "xil_exception.h"
 #include "xil_printf.h"
 #include "crc.h"
 #include "spi_link.h"
+#include "sd_control_codec.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -46,6 +48,8 @@
 
 static spi_link_status_t SpiSlaveTxRx(u8 *tx_data, u8 *rx_data, size_t length);
 
+static spi_link_status_t SpiPsReceiveCtrlMsg(spi_link_msg_handle_t msg);
+
 static int SpiPsSetupIntrSystem(XScuGic *IntcInstancePtr,
 			       XSpiPs *SpiInstancePtr, u16 SpiIntrId);
 
@@ -70,8 +74,9 @@ static XSpiPs SpiInstance;
  * The ReadBuffer is used to read to the data which it received from the SPI
  * Bus which master has sent.
  */
-u8 ReadBuffer[SPI_LINK_MSG_SIZE];
+//u8 ReadBuffer[SPI_LINK_MSG_SIZE];
 
+/* SPI link server related state */
 u8 *s_tx_data;
 u8 *s_rx_data;
 size_t s_length;
@@ -82,6 +87,10 @@ int s_sync_index;
 
 /* Debug counter */
 u32 xfer_count = 0;
+
+/* SPI link client related state */
+sdControlMsg_t s_control_cmd;
+sdControlMsg_t s_control_rsp;
 
 /*****************************************************************************/
 /**
@@ -195,10 +204,59 @@ static int SpiPsSlavePolledExample(XScuGic *IntcInstancePtr,
 	s_sync_index = 0;
 
 	spi_link_init();
+
+	/* Register as the server to SPI link */
 	spi_link_register_server(&SpiSlaveTxRx);
+
+	/* Also register as the client for the SPI_LINK_CHANNEL_CNTL channel. */
+	spi_link_register_client(SPI_LINK_CHANNEL_CNTL, &SpiPsReceiveCtrlMsg);
+
 	spi_link_start();
 
-	for ( ;; ) { }
+	for ( ;; )
+	{
+		u32 CntrlRegister;
+
+		CntrlRegister = XUartPs_ReadReg(XPAR_XUARTPS_0_BASEADDR, XUARTPS_CR_OFFSET);
+
+		/* Enable TX and RX for the device */
+		XUartPs_WriteReg(XPAR_XUARTPS_0_BASEADDR, XUARTPS_CR_OFFSET,
+				  ((CntrlRegister & ~XUARTPS_CR_EN_DIS_MASK) |
+				   XUARTPS_CR_TX_EN | XUARTPS_CR_RX_EN));
+
+		 /* Wait until there is data */
+		while (!XUartPs_IsReceiveData(XPAR_XUARTPS_0_BASEADDR));
+
+		u8 RecvChar = XUartPs_ReadReg(XPAR_XUARTPS_0_BASEADDR, XUARTPS_FIFO_OFFSET);
+
+		if (('0' <= RecvChar) && ('6' >= RecvChar))
+		{
+			s_control_cmd.msgType = MSG_TYPE_COMMAND;
+			s_control_cmd.function = FUNCTION_LED;
+			s_control_cmd.payload[0] = (RecvChar - '0');
+
+			spi_link_msg_handle_t msg = spi_link_acquire_msg(SPI_LINK_CHANNEL_CNTL);
+			if (msg)
+			{
+				SdControlCodecEncodeMsg(&s_control_cmd, SPI_LINK_MSG_DATA(msg));
+
+				spi_link_send_msg(msg, LEN_MESSAGE);
+			}
+		}
+
+		/* Change the capitalization */
+		if (('a' <= RecvChar) && ('z' >= RecvChar)) {
+			/* Convert the Capital letter to a small. */
+			RecvChar = RecvChar - 'a' + 'A';
+		}
+		else if (('A' <= RecvChar) && ('Z' >= RecvChar)) {
+			/* Convert the small letter to a Capital. */
+			RecvChar = RecvChar - 'A' + 'a';
+		}
+
+		/* Echo the character back */
+		XUartPs_WriteReg(XPAR_XUARTPS_0_BASEADDR,  XUARTPS_FIFO_OFFSET, RecvChar);
+	}
 
 	SpiPsDisableIntrSystem(IntcInstancePtr, SpiIntrId);
 
@@ -206,19 +264,6 @@ static int SpiPsSlavePolledExample(XScuGic *IntcInstancePtr,
 	 * Disable the device.
 	 */
 	XSpiPs_Disable((&SpiInstance));
-
-#if 0
-	/* Clear all interrupts. */
-	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_SR_OFFSET, XSPIPS_IXR_WR_TO_CLR_MASK);
-	/* Disable all interrupts. */
-	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_IDR_OFFSET, 0x7F);
-
-	/* Enable the specific interrupts we care about. */
-	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_IER_OFFSET,
-			( XSPIPS_IXR_RXNEMPTY_MASK
-			| XSPIPS_IXR_MODF_MASK
-			| XSPIPS_IXR_RXOVR_MASK ));
-#endif
 
 	return XST_SUCCESS;
 }
@@ -234,13 +279,6 @@ static spi_link_status_t SpiSlaveTxRx(u8 *tx_data, u8 *rx_data, size_t length)
 	s_rx_data = rx_data;
 	s_length = length;
 
-#if 0
-	/* Clear all interrupts. */
-	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_SR_OFFSET, XSPIPS_IXR_WR_TO_CLR_MASK);
-	/* Disable all interrupts. */
-	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_IDR_OFFSET, 0x7F);
-#endif
-
 	if (0 == s_rx_fifo_threshold)
 	{
 		/* Initial startup. */
@@ -248,29 +286,19 @@ static spi_link_status_t SpiSlaveTxRx(u8 *tx_data, u8 *rx_data, size_t length)
 		s_rx_fifo_threshold = SYNCING_RX_FIFO_THRESHOLD;
 		XSpiPs_SetRXWatermark((&SpiInstance), s_rx_fifo_threshold);
 
-#if 0
-		for (int index = 0; index < s_rx_fifo_threshold; index++)
-		{
-			SpiPs_SendByte(SpiInstance.Config.BaseAddress, 0);
-		}
-#endif
-#if 1
 		/* Clear all interrupts. */
 		XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_SR_OFFSET, XSPIPS_IXR_WR_TO_CLR_MASK);
 		/* Disable all interrupts. */
 		XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_IDR_OFFSET, 0x7F);
-#endif
 
 		/* Enable the device, but don't actually transmit anything until synchronized. */
 		XSpiPs_Enable((&SpiInstance));
 
-#if 1
 		/* Enable the specific interrupts we care about. */
 		XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_IER_OFFSET,
 				( XSPIPS_IXR_RXNEMPTY_MASK
 				| XSPIPS_IXR_MODF_MASK
 				| XSPIPS_IXR_RXOVR_MASK ));
-#endif
 	}
 	else if (SPI_LINK_MSG_SIZE == s_rx_fifo_threshold)
 	{
@@ -290,15 +318,15 @@ static spi_link_status_t SpiSlaveTxRx(u8 *tx_data, u8 *rx_data, size_t length)
 		/* Don't write anything to TX FIFO until we are synchronized. */
 	}
 
-#if 0
-	/* Enable the specific interrupts we care about. */
-	XSpiPs_WriteReg((&SpiInstance)->Config.BaseAddress, XSPIPS_IER_OFFSET,
-			( XSPIPS_IXR_RXNEMPTY_MASK
-			| XSPIPS_IXR_MODF_MASK
-			| XSPIPS_IXR_RXOVR_MASK ));
-#endif
-
 	return SPI_LINK_OK;
+}
+
+/*****************************************************************************/
+static spi_link_status_t SpiPsReceiveCtrlMsg(spi_link_msg_handle_t msg)
+{
+	spi_link_status_t result = SPI_LINK_OK;
+
+	return result;
 }
 
 /*****************************************************************************/
@@ -376,13 +404,6 @@ static void SpiPsInterruptHandler(XSpiPs *InstancePtr)
 		else
 		{
 			/* We are at some point in the synchronization process. */
-#if 0
-			for (int index = 0; index < s_rx_fifo_threshold; index++)
-			{
-				SpiPs_SendByte(SpiInstance.Config.BaseAddress, 0);
-			}
-#endif
-
 			for (int index = 0; index < s_rx_fifo_threshold; index++)
 			{
 				data = SpiPs_RecvByte(SpiInstance.Config.BaseAddress);
@@ -410,10 +431,6 @@ static void SpiPsInterruptHandler(XSpiPs *InstancePtr)
 					(s_rx_data[SPI_LINK_MSG_OFFSET_CRC_LSB] == (u8)(crc & 0xff)))
 				{
 					/* We appear to be synchronized! Happy day! */
-#if 0
-					XSpiPs_Disable((&SpiInstance));
-					XSpiPs_Enable((&SpiInstance));
-#endif
 					s_rx_fifo_threshold = SPI_LINK_MSG_SIZE;
 					XSpiPs_SetRXWatermark((&SpiInstance), s_rx_fifo_threshold);
 					report = 1;
