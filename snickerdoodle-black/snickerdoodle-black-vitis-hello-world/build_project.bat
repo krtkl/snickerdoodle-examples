@@ -10,7 +10,3 @@ REM script.  build the project, then export the resulting
 REM hardware package to the ./sdk folder for vitis to open
 vivado -mode batch -source .\scripts\build_project.tcl
 
-REM launch vitis against the exported hardware package
-vitis -workspace ./sdk
-
-REM todo: script vitis application flow
