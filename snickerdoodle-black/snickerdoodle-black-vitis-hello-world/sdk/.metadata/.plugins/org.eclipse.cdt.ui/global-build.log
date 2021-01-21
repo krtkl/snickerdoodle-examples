@@ -1,24 +1,174 @@
-Nothing to build in platform 'sn_black_wrapper'
+Cleaning the zynq_fsbl application.
+rm -rf  nand.o  pcap.o  rsa.o  qspi.o  nor.o  main.o  fsbl_hooks.o  md5.o  image_mover.o  ps7_init.o  sd.o  fsbl_handoff.o  zyn
+q_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a executable.elf *.o
 
-15:29:53 **** Incremental Build of configuration Debug for project helloworld ****
-make all 
-make --no-print-directory pre-build
-a9-linaro-pre-build-step
+Cleaning the zynq_fsbl application, bsp
+make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/spips_v3_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s clean 
+
+rm -f ps7_cortexa9_0/lib/libxil.a
+
+Cleaning the BSP for domain  - domain_ps7_cortexa9_0
+make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/spips_v3_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s clean 
+
+rm -f ps7_cortexa9_0/lib/libxil.a
+
+
+13:43:26 Build Finished (took 8s.347ms)
+
+13:43:26 **** Clean-only build of configuration Debug for project helloworld ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  helloworld.elf.size  helloworld.elf
  
-make --no-print-directory main-build
-Building file: ../src/helloworld.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I./sdk/sn_black_wrapper/export/sn_black_wrapper/sw/sn_black_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-Finished building: ../src/helloworld.c
- 
-Building target: helloworld.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L./sdk/sn_black_wrapper/export/sn_black_wrapper/sw/sn_black_wrapper/domain_ps7_cortexa9_0/bsplib/lib -o "helloworld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: helloworld.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size helloworld.elf  |tee "helloworld.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  23404	   1160	  22600	  47164	   b83c	helloworld.elf
-Finished building: helloworld.elf.size
- 
+13:43:26 **** Clean-only build of project sn_black_wrapper ****
+buildplatform.sh 40625 sn_black_wrapper clean 
+XSDB Server Channel: tcfchan#2
+Cleaning the zynq_fsbl application.
+rm -rf  nand.o  pcap.o  qspi.o  nor.o  rsa.o  main.o  fsbl_hooks.o  md5.o  image_mover.o  ps7_init.o  sd.o  fsbl_handoff.o  zyn
+q_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a executable.elf *.o
+
+Cleaning the zynq_fsbl application, bsp
+make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/spips_v3_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s clean 
+
+rm -f ps7_cortexa9_0/lib/libxil.a
+
+Cleaning the BSP for domain  - domain_ps7_cortexa9_0
+make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/spips_v3_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s clean 
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s clean 
+
+rm -f ps7_cortexa9_0/lib/libxil.a
+

@@ -1,6 +1,7 @@
 
-# we'll run headless for this script, as there is no need for the gui
-# to be open.
+# open up the GUI, as we're using a flow that will 
+# create the project for editing
+start_gui
 
 # create the project against the snickerdoodle black board, and vhdl
 create_project snickerdoodle-black-vitis-hello-world ./project -part xc7z020clg400-3
@@ -45,5 +46,6 @@ wait_on_run impl_1
 set_property pfm_name {} [get_files -all {./project/snickerdoodle-black-vitis-hello-world.srcs/sources_1/bd/sn_black/sn_black.bd}]
 write_hw_platform -fixed -include_bit -force -file ./sdk/sn_black_wrapper.xsa
 
-# exit, we're all done with vivado ( note: the calling script will need to 
-                                           launch vitis )
+# exit, we're all done with vivado ( note: the calling script will need to launch vitis )
+
+exit

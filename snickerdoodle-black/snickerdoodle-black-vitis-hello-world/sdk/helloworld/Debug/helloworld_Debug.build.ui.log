@@ -1,0 +1,7 @@
+2021-01-21T13:43:26.5862100255-13:43:26 **** Clean-only build of configuration Debug for project helloworld ****
+000-make clean 
+000-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  helloworld.elf.size  helloworld.elf
+000- 
+00255-
+13:43:26 Build Finished (took 65ms)
+

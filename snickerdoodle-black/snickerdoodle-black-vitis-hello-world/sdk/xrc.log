@@ -1,0 +1,11 @@
+Thu Jan 21 12:04:54 2021: Server was asked to start on port: '39605'
+Thu Jan 21 12:04:54 2021: Server is using token UUID: 'f8fefc83-05b3-43c6-978f-b1c9473331c6'
+Thu Jan 21 12:04:54 2021: Attempting to start server on port '39605'
+Thu Jan 21 12:04:54 2021: XRC main fifo: created main fifo '/tmp/xrcmainf8fefc83-05b3-43c6-978f-b1c9473331c6', fd read = 11
+Thu Jan 21 12:04:54 2021: Running Rule Check Server
+Thu Jan 21 12:04:54 2021: Version 1.6.1
+Thu Jan 21 12:04:54 2021: Rule Check Server: Accepted socket connection from client
+Thu Jan 21 12:04:54 2021: EXCHANGE_TOKEN received, server token: f8fefc83-05b3-43c6-978f-b1c9473331c6, passed token: f8fefc83-05b3-43c6-978f-b1c9473331c6
+Thu Jan 21 13:43:59 2021: STOP_SERVER received, server token: f8fefc83-05b3-43c6-978f-b1c9473331c6, passed token: f8fefc83-05b3-43c6-978f-b1c9473331c6
+Thu Jan 21 13:43:59 2021: Socket received request to stop server.
+Thu Jan 21 13:43:59 2021: SERVER: destructor for server bound to port 39605
